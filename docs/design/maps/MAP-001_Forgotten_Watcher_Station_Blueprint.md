@@ -395,3 +395,57 @@ When Mapping is accepted, the package advances to:
 **Mapping -> Eventwright -> Validation**
 
 The Eventwright should not need to redesign geometry; Validation should be able to compare both map and events directly against this work order, the Bible, and the locked story source.
+
+
+# 21. Foreman Preflight Addendum - 2026-09-11
+
+**Decision:** Approved for Mapping skeleton pass only. This is specification readiness, not a Mapping PASS or executable-scene validation.
+
+**Reviewed baseline:** repository commit `853148f149a245cf1290caaa9790afe26c19b34b`; supplied `EryndraStory.zip`, `EryndraStory/Acts/PrologueStoryv0.3.pdf`, PDF page 2 (purpose/P-01) and page 5 (P-08); supplied `SampleGenerated.zip` technical reference. The normative Production Roles and Handoff Contract applies.
+
+The opening and return to this chamber agree with canon. Preserve the wall-mounted ring, dead roots, undisturbed dust, fitted stone and dull metal. No location label, date, explanatory terminology or living character may be displayed. The station is not the smaller local structure in MAP-007. No story revision is needed.
+
+## Skeleton decisions and coordinate contract
+
+These explicit Foreman decisions narrow the earlier approximate instructions for this first pass:
+
+- Coordinates are zero-based MZ tile coordinates, x rightward and y downward. Retain 29x21 tiles and 48 px tiles.
+- Retain all six anchor names and exact coordinates in section 11 for the first pass; assign local event IDs 1 through 6 in table order. They are MAP-001-EV-001 through MAP-001-EV-006. No global IDs are allocated by this local assignment.
+- Each stub has one blank, unconditional action-button page, no image, no autonomous movement, through enabled, below-character priority, and only the terminating event command. No autorun, parallel processing, transfers, dialogue, state changes or audio in this pass.
+- Ring artwork is on the north wall, not a floor sigil. Reserve tile rectangle x=12..16, y=4..7 unobstructed for its future graphic; the anchor at (14,6) is a registration reference, not the artwork's bounding box. Depict a deliberate narrow division without letters or extra symbols.
+- At 816x624, the default camera centered on tile (14,10) shows tile columns 6..22 and rows 4..16. The alternate center (14,8) shows columns 6..22 and rows 2..14. Both remain within the map. The room perimeter need not fit entirely on-screen; the ring and sufficient dusty floor must. Keep the ring inside both frames. These are framing positions, not a zoom specification.
+- Hidden camera/player reference position is (14,10), facing down. Eventwright owns hiding player/followers and controlling input before reveal; Mapping must not implement this behavior. Invisible runtime player coordinates do not imply a living character in the scene.
+- No visible map display name, encounters, autoplay BGM/BGS, parallax, looping or gameplay regions. Leave the runtime display name empty; the author-facing map name remains Forgotten Watcher Station. All region cells are zero.
+
+## Sample dependency boundary
+
+The inspected sample System.json specifies 816x624, and js/plugins.js has no enabled plugins. Its Tilesets.json contains stock Dungeon entry 4 with Dungeon_A1, Dungeon_A2, Dungeon_A4, Dungeon_A5, Dungeon_B and Dungeon_C sheets. These are available candidate geometry assets, not proof that a suitable fractured-ring or dead-root graphic exists.
+
+For this skeleton, the Foreman authorizes referencing sample tileset 4 in an isolated sample-based review fixture only. Record every selected tile ID, source sheet and passage flag in the Mapping dependency note. This does not assign Eryndra TIL-004 or authorize wholesale database import. The production tileset assignment remains pending until the chosen subset is reviewed. Do not replace the sample's Map001 or import its maps, actors, state or plugins into Eryndra.
+
+Deliver the candidate map under `work/mapping/MAP-001/pass-01/Map001.json` with its dependency note and review images. Promote to `game/data/Map001.json` only after Mapping acceptance and production dependency registration. Record the exact sample archive checksum used by the fixture. Keep stock runtime/assets out of the repository unless separately needed and authorized.
+
+Stone geometry can use documented stock placeholders. Metal, dead roots, dust and ring art may be explicitly marked unresolved visual placeholders in the dependency note. Do not substitute a portal, altar, live vines, runes or bright machinery. A review-only ring-footprint diagram is acceptable for skeleton composition; it is not a completed runtime asset. Any missing ring representation remains a named asset dependency before Eventwright presentation work.
+
+## Handoff and acceptance limits
+
+The Mapping package must include the map, both camera-frame review images, a ring-state footprint mock-up, tile/dependency manifest, and deviations. Validate JSON dimensions/layers, anchor identity and coordinates, absence of event logic, and collision flags against the fixture tileset. Empty tile cells alone must not be assumed impassable.
+
+The MZ-open acceptance item in section 19 still requires an actual editor-open check. A JSON parse or diagram does not satisfy it. If unavailable, report it as NOT RUN and keep the Mapping handoff pending; do not label the map Tested or Locked.
+
+The four ring states need spatial accommodation in Mapping; pulse timing, black fracture during closing illumination, residual light, sound and title execution belong to Eventwright/Asset passes. No final asset or cinematic behavior is claimed by this preflight.
+
+The exact MAP-002 destination coordinate/facing, production tileset ID, ring graphics and three-note audio are Eventwright-entry dependencies. They do not block geometry construction, but must be specified before claiming a complete opening-to-home flow. Do not guess a transfer coordinate or use Go To Title for the ERYNDRA narrative title reveal.
+
+## Review findings
+
+| Finding | Owner | Disposition |
+|---|---|---|
+| Unspecified tile coordinate convention, ring footprint and camera framing | Foreman | Resolved above for pass 01 |
+| Final tileset TBD; sample database is not Eryndra's | Foreman / Mapping | Isolated fixture authorized; dependency manifest required before promotion |
+| Event stub behavior/local IDs unspecified | Foreman | Resolved above; no executable story logic |
+| Hidden runtime player versus no living cast | Eventwright | Explicit presentation requirement; no actor placed by Mapping |
+| Opening transfer destination and presentation assets unresolved | Foreman / Eventwright / Asset | Required before functional/presentation acceptance |
+| Decomposition still describes numeric assignments as provisional | Foreman | Use newer Prologue_MZ_ID_Assignments.md and ID_Allocation_Plan.md for assigned IDs; historical decomposition wording grants no renumbering authority |
+
+**Next assigned production unit:** MAP-001 Mapping skeleton pass 01. No Mapping deliverable or runtime validation has been produced by this preflight.
