@@ -4,6 +4,33 @@ This changelog records meaningful structural and implementation-reference change
 
 ---
 
+## v0.2 — 2026-09-10
+
+### Added
+- Full first-pass decomposition of the locked Prologue into twelve implementation scenes (`PRO-SC-001` through `PRO-SC-012`).
+- Dedicated Prologue implementation plan: `docs/design/Prologue_Implementation_Decomposition.md`.
+- Initial Prologue CORE character assignments:
+  - `ACT-001` Marek Venn
+  - `NPC-001` Davren Venn
+  - `NPC-002` Elira Venn
+  - `NPC-003` Nessa Venn
+  - `NPC-004` Latch
+  - `NPC-005` Joren Pell
+  - `NPC-006` Edrin Holt
+  - `NPC-007` Cael Veyran
+- Initial Prologue CORE map assignments `MAP-001` through `MAP-008`.
+- Initial named Prologue story-state switches and proposed system-wide `SYS_StoryStage` variable concept.
+- Explicit rule that the locked Prologue requires no CORE combat and no enemies/troops should be invented merely to add RPG combat.
+- Vertical-slice success criteria covering sequence, map gating, transfers, character presence, dialogue/cinematics, motif continuity, canon secrecy, save/load integrity, and Act I handoff.
+
+### Changed
+- Master Implementation Index advanced to v0.2 and seeded with the Prologue scene, actor, NPC, map, state, common-event, and initial asset registries.
+
+### Current Next Step
+- Define reserved RPG Maker numeric ID ranges and then assign MZ IDs to the Prologue CORE registries before constructing the first maps/events.
+
+---
+
 ## v0.1 — 2026-09-10
 
 ### Added
