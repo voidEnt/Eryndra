@@ -206,6 +206,12 @@ Changes that affect dependencies should record affected IDs, especially actor, m
 
 Blueprints and work orders are living implementation documents until their associated object is Locked. If a work order changes after downstream work has begun, affected downstream work must be revalidated.
 
+## 1.13A Immutable Source and Reference Packages
+
+Supplied story archives and reference-project archives are immutable inputs. Workers may inspect them read-only, including extraction to temporary scratch storage, but must never rewrite an archive or use an extracted reference project as an editable Eryndra test fixture.
+
+`EryndraStory.zip` remains narrative-source material. `SampleGenerated.zip` remains technical and visual reference only. Eryndra maps, databases, assets and tests must live in Eryndra-owned repository paths or in newly created Eryndra review projects. Copying or replacing files inside a SampleGenerated project tree for testing is prohibited.
+
 ## 1.14 Plugin and Custom-Code Policy
 
 Default to stock RPG Maker MZ behavior unless a plugin or custom JavaScript solves a demonstrated need.
@@ -434,3 +440,4 @@ The Prologue is built end-to-end before production expands into later acts. Its 
 Optional side quests, historical books, hidden content, decorative interactions, and similar additions remain DEFERRED until the core story spine is functioning.
 
 The current production target is the `MAP-001 / Map001.json` skeleton for `PRO-SC-001 The Forgotten Place`, beginning from its approved mapper blueprint. Event logic follows only after the Mapping handoff is ready.
+

@@ -35,7 +35,7 @@ The compositor's selected A4 quarter-tile calculation and wall table use agree w
 
 | ID | Owner | Severity / stage | Required outcome and regression |
 |---|---|---|---|
-| VAL-MAP001-001 | Validation with MZ editor access / Foreman coordination | Blocking evidence gap for Mapping handoff | Open candidate in the isolated sample-based fixture, record editor version/result and missing-asset errors, confirm tiles/events display correctly. Compare with review composite. If map changes, rerun static checks and visual review against its new checksum |
+| VAL-MAP001-001 | Validation with MZ editor access / Foreman coordination | Blocking evidence gap for Mapping handoff | Open the candidate in a newly created blank Eryndra review project, record editor/project version and missing-asset errors, and confirm tiles/events display correctly. Keep SampleGenerated unchanged and reference-only. Compare with review composite. If map changes, rerun static checks and visual review against its new checksum |
 | DEP-MAP001-001 | Foreman | Blocks production promotion | Register production tileset dependency before copying candidate to `game/data/`; if flags/ID change, rerun collision and tile-reference checks |
 | DEP-MAP001-002 | Asset / Eventwright | Required before presentation acceptance | Supply ring, dust, dead roots/fine seams, unfamiliar metal and appropriate final stone/darkness. Preserve reserved footprint, deliberate black fracture, lack of recent traffic and no explanatory symbolism; recheck both frames after assets are integrated |
 | DEP-MAP001-003 | Foreman / Eventwright / Asset | Required for later executable flow | Specify MAP-002 destination and three-note presentation, then implement hidden player/input control, pulse/residual/closing states and title/transfer behavior under an Eventwright work order |
@@ -52,4 +52,4 @@ Run from this folder:
 python validate_candidate.py Map001.json /absolute/path/to/02-SampleGenerated.zip > validation_checks.json
 ```
 
-The checker requires Python's standard library. Overall acceptance remains pending even if it exits successfully. The Mapper's dependency note gives disposable editor-fixture inspection steps; preserve the original reference sample and production project.
+The checker requires Python's standard library. Overall acceptance remains pending even if it exits successfully. The Mapper's dependency note gives blank-project editor inspection steps; keep both supplied reference packages unchanged.

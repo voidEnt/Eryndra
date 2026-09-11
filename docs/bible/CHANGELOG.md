@@ -4,6 +4,17 @@ This changelog records meaningful structural and implementation-reference change
 
 ---
 
+## 2026-09-11 — Immutable reference-package correction
+
+- Made `EryndraStory.zip` and `SampleGenerated.zip` explicitly immutable inputs.
+- Prohibited using an extracted SampleGenerated tree as an editable Eryndra test fixture or project base.
+- Replaced the MAP-001 editor-check procedure with a new blank Eryndra review project created in RPG Maker MZ.
+- Confirmed the MAP-001 candidate remains in its own repository work folder; nothing has been promoted to `game/data/`.
+- No supplied ZIP was modified.
+
+---
+
+
 ## 2026-09-11 — MAP-001 Mapping skeleton pass 01
 
 - Separate Mapper and Validator worked from baseline c5dda89c8eff08cdfc74c1fa9780b14322f50ff7 and the approved blueprint.

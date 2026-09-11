@@ -421,7 +421,9 @@ These explicit Foreman decisions narrow the earlier approximate instructions for
 
 The inspected sample System.json specifies 816x624, and js/plugins.js has no enabled plugins. Its Tilesets.json contains stock Dungeon entry 4 with Dungeon_A1, Dungeon_A2, Dungeon_A4, Dungeon_A5, Dungeon_B and Dungeon_C sheets. These are available candidate geometry assets, not proof that a suitable fractured-ring or dead-root graphic exists.
 
-For this skeleton, the Foreman authorizes referencing sample tileset 4 in an isolated sample-based review fixture only. Record every selected tile ID, source sheet and passage flag in the Mapping dependency note. This does not assign Eryndra TIL-004 or authorize wholesale database import. The production tileset assignment remains pending until the chosen subset is reviewed. Do not replace the sample's Map001 or import its maps, actors, state or plugins into Eryndra.
+SampleGenerated is immutable and reference-only. It may be inspected read-only to understand MZ schemas, stock tile behavior and visual patterns. It must not be used as an editable test fixture, an Eryndra project base, or a production dependency. Do not replace any file in the archive or in an extracted copy presented as SampleGenerated. Do not import its maps, actors, state or plugins into Eryndra.
+
+For this skeleton, sample tileset 4 may inform documented placeholder tile selection only. Record every selected tile ID, source sheet and passage flag in the Mapping dependency note. This does not assign Eryndra TIL-004. The production tileset assignment remains pending. Any editor-open test must use a newly created Eryndra review project, separate from both supplied reference packages.
 
 Deliver the candidate map under `work/mapping/MAP-001/pass-01/Map001.json` with its dependency note and review images. Promote to `game/data/Map001.json` only after Mapping acceptance and production dependency registration. Record the exact sample archive checksum used by the fixture. Keep stock runtime/assets out of the repository unless separately needed and authorized.
 
@@ -449,3 +451,4 @@ The exact MAP-002 destination coordinate/facing, production tileset ID, ring gra
 | Decomposition still describes numeric assignments as provisional | Foreman | Use newer Prologue_MZ_ID_Assignments.md and ID_Allocation_Plan.md for assigned IDs; historical decomposition wording grants no renumbering authority |
 
 **Next assigned production unit:** MAP-001 Mapping skeleton pass 01. No Mapping deliverable or runtime validation has been produced by this preflight.
+

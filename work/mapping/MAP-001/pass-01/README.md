@@ -20,7 +20,7 @@ Images reconstruct the selected stock tiles offline; they are not MZ screenshots
 
 ## Next gate
 
-Open the candidate in a disposable copy of the supplied sample using RPG Maker MZ, following the dependency note. Record the editor version and any errors or visual discrepancies. Actual editor-open has not been performed here and is required by blueprint section 21 before handoff. Production tileset registration and the listed visual dependencies also remain pending; do not copy this candidate into the production game yet.
+Open the candidate in a newly created blank Eryndra review project using RPG Maker MZ, following the dependency note. Keep both supplied ZIPs and any extracted SampleGenerated reference tree unchanged. Record the editor version and any errors or visual discrepancies. Actual editor-open has not been performed here and is required by blueprint section 21 before handoff. Production tileset registration and the listed visual dependencies also remain pending; do not copy this candidate into the production game yet.
 
 The production index remains Assigned. No story event commands, new global state, sample database import or finished presentation are included.
 

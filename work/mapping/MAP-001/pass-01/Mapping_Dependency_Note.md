@@ -20,7 +20,7 @@ Read main Bible, Production Roles and Handoff Contract, Master Implementation In
 
 Inspected Dungeon_A4 and Dungeon_A5 visually. Selected dark brick wall autotile kind 121 (`7856 + adjacency shape`) and A5 tile 1559 for a neutral fitted-stone floor. A5 tile 1536 supplies opaque black buffer. These are **stock stone placeholders**, not the final ancient technical-stone material. Their flags include no ladder, counter or damage floor. All wall/buffer passage bits are 15; floor passage bits are 0. Upper layers are empty/star and region layer is zero. The floor is one unobstructed rectangle. No floor tile has footprints, vegetation, loot or symbols.
 
-Sample tileset 4 is authorized **only for the isolated review fixture**. It does not allocate Eryndra TIL-004. Production tileset assignment remains unresolved. Do not copy the sample database into production.
+Sample tileset 4 was inspected **read-only as technical reference**. It does not allocate Eryndra TIL-004 and must not become an editable fixture or production dependency. Production tileset assignment remains unresolved. Do not copy or modify the sample project or database.
 
 ## Explicit outstanding dependencies / limits
 
@@ -45,10 +45,10 @@ Run `python build_candidate.py /absolute/path/to/02-SampleGenerated.zip` with Py
 
 ## Local MZ editor check
 
-1. Extract the supplied sample into a **new disposable review folder**; preserve the original sample and Eryndra project.
-2. In that disposable copy only, replace `data/Map001.json` with this candidate. Keep that copy's original Tilesets.json and stock sheets so fixture tileset 4 resolves. This is not a production import.
-3. Open the disposable copy's `game.rmmzproject` in your licensed MZ editor. Select the map with ID 001 in the map tree; its author-facing sample name may differ, while this candidate deliberately has an empty runtime display name.
-4. Verify one sealed room, correct tile appearance and six invisible stubs in the event editor. Verify map size 29×21 and tileset Dungeon, then compare north wall and floor with the supplied raw tile composite.
-5. Record MZ version, result and any missing-sheet/editor errors for Validation. Editor-open alone does not validate cinematics. Do not press New Game and infer scene behavior: the sample System.json start location and party are not Eryndra's, and this pass deliberately does not alter them.
+1. In your licensed RPG Maker MZ editor, create a **new blank project** named `Eryndra_MAP001_Review`. Keep it separate from both supplied ZIPs and from any extracted reference folders.
+2. Close the editor. In the new review project only, back up its generated `data/Map001.json`, then replace that generated file with this candidate. Do not copy from, replace, or edit anything in SampleGenerated.
+3. Reopen the new review project's `game.rmmzproject`. Select map ID 001. The candidate currently references stock tileset ID 4 as a placeholder, so confirm that the new project provides its normal Dungeon tileset at ID 4. If it does not, stop and report the mismatch rather than changing the reference project.
+4. Verify one sealed room, correct tile appearance and six invisible stubs in the event editor. Verify map size 29×21 and compare the north wall and floor with the supplied raw tile composite.
+5. Record the MZ version, blank-project version, result and any missing-sheet/editor errors for Validation. Editor-open alone does not validate cinematics. Do not treat this blank review project as the production Eryndra project or commit it.
 
 No geometry or anchor deviation from section 21 is intended. Known fidelity omissions above are explicitly allowed skeleton placeholders and must not be described as completed presentation. No Mapping PASS, Tested, Locked, editor-open or complete playable scene is claimed.
