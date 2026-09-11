@@ -1,6 +1,6 @@
 # Eryndra Game Implementation Bible
 
-**Version:** 0.2  
+**Version:** 0.3  
 **Status:** Living document  
 **Role:** Authoritative implementation reference for translating locked story canon into RPG Maker MZ data and project structure.
 
@@ -15,6 +15,7 @@ Supporting implementation references currently include:
 - `ID_Allocation_Plan.md`
 - `Prologue_MZ_ID_Assignments.md`
 - `../design/Prologue_Implementation_Decomposition.md`
+- `../design/Map_Work_Order_Standard.md`
 
 ---
 
@@ -39,6 +40,8 @@ Conflicts between layers must be reviewed and resolved explicitly.
 ## 1.3 Implementation Status
 
 `Concept → Defined → Assigned → Implemented → Tested → Locked`
+
+These statuses describe the implementation object, not a single worker's completion claim. An object may move backward when Validation identifies a problem requiring upstream revision.
 
 ## 1.4 Story Scope Codes
 
@@ -201,6 +204,8 @@ Meaningful structural changes must be recorded in `CHANGELOG.md`.
 
 Changes that affect dependencies should record affected IDs, especially actor, map, switch, variable, item/equipment, common-event, and scene IDs.
 
+Blueprints and work orders are living implementation documents until their associated object is Locked. If a work order changes after downstream work has begun, affected downstream work must be revalidated.
+
 ## 1.14 Plugin and Custom-Code Policy
 
 Default to stock RPG Maker MZ behavior unless a plugin or custom JavaScript solves a demonstrated need.
@@ -208,6 +213,123 @@ Default to stock RPG Maker MZ behavior unless a plugin or custom JavaScript solv
 Every plugin must record purpose, version, source, license, dependencies, configuration notes, and affected systems.
 
 Custom JavaScript should remain narrow, documented, and avoid replacing stock systems unnecessarily.
+
+## 1.15 Canonical Production Workflow
+
+The standard implementation chain is:
+
+**Blueprint / Work Order → Mapping → Eventwright → Validation**
+
+The first three worker stages are commonly referred to as:
+
+**Mapping → Eventwright → Validation**
+
+The Blueprint/Work Order is the controlling recipe supplied to the Mapping stage. Each stage may require multiple passes. Advancement is based on acceptance criteria, not simply on the fact that a pass was attempted.
+
+### A. Blueprint / Work Order
+
+Before implementation, the relevant Bible categories, story scenes, locked story source, IDs, assets, state dependencies, and acceptance criteria are assembled into a task-specific work order.
+
+The work order exists to reduce interpretation by downstream workers. It must state what is required, what is forbidden, what is still flexible, and what must be checked against story canon.
+
+For maps, the active standard is `../design/Map_Work_Order_Standard.md`.
+
+### B. Mapping
+
+The Mapper builds the physical stage required by the work order.
+
+Mapper responsibility includes:
+
+- map dimensions and usable footprint
+- terrain, walls, floors, architecture, and environmental geometry
+- passability and collision
+- required sightlines and staging space
+- transfers/spawn positions when specified
+- region placement when specified
+- named event anchors/stubs required by downstream work
+- spatial support for required alternate states
+- compliance with the Narrative Style Gate
+
+The Mapper does **not** independently invent story beats, dialogue, quests, enemies, rewards, global state logic, or canon changes.
+
+Typical Mapping passes may include:
+
+1. **Blocking/Skeleton Pass** — size, zones, routes, focal points, and required anchors.
+2. **Spatial Refinement Pass** — architecture, terrain, composition, passability, and staging quality.
+3. **Mapper Compliance Pass** — self-check against work order, Bible, and locked story before handoff.
+
+A map may remain visually rough while the CORE skeleton is being established. Decorative polish must not delay a functional story spine.
+
+### C. Eventwright
+
+The Eventwright converts the mapped stage and its anchors into executable RPG Maker story/system behavior.
+
+Eventwright responsibility includes:
+
+- event pages and triggers
+- dialogue commands
+- movement routes
+- switches, variables, and self switches
+- Common Event calls
+- transfers and scene transitions
+- cinematics and timing
+- audio/visual presentation commands
+- story gating
+- battle calls where specified
+- resulting state changes required by the work order
+
+The Eventwright must use the supplied map and registered IDs rather than silently redesigning the map or allocating unapproved global state.
+
+Typical Eventwright passes may include:
+
+1. **Functional Spine Pass** — the scene can run from required entry state to required exit state.
+2. **Narrative/Presentation Pass** — dialogue, movement, timing, cinematics, and cues match the intended scene.
+3. **State/Edge-Case Pass** — event pages, gating, repeat interactions, save/load behavior, and local/global state are cleaned up before Validation.
+
+If the map cannot support the required event logic, the issue is returned to Mapping rather than hidden through increasingly fragile event code.
+
+### D. Validation
+
+Validation is an independent acceptance stage, not merely a final polish pass.
+
+Validation compares the implemented result against:
+
+1. the locked story source
+2. the Implementation Bible
+3. the applicable blueprint/work order
+4. registered IDs and state rules
+5. upstream/downstream scene dependencies
+6. executable RPG Maker behavior
+
+Typical Validation passes may include:
+
+1. **Technical Validation** — JSON/project integrity, transfers, passability, triggers, switches, variables, save/load, and absence of soft locks.
+2. **Narrative Validation** — scene beats, character presence, information timing, tone, canon secrecy, and story order.
+3. **Integration Validation** — entry from the preceding scene and clean handoff to the following scene, including regression checks when appropriate.
+
+Validation does not casually rewrite upstream work. A failed requirement is returned to the responsible stage with a specific correction request.
+
+### E. Rework Loop
+
+The workflow is intentionally iterative:
+
+`Mapping ↔ Eventwright → Validation`
+
+Validation may return work to Eventwright or Mapping. Eventwright may return work to Mapping when the stage cannot physically support the required logic. Material changes to the blueprint may require both stages to be revisited.
+
+A later pass is not presumed to be cosmetic. Any pass may correct structural problems discovered after implementation begins.
+
+### F. Stage Ownership Rule
+
+Each stage owns its domain:
+
+- **Mapping owns space.**
+- **Eventwright owns executable scene logic.**
+- **Validation owns acceptance.**
+- **The Bible/work order owns requirements.**
+- **The locked story owns narrative canon.**
+
+Downstream workers should not solve upstream specification problems by inventing new design without recording the change in the Bible/work order.
 
 ---
 
@@ -234,6 +356,8 @@ Primary question: **Who exists, what can they do, and what state are they in?**
 Contains regions, geography, map registry/hierarchy, map availability, tilesets, transfers, local events, travel/access rules, dungeons, towns, puzzles, treasure, environmental storytelling, and physical world-state changes.
 
 Primary question: **Where is the player, what can they interact with, and where can they go?**
+
+Maps are implemented through mapper work orders and advance through the Mapping stage before executable scene logic is added by Eventwright.
 
 ---
 
@@ -263,6 +387,8 @@ Primary question: **What logic makes the story and systems behave correctly?**
 
 `VR-0001 / SYS_StoryStage` is the primary linear story-spine variable. Persistent switches record facts that must remain independently queryable.
 
+Event implementation belongs to the Eventwright stage and must follow approved IDs, state rules, scene specifications, and work orders.
+
 ---
 
 # Section 8 — Presentation & Assets
@@ -270,6 +396,8 @@ Primary question: **What logic makes the story and systems behave correctly?**
 Contains character sprites, faces, battlers, tilesets, pictures, story illustrations, UI graphics, animations, effects, music, ambient audio, sound effects, dialogue presentation, menus, and licensing/source tracking.
 
 Primary question: **How does the player see and hear the game?**
+
+Placeholder assets may be used during skeleton passes when permitted by the work order. Final asset quality is not allowed to block proof of the CORE story spine unless presentation itself is required to test the scene correctly.
 
 ---
 
@@ -279,14 +407,30 @@ Contains asset/ID registries, implementation status, debug systems, development 
 
 Primary question: **How do we know the game is correct, reproducible, and ready to ship?**
 
+## 9.1 Stage-Gated Production
+
+Implementation progresses through Mapping, Eventwright, and Validation rather than through a single monolithic build step.
+
+Each stage may have multiple passes. A stage is complete only when its work order acceptance conditions are met sufficiently for downstream work. Early passes prioritize the structural skeleton; later passes may add refinement and presentation.
+
+## 9.2 Validation Authority
+
+Validation may reject an implementation even if it runs technically, including when it violates canon, reveals information too early, fails a work-order requirement, produces an incorrect map scale, misuses global state, or creates a fragile scene transition.
+
+Corrections should be returned to the stage that owns the defect.
+
+## 9.3 Regression Principle
+
+When Mapping or Eventwright changes a previously validated object, affected validation checks must be repeated. Locked content may be reopened when a necessary upstream change affects it, but the change must be recorded.
+
 ---
 
 # Immediate Production Strategy
 
 The first full implementation target is the **Prologue vertical slice**.
 
-The Prologue is built end-to-end before production expands into later acts. Its purpose is to establish a repeatable workflow for story decomposition, database assignment, map planning, switches/variables, event construction, dialogue/cinematics, placeholder assets, testing, JSON generation, and validation.
+The Prologue is built end-to-end before production expands into later acts. Its purpose is to establish a repeatable workflow for story decomposition, database assignment, work-order generation, Mapping, Eventwright implementation, Validation, placeholder assets, testing, JSON generation, and revision.
 
 Optional side quests, historical books, hidden content, decorative interactions, and similar additions remain DEFERRED until the core story spine is functioning.
 
-The next implementation target is `MAP-001 / Map001.json` for `PRO-SC-001 The Forgotten Place`.
+The current production target is the `MAP-001 / Map001.json` skeleton for `PRO-SC-001 The Forgotten Place`, beginning from its approved mapper blueprint. Event logic follows only after the Mapping handoff is ready.
