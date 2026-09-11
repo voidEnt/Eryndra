@@ -4,6 +4,44 @@ This changelog records meaningful structural and implementation-reference change
 
 ---
 
+## v0.4 — 2026-09-11
+
+### Added
+- Canonical stage-gated production workflow: **Blueprint / Work Order → Mapping → Eventwright → Validation**.
+- Short-form implementation chain: **Mapping → Eventwright → Validation**.
+- Multiple-pass policy for every implementation stage rather than one-shot handoffs.
+- Mapping pass model:
+  1. Blocking/Skeleton
+  2. Spatial Refinement
+  3. Mapper Compliance
+- Eventwright pass model:
+  1. Functional Spine
+  2. Narrative/Presentation
+  3. State/Edge-Case
+- Validation pass model:
+  1. Technical Validation
+  2. Narrative Validation
+  3. Integration Validation
+- Rework loop allowing Validation to return defects to Eventwright or Mapping and allowing Eventwright to return spatial constraints to Mapping.
+- Stage ownership rules:
+  - Mapping owns space.
+  - Eventwright owns executable scene logic.
+  - Validation owns acceptance.
+  - Bible/work orders own implementation requirements.
+  - Locked story owns narrative canon.
+- Regression rule requiring affected validation checks to be rerun when previously validated Mapping or Eventwright work changes.
+- Work-order change rule requiring downstream work to be revalidated when controlling blueprints change.
+
+### Changed
+- Main Implementation Bible advanced to v0.3.
+- Production strategy now explicitly prioritizes skeleton passes before decorative polish.
+- `MAP-001` is treated first as a Mapping-stage skeleton produced from its mapper blueprint; event logic follows only after Mapping handoff.
+
+### Current Next Step
+- Execute the first Mapping pass for `MAP-001 / Map001.json` using the approved Forgotten Watcher Station blueprint, then hand the accepted spatial skeleton to Eventwright.
+
+---
+
 ## v0.3 — 2026-09-10
 
 ### Added
