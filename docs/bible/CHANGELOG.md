@@ -4,6 +4,17 @@ This changelog records meaningful structural and implementation-reference change
 
 ---
 
+## 2026-09-11 — MAP-001 Foreman preflight
+
+- Compared the existing blueprint with supplied PrologueStoryv0.3 PDF pages 2 and 5 and sample MZ configuration.
+- Approved Mapping skeleton pass 01 only; no map or executable-scene validation claimed.
+- Added a controlling preflight addendum to the MAP-001 blueprint: zero-based coordinates, exact six stub IDs/positions, ring footprint, two camera frames, no-op stub behavior, and hidden-player responsibility.
+- Authorized sample tileset 4 only in an isolated review fixture, with tile/flag manifest required; no production TIL-004 assignment or sample database import.
+- Recorded pending production asset/tileset registration, MAP-002 transfer coordinates and actual MZ-open evidence as later gate dependencies.
+- Affected IDs: MAP-001, MAP-001-EV-001 through MAP-001-EV-006; no global state allocations or story changes.
+
+---
+
 ## v0.4 — 2026-09-11
 
 ### Added
