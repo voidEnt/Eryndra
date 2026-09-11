@@ -1,6 +1,6 @@
 # Eryndra Game Implementation Bible
 
-**Version:** 0.1  
+**Version:** 0.2  
 **Status:** Living document  
 **Role:** Authoritative implementation reference for translating locked story canon into RPG Maker MZ data and project structure.
 
@@ -9,6 +9,12 @@
 # Section 0 — Master Implementation Index
 
 The compact cross-project registry lives in `Master_Implementation_Index.md` and links story scenes, actors, maps, switches, variables, events, assets, battles, and implementation status.
+
+Supporting implementation references currently include:
+
+- `ID_Allocation_Plan.md`
+- `Prologue_MZ_ID_Assignments.md`
+- `../design/Prologue_Implementation_Decomposition.md`
 
 ---
 
@@ -27,6 +33,8 @@ Conflicts between layers must be reviewed and resolved explicitly.
 - **CORE** — required for the main story spine.
 - **SUPPORT** — required for CORE content to function correctly.
 - **DEFERRED** — optional material postponed until the story spine works.
+
+`DEFERRED` is deliberately flexible. Deferred content may be added, removed, renamed, reorganized, or promoted later. Once an individual entry has entered an implemented build, its numeric ID follows the normal stability/retirement rules even if its priority later changes.
 
 ## 1.3 Implementation Status
 
@@ -55,8 +63,8 @@ Conflicts between layers must be reviewed and resolved explicitly.
 | Faction | `FAC-###` | `FAC-003` |
 | Map | `MAP-###` | `MAP-012` |
 | Map Event | `MAP-###-EV-###` | `MAP-012-EV-006` |
-| Switch | `SW-####` | `SW-0021` |
-| Variable | `VR-####` | `VR-0010` |
+| Switch | `SW-####` | `SW-0100` |
+| Variable | `VR-####` | `VR-0001` |
 | Common Event | `CE-###` | `CE-008` |
 | Class | `CLS-###` | `CLS-001` |
 | Skill | `SKL-###` | `SKL-012` |
@@ -74,6 +82,19 @@ Conflicts between layers must be reviewed and resolved explicitly.
 | Ambient Audio | `BGS-###` | `BGS-002` |
 | Sound Effect | `SE-###` | `SE-014` |
 
+### Direct-ID alignment
+
+When a Bible object has a direct one-to-one RPG Maker MZ numeric ID, the Bible numeric suffix should match the MZ ID whenever practical.
+
+Examples:
+
+- `ACT-001` = Actor 1
+- `MAP-001` = `Map001.json`
+- `SW-0100` = Switch 100
+- `VR-0001` = Variable 1
+
+Story scenes and named NPC identities remain independent logical IDs where no global MZ data ID exists.
+
 ## 1.6 RPG Maker Database Naming
 
 RPG Maker database names should remain human-readable. Bible codes are tracked in the Bible rather than embedded everywhere in player-facing database names.
@@ -82,14 +103,13 @@ Examples:
 
 - Actor database name: `Marek`
 - Enemy database name: `Ash Wolf`
-- Map database name: `Eastwatch Village`
+- Map database name: `Brackenford`
 
-Switches and variables should include readable scope prefixes because they appear in large lists:
+Switches and variables include readable scope prefixes because they appear in large lists:
 
-- `PRO_Marek_Intro_Complete`
+- `PRO_Contact_Complete`
 - `A1_Council_Meeting_Complete`
-- `SYS_Current_Act`
-- `SYS_Current_Story_Stage`
+- `SYS_StoryStage`
 
 ## 1.7 Asset Filename Convention
 
@@ -105,7 +125,7 @@ Examples:
 - `SV_Marek_Default.png`
 - `Enemy_AshWolf.png`
 - `CG_Prologue_Vision01.png`
-- `Tile_Eastwatch_Exterior_A.png`
+- `Tile_Brackenford_Exterior_A.png`
 - `BGM_MarekTheme.ogg`
 
 Rules:
@@ -121,13 +141,11 @@ Maps should describe the physical location directly.
 
 Examples:
 
-- `Eastwatch Village`
-- `Eastwatch - Inn`
-- `Eastwatch - Blacksmith`
-- `Old Shrine - Entrance`
-- `Old Shrine - Lower Hall`
-
-Bible map IDs remain stable independently of displayed map names.
+- `Brackenford`
+- `Brackenford - Venn Home`
+- `Brackenford - Survey Office`
+- `Old Place - Exterior`
+- `Old Place - Interior`
 
 ## 1.9 Event Naming
 
@@ -136,10 +154,9 @@ Name events by purpose rather than visual appearance.
 Preferred:
 
 - `EV_Story_MarekArrival`
-- `EV_Transfer_Inn`
-- `EV_NPC_Blacksmith`
-- `EV_Chest_NorthRoom`
-- `EV_Controller_AttackScene`
+- `EV_Transfer_SurveyOffice`
+- `EV_NPC_Joren`
+- `EV_Controller_Contact`
 - `DEC_Fireplace`
 
 Avoid generic names such as `Event001`, `Guy`, or `Thing` except for temporary experiments.
@@ -148,7 +165,7 @@ Avoid generic names such as `Event001`, `Guy`, or `Thing` except for temporary e
 
 Use global switches only when state must be known outside the local event/map.
 
-Prefer self switches for local persistent states such as:
+Prefer Self Switches A-D for local persistent states such as:
 
 - chest opened
 - one-time local dialogue complete
@@ -159,79 +176,54 @@ Prefer self switches for local persistent states such as:
 
 **Once an ID has entered an implemented build, never reuse it for a different object.**
 
-Deleted IDs become **retired** rather than recycled. Renaming an object does not change its Bible ID.
+Before implementation, an Assigned entry may still be corrected if architecture requires it. After implementation, deleted IDs become retired rather than recycled. Renaming or reprioritizing an object does not change its implemented ID.
 
 ## 1.12 Reserved ID Ranges
 
-To be assigned before Prologue implementation begins. Ranges should separate system, Prologue, Acts, debug, and deferred content where practical.
+The active allocation policy is defined in `ID_Allocation_Plan.md`.
+
+Current major reservations include:
+
+- Prologue Maps: 001-049
+- Prologue Switches: 0100-0299
+- Prologue Variables: 0050-0099
+- Prologue Common Events: 020-039
+- Prologue Items: 100-149
+- Prologue Enemies/Troops: 001-024
+
+System, Acts I-V, Epilogue, Debug, Deferred, and unallocated reserve ranges are explicitly defined in that file.
+
+The first concrete Prologue assignments are recorded in `Prologue_MZ_ID_Assignments.md`.
 
 ## 1.13 Versioning and Change Control
 
 Meaningful structural changes must be recorded in `CHANGELOG.md`.
 
-Changes that affect dependencies should record affected IDs, especially:
-
-- actor IDs
-- map IDs
-- switch IDs
-- variable IDs
-- item/equipment IDs
-- common-event IDs
-- scene IDs
+Changes that affect dependencies should record affected IDs, especially actor, map, switch, variable, item/equipment, common-event, and scene IDs.
 
 ## 1.14 Plugin and Custom-Code Policy
 
 Default to stock RPG Maker MZ behavior unless a plugin or custom JavaScript solves a demonstrated need.
 
-Every plugin must record:
+Every plugin must record purpose, version, source, license, dependencies, configuration notes, and affected systems.
 
-- purpose
-- version
-- source
-- license
-- dependencies
-- configuration notes
-- affected systems
-
-Custom JavaScript should be kept narrow, documented, and avoid replacing stock systems unnecessarily.
+Custom JavaScript should remain narrow, documented, and avoid replacing stock systems unnecessarily.
 
 ---
 
 # Section 2 — Story & Narrative Implementation
 
-Contains:
-
-- Prologue, Acts I–V, and Epilogue structure
-- story scenes and scene order
-- scene implementation registry
-- mandatory story beats
-- dialogue implementation
-- choices and branching logic
-- cinematics and scripted sequences
-- main quest spine
-- quest-state registry
-- world-state changes
-- lore delivery
-- deferred narrative content
+Contains Prologue/Acts/Epilogue structure, scene order, scene implementation registry, mandatory beats, dialogue, choices, cinematics, main quest spine, quest-state logic, world-state changes, lore delivery, and deferred narrative content.
 
 Primary question: **What happens, in what order, and what game state changes when it happens?**
+
+The current Prologue spine is defined in `../design/Prologue_Implementation_Decomposition.md` as twelve implementation scenes `PRO-SC-001` through `PRO-SC-012`.
 
 ---
 
 # Section 3 — Characters, Actors & Factions
 
-Contains:
-
-- playable actors
-- temporary/guest actors
-- NPCs and recurring story characters
-- classes
-- stat progression
-- learned skills
-- equipment restrictions
-- recruitment conditions
-- character visual states
-- factions and political relationships
+Contains playable actors, temporary/guest actors, NPCs, classes, progression, equipment restrictions, recruitment conditions, visual states, factions, and political relationships.
 
 Primary question: **Who exists, what can they do, and what state are they in?**
 
@@ -239,21 +231,7 @@ Primary question: **Who exists, what can they do, and what state are they in?**
 
 # Section 4 — World, Maps & Exploration
 
-Contains:
-
-- world regions and geography
-- map registry and hierarchy
-- map availability by story stage
-- tilesets
-- map transfers
-- local map events
-- travel/access rules
-- dungeon structure
-- town structure
-- puzzles
-- treasure locations
-- environmental storytelling
-- physical world-state changes
+Contains regions, geography, map registry/hierarchy, map availability, tilesets, transfers, local events, travel/access rules, dungeons, towns, puzzles, treasure, environmental storytelling, and physical world-state changes.
 
 Primary question: **Where is the player, what can they interact with, and where can they go?**
 
@@ -261,44 +239,17 @@ Primary question: **Where is the player, what can they interact with, and where 
 
 # Section 5 — Combat & Progression Systems
 
-Contains:
-
-- battle rules
-- party rules
-- enemies
-- troops
-- bosses
-- encounter rules
-- skills
-- states
-- elements and damage types
-- experience and levels
-- stat progression
-- defeat/escape behavior
-- balancing targets
+Contains battle rules, party rules, enemies, troops, bosses, encounters, skills, states, elements, experience, levels, stat progression, defeat/escape behavior, and balancing targets.
 
 Primary question: **How does the RPG play when combat starts?**
+
+The locked Prologue currently requires no CORE combat.
 
 ---
 
 # Section 6 — Items, Equipment & Economy
 
-Contains:
-
-- consumables
-- key items
-- quest items
-- weapons
-- armor
-- accessories
-- relics
-- shops and vendors
-- currency
-- prices
-- loot
-- chest rewards
-- boss rewards
-- equipment progression
+Contains consumables, key items, quest items, weapons, armor, accessories, relics, shops, vendors, currency, prices, loot, rewards, and equipment progression.
 
 Primary question: **What does the player acquire, equip, spend, consume, or carry?**
 
@@ -306,40 +257,17 @@ Primary question: **What does the player acquire, equip, spend, consume, or carr
 
 # Section 7 — Game State, Events & Logic
 
-Contains:
-
-- global switches
-- variables
-- self-switch conventions
-- common events
-- event-state rules
-- story progression state
-- reusable temporary variables
-- system flags
-- event dependencies
-- cross-reference registry
+Contains global switches, variables, self-switch conventions, Common Events, event-state rules, story progression state, reusable variables, system flags, dependencies, and cross-reference registry.
 
 Primary question: **What logic makes the story and systems behave correctly?**
+
+`VR-0001 / SYS_StoryStage` is the primary linear story-spine variable. Persistent switches record facts that must remain independently queryable.
 
 ---
 
 # Section 8 — Presentation & Assets
 
-Contains:
-
-- character sprites
-- face graphics
-- battlers
-- tilesets
-- pictures and story illustrations
-- interface graphics
-- animations and visual effects
-- music
-- ambient audio
-- sound effects
-- dialogue presentation rules
-- menus and title/game-over presentation
-- asset licensing/source tracking
+Contains character sprites, faces, battlers, tilesets, pictures, story illustrations, UI graphics, animations, effects, music, ambient audio, sound effects, dialogue presentation, menus, and licensing/source tracking.
 
 Primary question: **How does the player see and hear the game?**
 
@@ -347,23 +275,7 @@ Primary question: **How does the player see and hear the game?**
 
 # Section 9 — Production, Testing & Release
 
-Contains:
-
-- asset registry
-- ID registry
-- implementation status
-- debug systems
-- development maps
-- continuity testing
-- event testing
-- transfer testing
-- combat testing
-- save/load testing
-- regression testing
-- sequence-breaking and soft-lock testing
-- release packaging
-- credits and licensing
-- deferred-content tracking
+Contains asset/ID registries, implementation status, debug systems, development maps, continuity/event/transfer/combat/save/regression testing, sequence-breaking and soft-lock tests, packaging, credits/licensing, and deferred-content tracking.
 
 Primary question: **How do we know the game is correct, reproducible, and ready to ship?**
 
@@ -373,17 +285,8 @@ Primary question: **How do we know the game is correct, reproducible, and ready 
 
 The first full implementation target is the **Prologue vertical slice**.
 
-The Prologue should be built end-to-end before full production expands into later acts. Its purpose is to establish a repeatable workflow for:
+The Prologue is built end-to-end before production expands into later acts. Its purpose is to establish a repeatable workflow for story decomposition, database assignment, map planning, switches/variables, event construction, dialogue/cinematics, placeholder assets, testing, JSON generation, and validation.
 
-1. story scene decomposition
-2. actor/database assignment
-3. map planning
-4. switches and variables
-5. event construction
-6. dialogue implementation
-7. battle implementation
-8. visual/audio placeholders
-9. testing and regression checks
-10. JSON generation and validation
+Optional side quests, historical books, hidden content, decorative interactions, and similar additions remain DEFERRED until the core story spine is functioning.
 
-Optional side quests, historical books, hidden content, decorative interactions, and similar additions remain **DEFERRED** until the core story spine is functioning.
+The next implementation target is `MAP-001 / Map001.json` for `PRO-SC-001 The Forgotten Place`.
