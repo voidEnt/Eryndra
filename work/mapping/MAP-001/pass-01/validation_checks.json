@@ -1,0 +1,199 @@
+{
+  "map_sha256": "469b92fb6218e84eea0f957ccc810b738e6114b61d926aba4a3908f5877243be",
+  "sample_archive_sha256": "b09e8c96856098aa94d01b563abc40e97321f3eca99ef7cbe836632d94cfd768",
+  "checks": [
+    {
+      "check": "canvas",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "six integral layers",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "sample fixture tileset only",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "empty display name",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "no encounters or autoplay",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "no parallax or loop",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "zero regions",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "valid shadow bits",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "exactly six events plus null zero",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "anchor 1 identity and location",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "anchor 1 inert unconditional blank page",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "anchor 2 identity and location",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "anchor 2 inert unconditional blank page",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "anchor 3 identity and location",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "anchor 3 inert unconditional blank page",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "anchor 4 identity and location",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "anchor 4 inert unconditional blank page",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "anchor 5 identity and location",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "anchor 5 inert unconditional blank page",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "anchor 6 identity and location",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "anchor 6 inert unconditional blank page",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "tile flags exist",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "ring reservation has wall backing and no upper graphics",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "manifest tile coverage and flags",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "manifest sample provenance and isolated dependency",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "outer buffer blocks all four directions",
+      "status": "PASS",
+      "details": {
+        "tested_cells": 343,
+        "leaks": []
+      }
+    },
+    {
+      "check": "no ladder counter damage flags",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "check": "floor cannot escape sealed chamber",
+      "status": "PASS",
+      "details": {
+        "reachable_from_14_10": 104
+      }
+    },
+    {
+      "check": "one connected walkable chamber",
+      "status": "PASS",
+      "details": {
+        "walkable_cells": 104,
+        "disconnected": []
+      }
+    },
+    {
+      "check": "default camera within map and full ring rectangle visible",
+      "status": "PASS",
+      "details": {
+        "tile_bounds_inclusive": [
+          6,
+          4,
+          22,
+          16
+        ]
+      }
+    },
+    {
+      "check": "alternate camera within map and full ring rectangle visible",
+      "status": "PASS",
+      "details": {
+        "tile_bounds_inclusive": [
+          6,
+          2,
+          22,
+          14
+        ]
+      }
+    }
+  ],
+  "tile_flags": {
+    "0": 16,
+    "1536": 1551,
+    "1559": 1536,
+    "7856": 3599,
+    "7857": 3599,
+    "7858": 3599,
+    "7859": 3599,
+    "7860": 3599,
+    "7862": 3599,
+    "7864": 3599,
+    "7865": 3599,
+    "7868": 3599
+  },
+  "mz_editor_open": "NOT RUN",
+  "scope": "Independent static JSON, exact anchors, tile-flag collision and camera bounds; visual/canon review recorded separately."
+}

@@ -1,0 +1,199 @@
+{
+  "sample_archive_sha256": "b09e8c96856098aa94d01b563abc40e97321f3eca99ef7cbe836632d94cfd768",
+  "review_fixture_tileset_id": 4,
+  "production_tileset_id": null,
+  "tiles": [
+    {
+      "tile_id": 1536,
+      "sheet": "Dungeon_A5.png",
+      "flag_decimal": 1551,
+      "flag_hex": "0x60f",
+      "passage_bits": 15,
+      "ladder": false,
+      "bush": false,
+      "counter": false,
+      "damage_floor": false,
+      "terrain_tag": 0,
+      "purpose": "solid black outer buffer",
+      "count": 343
+    },
+    {
+      "tile_id": 1559,
+      "sheet": "Dungeon_A5.png",
+      "flag_decimal": 1536,
+      "flag_hex": "0x600",
+      "passage_bits": 0,
+      "ladder": false,
+      "bush": false,
+      "counter": false,
+      "damage_floor": false,
+      "terrain_tag": 0,
+      "purpose": "fitted-stone floor placeholder",
+      "count": 104
+    },
+    {
+      "tile_id": 7856,
+      "sheet": "Dungeon_A4.png",
+      "flag_decimal": 3599,
+      "flag_hex": "0xe0f",
+      "passage_bits": 15,
+      "ladder": false,
+      "bush": false,
+      "counter": false,
+      "damage_floor": false,
+      "terrain_tag": 0,
+      "purpose": "sealed dark stone wall placeholder",
+      "count": 58
+    },
+    {
+      "tile_id": 7857,
+      "sheet": "Dungeon_A4.png",
+      "flag_decimal": 3599,
+      "flag_hex": "0xe0f",
+      "passage_bits": 15,
+      "ladder": false,
+      "bush": false,
+      "counter": false,
+      "damage_floor": false,
+      "terrain_tag": 0,
+      "purpose": "sealed dark stone wall placeholder",
+      "count": 20
+    },
+    {
+      "tile_id": 7858,
+      "sheet": "Dungeon_A4.png",
+      "flag_decimal": 3599,
+      "flag_hex": "0xe0f",
+      "passage_bits": 15,
+      "ladder": false,
+      "bush": false,
+      "counter": false,
+      "damage_floor": false,
+      "terrain_tag": 0,
+      "purpose": "sealed dark stone wall placeholder",
+      "count": 30
+    },
+    {
+      "tile_id": 7859,
+      "sheet": "Dungeon_A4.png",
+      "flag_decimal": 3599,
+      "flag_hex": "0xe0f",
+      "passage_bits": 15,
+      "ladder": false,
+      "bush": false,
+      "counter": false,
+      "damage_floor": false,
+      "terrain_tag": 0,
+      "purpose": "sealed dark stone wall placeholder",
+      "count": 1
+    },
+    {
+      "tile_id": 7860,
+      "sheet": "Dungeon_A4.png",
+      "flag_decimal": 3599,
+      "flag_hex": "0xe0f",
+      "passage_bits": 15,
+      "ladder": false,
+      "bush": false,
+      "counter": false,
+      "damage_floor": false,
+      "terrain_tag": 0,
+      "purpose": "sealed dark stone wall placeholder",
+      "count": 20
+    },
+    {
+      "tile_id": 7862,
+      "sheet": "Dungeon_A4.png",
+      "flag_decimal": 3599,
+      "flag_hex": "0xe0f",
+      "passage_bits": 15,
+      "ladder": false,
+      "bush": false,
+      "counter": false,
+      "damage_floor": false,
+      "terrain_tag": 0,
+      "purpose": "sealed dark stone wall placeholder",
+      "count": 1
+    },
+    {
+      "tile_id": 7864,
+      "sheet": "Dungeon_A4.png",
+      "flag_decimal": 3599,
+      "flag_hex": "0xe0f",
+      "passage_bits": 15,
+      "ladder": false,
+      "bush": false,
+      "counter": false,
+      "damage_floor": false,
+      "terrain_tag": 0,
+      "purpose": "sealed dark stone wall placeholder",
+      "count": 30
+    },
+    {
+      "tile_id": 7865,
+      "sheet": "Dungeon_A4.png",
+      "flag_decimal": 3599,
+      "flag_hex": "0xe0f",
+      "passage_bits": 15,
+      "ladder": false,
+      "bush": false,
+      "counter": false,
+      "damage_floor": false,
+      "terrain_tag": 0,
+      "purpose": "sealed dark stone wall placeholder",
+      "count": 1
+    },
+    {
+      "tile_id": 7868,
+      "sheet": "Dungeon_A4.png",
+      "flag_decimal": 3599,
+      "flag_hex": "0xe0f",
+      "passage_bits": 15,
+      "ladder": false,
+      "bush": false,
+      "counter": false,
+      "damage_floor": false,
+      "terrain_tag": 0,
+      "purpose": "sealed dark stone wall placeholder",
+      "count": 1
+    }
+  ],
+  "empty_layer_value": {
+    "tile_id": 0,
+    "flag": 16,
+    "meaning": "star/skip; never used as collision foundation"
+  },
+  "camera_frames": [
+    {
+      "center": [
+        14,
+        10
+      ],
+      "bounds_inclusive": [
+        6,
+        4,
+        22,
+        16
+      ]
+    },
+    {
+      "center": [
+        14,
+        8
+      ],
+      "bounds_inclusive": [
+        6,
+        2,
+        22,
+        14
+      ]
+    }
+  ],
+  "ring_rectangle_inclusive": [
+    12,
+    4,
+    16,
+    7
+  ],
+  "runtime_ring_asset": false
+}

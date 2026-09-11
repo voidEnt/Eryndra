@@ -4,6 +4,16 @@ This changelog records meaningful structural and implementation-reference change
 
 ---
 
+## 2026-09-11 — MAP-001 Mapping skeleton pass 01
+
+- Separate Mapper and Validator worked from baseline c5dda89c8eff08cdfc74c1fa9780b14322f50ff7 and the approved blueprint.
+- Added candidate map, raw tile/camera composites, review-only ring-state diagram, dependency note/manifest, reproduction script and independent validation evidence under work/mapping/MAP-001/pass-01/.
+- Static skeleton checks passed; actual RPG Maker MZ editor-open is NOT RUN. Mapping acceptance and Eventwright handoff remain pending.
+- Runtime ring/material details and production tileset registration remain outstanding; no production database import, story event implementation or promotion to game/data.
+- MAP-001 remains Assigned in the production index; no Tested or Locked status is claimed.
+
+---
+
 ## 2026-09-11 — MAP-001 Foreman preflight
 
 - Compared the existing blueprint with supplied PrologueStoryv0.3 PDF pages 2 and 5 and sample MZ configuration.
@@ -127,3 +137,4 @@ This changelog records meaningful structural and implementation-reference change
 
 ### Current Next Step
 - Decompose the locked Prologue into implementation scenes and assign initial CORE entries before allocating detailed RPG Maker IDs.
+
