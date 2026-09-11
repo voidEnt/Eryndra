@@ -2,7 +2,7 @@
 
 **Version:** 0.1  
 **Scope:** Prologue CORE implementation  
-**Status:** Assigned; not yet implemented
+**Status:** Assigned; MAP-001 presentation and event subset implemented as a statically validated work-stage candidate
 
 These assignments are the first concrete bridge from the living Bible to RPG Maker MZ JSON data.
 
@@ -26,7 +26,7 @@ Bible map IDs intentionally match MZ map IDs.
 
 | Bible ID | MZ Map ID / File | Map Name | Required Scenes | Status |
 |---|---|---|---|---|
-| `MAP-001` | `Map001.json` | Forgotten Watcher Station | `PRO-SC-001`, `PRO-SC-012` | Assigned |
+| `MAP-001` | `Map001.json` | Forgotten Watcher Station | `PRO-SC-001`, `PRO-SC-012` | Implemented — runtime test pending |
 | `MAP-002` | `Map002.json` | Brackenford - Venn Home | `PRO-SC-002`, `PRO-SC-011` | Assigned |
 | `MAP-003` | `Map003.json` | Brackenford | `PRO-SC-003`, `PRO-SC-005`, `PRO-SC-010` | Assigned |
 | `MAP-004` | `Map004.json` | Brackenford - Survey Office | `PRO-SC-004`, `PRO-SC-010` | Assigned |
@@ -123,17 +123,29 @@ The reserved Prologue ranges 001-024 remain empty. This is intentional: the lock
 
 ---
 
-# Next Implementation Target
+# Current Implementation Gate
 
-With the allocation layer established, the next technical target is `MAP-001 / Map001.json` and `PRO-SC-001 The Forgotten Place`.
+`MAP-001 / Map001.json` and the MAP-001 portion of `PRO-SC-001 The Forgotten Place` now exist as an integrated work-stage candidate under `work/mapping/MAP-001/pass-02/`.
 
-That implementation should define:
+Static validation is complete. The current gate is the live RPG Maker MZ playtest defined in `work/mapping/MAP-001/pass-02/validation/RUNTIME_PLAYTEST.md`. Successful evidence advances MAP-001 to Tested and authorizes production promotion. The unresolved transfer to MAP-002 remains an explicit hook until MAP-002 coordinates exist.
 
-1. map dimensions and tileset strategy
-2. opening cinematic event controller(s)
-3. New Game initialization of `VR-0001`
-4. setting `SW-0100` and `SW-0101`
-5. title transition
-6. handoff to `MAP-002` / `PRO-SC-002`
-7. placeholder visual/audio assets where final assets do not yet exist
-8. a repeatable JSON validation/playtest checklist
+---
+
+# MAP-001 Presentation Asset Assignments
+
+These assignments support the MAP-001 proof build and establish the first reusable cinematic-map asset pattern.
+
+| Bible ID | Runtime name | Type | Scope | Status |
+|---|---|---|---|---|
+| TIL-007 | Cinematic Parallax Collision | Tileset | System / cinematic maps | Implemented |
+| PIC-001 | MAP001_WatcherStation_Base | Map parallax | MAP-001 | Implemented |
+| PIC-002 | MAP001_Ring_Pulse | Picture overlay | PRO-SC-001 / 012 | Implemented |
+| PIC-003 | MAP001_Ring_Residual | Picture overlay | PRO-SC-001 | Implemented |
+| PIC-004 | MAP001_Ring_Propagated | Picture overlay | PRO-SC-012 | Implemented |
+| PIC-005 | MAP001_Dust_Tremor | Picture overlay | PRO-SC-001 | Implemented |
+| PIC-006 | SYS_Eryndra_Title | Picture overlay | PRO-SC-001 | Implemented |
+| SE-001 | Ancient_ThreeNote_Resonance | Sound effect | Recurring Prologue motif | Implemented |
+
+TIL-007 is intentionally placed after the six stock MZ tileset slots. It uses transparent tiles for cinematic parallax collision: tile 1536 is blocked and tile 1537 is passable. Its production database entry and assets must be installed together.
+
+These assets have passed static validation as work-stage implementations. Live MZ playback remains required before Tested status or production promotion. Supplied ZIP files remain immutable and are not runtime dependencies.

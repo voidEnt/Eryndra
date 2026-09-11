@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "source_map": "work/mapping/MAP-001/pass-01/Map001.json",
+  "source_sha256": "469b92fb6218e84eea0f957ccc810b738e6114b61d926aba4a3908f5877243be",
+  "output_map": "work/mapping/MAP-001/pass-02/eventwright/Map001.json",
+  "output_sha256": "9eb52bb228437fa47c13746abb74074f9bd8c6ef2b0bfebfdd02c155e3616e47",
+  "width": 29,
+  "height": 21,
+  "tileset_id": 7,
+  "parallax": "!MAP001_WatcherStation_Base",
+  "preserved_anchor_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ]
+}

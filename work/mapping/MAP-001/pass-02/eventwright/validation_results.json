@@ -1,0 +1,208 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "map dimensions",
+      "status": "PASS",
+      "evidence": "29x21"
+    },
+    {
+      "name": "registered tileset",
+      "status": "PASS",
+      "evidence": "tilesetId=7"
+    },
+    {
+      "name": "fixed map parallax",
+      "status": "PASS",
+      "evidence": "!MAP001_WatcherStation_Base"
+    },
+    {
+      "name": "accepted collision geometry",
+      "status": "PASS",
+      "evidence": "accepted floor -> 1537; all walls/buffer -> 1536"
+    },
+    {
+      "name": "upper tile layers clear",
+      "status": "PASS",
+      "evidence": "layers 1-5 use tile 0 only"
+    },
+    {
+      "name": "six anchors only",
+      "status": "PASS",
+      "evidence": "events array length=7"
+    },
+    {
+      "name": "anchor 1 identity/coordinate",
+      "status": "PASS",
+      "evidence": "('EV_Story_PrologueOpening', 14, 10)"
+    },
+    {
+      "name": "anchor 2 identity/coordinate",
+      "status": "PASS",
+      "evidence": "('EV_Story_PrologueOmen', 14, 10)"
+    },
+    {
+      "name": "anchor 3 identity/coordinate",
+      "status": "PASS",
+      "evidence": "('EV_Visual_FracturedRing', 14, 6)"
+    },
+    {
+      "name": "anchor 4 identity/coordinate",
+      "status": "PASS",
+      "evidence": "('EV_FX_DustTremor', 14, 12)"
+    },
+    {
+      "name": "anchor 5 identity/coordinate",
+      "status": "PASS",
+      "evidence": "('EV_Camera_Chamber', 14, 10)"
+    },
+    {
+      "name": "anchor 6 identity/coordinate",
+      "status": "PASS",
+      "evidence": "('EV_Camera_Ring', 14, 8)"
+    },
+    {
+      "name": "opening has autorun + switch-101 stop page",
+      "status": "PASS",
+      "evidence": "page 1 autorun; page 2 blank on SW-0101"
+    },
+    {
+      "name": "opening hides player/followers",
+      "status": "PASS",
+      "evidence": "Change Transparency ON; Followers HIDE"
+    },
+    {
+      "name": "opening state writes",
+      "status": "PASS",
+      "evidence": "SW100 ON; V1=1001; SW101 ON; V1=1002"
+    },
+    {
+      "name": "opening picture sequence",
+      "status": "PASS",
+      "evidence": "['MAP001_Dust_Tremor', 'MAP001_Ring_Pulse', 'MAP001_Ring_Residual', 'SYS_Eryndra_Title']"
+    },
+    {
+      "name": "dark beat before residual returns",
+      "status": "PASS",
+      "evidence": "24-frame fully dark pause after pulse erase"
+    },
+    {
+      "name": "title visible alone over black",
+      "status": "PASS",
+      "evidence": "after Fade Out, map tint resets to full black before title placement and Fade In"
+    },
+    {
+      "name": "opening three-note cue once",
+      "status": "PASS",
+      "evidence": "['Ancient_ThreeNote_Resonance']"
+    },
+    {
+      "name": "opening transfer hook and no guessed transfer",
+      "status": "PASS",
+      "evidence": "explicit hook; no Transfer Player command"
+    },
+    {
+      "name": "omen page gates",
+      "status": "PASS",
+      "evidence": "V1>=1012 autorun; local A stop; SW112 final stop"
+    },
+    {
+      "name": "propagated ring shown",
+      "status": "PASS",
+      "evidence": "['MAP001_Ring_Propagated']"
+    },
+    {
+      "name": "omen three-note cue once",
+      "status": "PASS",
+      "evidence": "['Ancient_ThreeNote_Resonance']"
+    },
+    {
+      "name": "omen continuation hooks",
+      "status": "PASS",
+      "evidence": "both off-map hooks present"
+    },
+    {
+      "name": "omen defers global completion",
+      "status": "PASS",
+      "evidence": "does not set SW112 or story stage 2001"
+    },
+    {
+      "name": "omen local replay guard",
+      "status": "PASS",
+      "evidence": "Self Switch A ON"
+    },
+    {
+      "name": "no dialogue/transfer/battle/inventory/script/plugin commands",
+      "status": "PASS",
+      "evidence": "found=[]"
+    },
+    {
+      "name": "anchor 3 remains inert",
+      "status": "PASS",
+      "evidence": "single terminator command"
+    },
+    {
+      "name": "anchor 4 remains inert",
+      "status": "PASS",
+      "evidence": "single terminator command"
+    },
+    {
+      "name": "anchor 5 remains inert",
+      "status": "PASS",
+      "evidence": "single terminator command"
+    },
+    {
+      "name": "anchor 6 remains inert",
+      "status": "PASS",
+      "evidence": "single terminator command"
+    },
+    {
+      "name": "asset MAP001_WatcherStation_Base.png",
+      "status": "PASS",
+      "evidence": "dimensions=(1392, 1008), alpha_channel=False, sha256=4fb64a66a9beabf1994f71abe526c1b3b2c3a59fb11435a57ee8a3f4ae9693f1"
+    },
+    {
+      "name": "asset MAP001_Ring_Pulse.png",
+      "status": "PASS",
+      "evidence": "dimensions=(816, 624), alpha_channel=True, sha256=211e5d3b236d0437f5a2ceac8fff93b28a33f8a234d4b272e3218567e64595c7"
+    },
+    {
+      "name": "asset MAP001_Ring_Residual.png",
+      "status": "PASS",
+      "evidence": "dimensions=(816, 624), alpha_channel=True, sha256=fecb3d4f695bb3c5bce8efd3a02ea05d29e974a102551a2fd5e1340eb2d05de7"
+    },
+    {
+      "name": "asset MAP001_Ring_Propagated.png",
+      "status": "PASS",
+      "evidence": "dimensions=(816, 624), alpha_channel=True, sha256=5f082c2c73e73000f9a15319fd781c155d7b36241fb1c8a82c47a1d73a32d5be"
+    },
+    {
+      "name": "asset MAP001_Dust_Tremor.png",
+      "status": "PASS",
+      "evidence": "dimensions=(816, 624), alpha_channel=True, sha256=6255168f89c670184446e4d8dd39b7470a25d2e233fa78adba07e7e3189dcb3a"
+    },
+    {
+      "name": "asset SYS_Eryndra_Title.png",
+      "status": "PASS",
+      "evidence": "dimensions=(816, 624), alpha_channel=True, sha256=837ccffafe8cc39339249f6ba8e92dd83ac85b0e3710b9ce46436638eaa6b63c"
+    },
+    {
+      "name": "asset Eryndra_CinematicCollision_A5.png",
+      "status": "PASS",
+      "evidence": "dimensions=(768, 768), alpha_channel=True, sha256=9542a32e82323eb002e9f3da746fc00f58f3553c6bb31cdf73ccb1253755c7e0"
+    },
+    {
+      "name": "three-note OGG readable",
+      "status": "PASS",
+      "evidence": "duration=3.400000s, sha256=8a55c42597e2db818e81d111d4d8e6da76115213402b1af29f298a2696c47faa"
+    },
+    {
+      "name": "required scripts present",
+      "status": "PASS",
+      "evidence": "install_into_blank_mz_project.py, build_eventwright_candidate.py"
+    }
+  ],
+  "check_count": 40,
+  "passed": 40,
+  "failed": 0
+}

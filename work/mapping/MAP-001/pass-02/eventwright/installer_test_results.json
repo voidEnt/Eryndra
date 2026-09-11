@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "tests": [
+    {
+      "name": "install into generated blank project",
+      "passed": true,
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "name": "refuse SampleGenerated path without mutation",
+      "passed": true,
+      "returncode": 1,
+      "stderr": "INSTALL REFUSED: target is inside a reference/source tree\n"
+    },
+    {
+      "name": "refuse nonblank project without mutation",
+      "passed": true,
+      "returncode": 1,
+      "stderr": "INSTALL REFUSED: target Map001 already contains events and is not blank\n"
+    },
+    {
+      "name": "refuse occupied Tileset 7 with entire tree unchanged",
+      "passed": true,
+      "returncode": 1,
+      "stderr": "INSTALL REFUSED: Tileset ID 7 is already occupied\n"
+    }
+  ]
+}

@@ -1,0 +1,311 @@
+{
+  "status": "PASS",
+  "verdict": "STATIC_PASS",
+  "final_room_acceptance": "CONDITIONAL_RUNTIME_PLAYTEST",
+  "scope": "independent static and artifact validation; RPG Maker MZ runtime playtest excluded",
+  "checks": [
+    {
+      "name": "immutable archive: 01-EryndraStory.zip",
+      "status": "PASS",
+      "evidence": "sha256=56f9d5336d7a8736b92745243c1baeb941786c005741a76cd327f573a2654611",
+      "owner": "Technical"
+    },
+    {
+      "name": "immutable archive: 02-SampleGenerated.zip",
+      "status": "PASS",
+      "evidence": "sha256=b09e8c96856098aa94d01b563abc40e97321f3eca99ef7cbe836632d94cfd768",
+      "owner": "Technical"
+    },
+    {
+      "name": "manifest hash: assets/img/parallaxes/MAP001_WatcherStation_Base.png",
+      "status": "PASS",
+      "evidence": "sha256=4fb64a66a9beabf1994f71abe526c1b3b2c3a59fb11435a57ee8a3f4ae9693f1",
+      "owner": "Asset"
+    },
+    {
+      "name": "manifest hash: assets/img/pictures/MAP001_Ring_Pulse.png",
+      "status": "PASS",
+      "evidence": "sha256=211e5d3b236d0437f5a2ceac8fff93b28a33f8a234d4b272e3218567e64595c7",
+      "owner": "Asset"
+    },
+    {
+      "name": "manifest hash: assets/img/pictures/MAP001_Ring_Residual.png",
+      "status": "PASS",
+      "evidence": "sha256=fecb3d4f695bb3c5bce8efd3a02ea05d29e974a102551a2fd5e1340eb2d05de7",
+      "owner": "Asset"
+    },
+    {
+      "name": "manifest hash: assets/img/pictures/MAP001_Ring_Propagated.png",
+      "status": "PASS",
+      "evidence": "sha256=5f082c2c73e73000f9a15319fd781c155d7b36241fb1c8a82c47a1d73a32d5be",
+      "owner": "Asset"
+    },
+    {
+      "name": "manifest hash: assets/img/pictures/MAP001_Dust_Tremor.png",
+      "status": "PASS",
+      "evidence": "sha256=6255168f89c670184446e4d8dd39b7470a25d2e233fa78adba07e7e3189dcb3a",
+      "owner": "Asset"
+    },
+    {
+      "name": "manifest hash: assets/img/pictures/SYS_Eryndra_Title.png",
+      "status": "PASS",
+      "evidence": "sha256=837ccffafe8cc39339249f6ba8e92dd83ac85b0e3710b9ce46436638eaa6b63c",
+      "owner": "Asset"
+    },
+    {
+      "name": "manifest hash: assets/img/tilesets/Eryndra_CinematicCollision_A5.png",
+      "status": "PASS",
+      "evidence": "sha256=9542a32e82323eb002e9f3da746fc00f58f3553c6bb31cdf73ccb1253755c7e0",
+      "owner": "Asset"
+    },
+    {
+      "name": "manifest hash: assets/data/Tileset007.fragment.json",
+      "status": "PASS",
+      "evidence": "sha256=7fa7be8cf7a939cff0ba0a81381ddf540d420c14d6aea70cf4aedd661351301c",
+      "owner": "Asset"
+    },
+    {
+      "name": "manifest hash: assets/audio/se/Ancient_ThreeNote_Resonance.ogg",
+      "status": "PASS",
+      "evidence": "sha256=8a55c42597e2db818e81d111d4d8e6da76115213402b1af29f298a2696c47faa",
+      "owner": "Asset"
+    },
+    {
+      "name": "review integrity: review/ChamberCamera_Dormant_816x624.jpg",
+      "status": "PASS",
+      "evidence": "sha256=8f8e4a9f1ac4a5ef359374afff67c3d9453ea0e65cf9a287ca61177dc5b5fcbe; manifest=8f8e4a9f1ac4a5ef359374afff67c3d9453ea0e65cf9a287ca61177dc5b5fcbe; PNG verified",
+      "owner": "Asset"
+    },
+    {
+      "name": "review integrity: review/ChamberCamera_Dust_816x624.jpg",
+      "status": "PASS",
+      "evidence": "sha256=f1be07b5c3f6744b5c13c40e8466e983f6cbae37b176c367d147c8876e85ac4d; manifest=f1be07b5c3f6744b5c13c40e8466e983f6cbae37b176c367d147c8876e85ac4d; PNG verified",
+      "owner": "Asset"
+    },
+    {
+      "name": "review integrity: review/RingCamera_Dormant_816x624.jpg",
+      "status": "PASS",
+      "evidence": "sha256=3e1415b96af7ebdde049251f61b254256192b5a1da3dd27bf97f0ac7dbb62048; manifest=3e1415b96af7ebdde049251f61b254256192b5a1da3dd27bf97f0ac7dbb62048; PNG verified",
+      "owner": "Asset"
+    },
+    {
+      "name": "review integrity: review/RingCamera_Dust_tremor_816x624.jpg",
+      "status": "PASS",
+      "evidence": "sha256=eaad79b70f9e43278675ee917765790f48b6df3ad46e42d6395accdf7690cd56; manifest=eaad79b70f9e43278675ee917765790f48b6df3ad46e42d6395accdf7690cd56; PNG verified",
+      "owner": "Asset"
+    },
+    {
+      "name": "review integrity: review/RingCamera_Propagated_816x624.jpg",
+      "status": "PASS",
+      "evidence": "sha256=e516b62b5f1c7340f27b766be86aca6db011b7435d1d4069c5d7eb6a81441b8d; manifest=e516b62b5f1c7340f27b766be86aca6db011b7435d1d4069c5d7eb6a81441b8d; PNG verified",
+      "owner": "Asset"
+    },
+    {
+      "name": "review integrity: review/RingCamera_Pulse_816x624.jpg",
+      "status": "PASS",
+      "evidence": "sha256=2174b2b8431fdff53b0d8f15b37fbc8ba77dd7318d8d12c27746152579e6e259; manifest=2174b2b8431fdff53b0d8f15b37fbc8ba77dd7318d8d12c27746152579e6e259; PNG verified",
+      "owner": "Asset"
+    },
+    {
+      "name": "review integrity: review/RingCamera_Residual_816x624.jpg",
+      "status": "PASS",
+      "evidence": "sha256=84c87f6e592b43e3cc357c1ef0b8cbfdc4f7a887344929be138b6c8294594a7d; manifest=84c87f6e592b43e3cc357c1ef0b8cbfdc4f7a887344929be138b6c8294594a7d; PNG verified",
+      "owner": "Asset"
+    },
+    {
+      "name": "review integrity: review/Ring_States_ContactSheet_1632x1248.jpg",
+      "status": "PASS",
+      "evidence": "sha256=df5d6e710db6583a4335e667136c14a45d836ad56eb9586e7f26b71a5501e0f3; manifest=df5d6e710db6583a4335e667136c14a45d836ad56eb9586e7f26b71a5501e0f3; PNG verified",
+      "owner": "Asset"
+    },
+    {
+      "name": "base matches documented deterministic source treatment",
+      "status": "PASS",
+      "evidence": "source=MAP001_CanonCorrected_CameraFit.jpg; runtime=1392x1008/P",
+      "owner": "Asset"
+    },
+    {
+      "name": "image contract: img/parallaxes/MAP001_WatcherStation_Base.png",
+      "status": "PASS",
+      "evidence": "size=(1392, 1008); mode=P",
+      "owner": "Asset"
+    },
+    {
+      "name": "image contract: img/pictures/MAP001_Ring_Pulse.png",
+      "status": "PASS",
+      "evidence": "size=(816, 624); mode=RGBA",
+      "owner": "Asset"
+    },
+    {
+      "name": "image contract: img/pictures/MAP001_Ring_Residual.png",
+      "status": "PASS",
+      "evidence": "size=(816, 624); mode=RGBA",
+      "owner": "Asset"
+    },
+    {
+      "name": "image contract: img/pictures/MAP001_Ring_Propagated.png",
+      "status": "PASS",
+      "evidence": "size=(816, 624); mode=RGBA",
+      "owner": "Asset"
+    },
+    {
+      "name": "image contract: img/pictures/MAP001_Dust_Tremor.png",
+      "status": "PASS",
+      "evidence": "size=(816, 624); mode=RGBA",
+      "owner": "Asset"
+    },
+    {
+      "name": "image contract: img/pictures/SYS_Eryndra_Title.png",
+      "status": "PASS",
+      "evidence": "size=(816, 624); mode=RGBA",
+      "owner": "Asset"
+    },
+    {
+      "name": "image contract: img/tilesets/Eryndra_CinematicCollision_A5.png",
+      "status": "PASS",
+      "evidence": "size=(768, 768); mode=RGBA",
+      "owner": "Asset"
+    },
+    {
+      "name": "Git-facing package file ceiling",
+      "status": "PASS",
+      "evidence": "largest=assets/img/parallaxes/MAP001_WatcherStation_Base.png (521623 bytes); ceiling=716800",
+      "owner": "Asset"
+    },
+    {
+      "name": "map dimensions",
+      "status": "PASS",
+      "evidence": "29x21",
+      "owner": "Mapper"
+    },
+    {
+      "name": "tileset registration",
+      "status": "PASS",
+      "evidence": "tilesetId=7",
+      "owner": "Technical"
+    },
+    {
+      "name": "fixed map-space parallax",
+      "status": "PASS",
+      "evidence": "name=!MAP001_WatcherStation_Base; loops=False/False",
+      "owner": "Eventwright"
+    },
+    {
+      "name": "collision tile domain",
+      "status": "PASS",
+      "evidence": "layer0 tile IDs=[1536, 1537]",
+      "owner": "Mapper"
+    },
+    {
+      "name": "upper tile layers clear",
+      "status": "PASS",
+      "evidence": "upper layer IDs=[0]",
+      "owner": "Mapper"
+    },
+    {
+      "name": "six stable anchors",
+      "status": "PASS",
+      "evidence": "{1: ('EV_Story_PrologueOpening', 14, 10), 2: ('EV_Story_PrologueOmen', 14, 10), 3: ('EV_Visual_FracturedRing', 14, 6), 4: ('EV_FX_DustTremor', 14, 12), 5: ('EV_Camera_Chamber', 14, 10), 6: ('EV_Camera_Ring', 14, 8)}",
+      "owner": "Eventwright"
+    },
+    {
+      "name": "opening page gates",
+      "status": "PASS",
+      "evidence": "page 1 autorun; page 2 inert when SW101 ON",
+      "owner": "Eventwright"
+    },
+    {
+      "name": "omen page gates",
+      "status": "PASS",
+      "evidence": "V1>=1012 autorun; Self A stop; SW112 final stop",
+      "owner": "Eventwright"
+    },
+    {
+      "name": "no forbidden command classes",
+      "status": "PASS",
+      "evidence": "found=[]",
+      "owner": "Eventwright"
+    },
+    {
+      "name": "three-note asset invoked once per sequence",
+      "status": "PASS",
+      "evidence": "opening=['Ancient_ThreeNote_Resonance']; omen=['Ancient_ThreeNote_Resonance']",
+      "owner": "Eventwright"
+    },
+    {
+      "name": "opening state result",
+      "status": "PASS",
+      "evidence": "switches=[[100, 100, 0], [101, 101, 0]]; variables=[[1, 1, 0, 0, 1001], [1, 1, 0, 0, 1002]]",
+      "owner": "Eventwright"
+    },
+    {
+      "name": "closing defers global completion",
+      "status": "PASS",
+      "evidence": "SW112 and stage 2001 absent",
+      "owner": "Eventwright"
+    },
+    {
+      "name": "canon pause before residual",
+      "status": "PASS",
+      "evidence": "wait frames between pulse death and residual=[24]",
+      "owner": "Eventwright"
+    },
+    {
+      "name": "title reveals against black",
+      "status": "PASS",
+      "evidence": "Fade Out -> full-black base tint -> transparent title -> Fade In",
+      "owner": "Eventwright"
+    },
+    {
+      "name": "camera/map-space alignment",
+      "status": "PASS",
+      "evidence": "start origin=(6,4) tiles; ring origin=(6,2) tiles; scroll north 2",
+      "owner": "Eventwright"
+    },
+    {
+      "name": "base ring remains inside both approved camera frames",
+      "status": "PASS",
+      "evidence": "ring_bounds=(617, 214, 765, 346); containment=[('chamber', True), ('ring', True)]",
+      "owner": "Asset"
+    },
+    {
+      "name": "audio has three measured tones",
+      "status": "PASS",
+      "evidence": "active regions=[(0.2, 0.75), (1.4, 1.95), (2.6, 3.15)]",
+      "owner": "Asset"
+    },
+    {
+      "name": "audio tone spacing equal",
+      "status": "PASS",
+      "evidence": "onset intervals=[1.2, 1.2]",
+      "owner": "Asset"
+    },
+    {
+      "name": "audio has clipping headroom",
+      "status": "PASS",
+      "evidence": "peak=0.259340; peak_dBFS=-11.72",
+      "owner": "Asset"
+    },
+    {
+      "name": "installer completes in a fresh blank project",
+      "status": "PASS",
+      "evidence": "returncode=0; assets=8/8",
+      "owner": "Technical"
+    },
+    {
+      "name": "installer refuses reference tree without mutation",
+      "status": "PASS",
+      "evidence": "INSTALL REFUSED: target is inside a reference/source tree",
+      "owner": "Technical"
+    },
+    {
+      "name": "installer preflights occupied IDs without mutation",
+      "status": "PASS",
+      "evidence": "stderr=INSTALL REFUSED: Tileset ID 7 is already occupied; new=[]",
+      "owner": "Technical"
+    }
+  ],
+  "check_count": 50,
+  "passed": 50,
+  "failed": 0
+}

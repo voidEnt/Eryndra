@@ -1,0 +1,316 @@
+{
+  "scope": "MAP-001 Asset Pass 02",
+  "source": {
+    "file": "source/MAP001_CanonCorrected_CameraFit.jpg",
+    "dimensions": [
+      1474,
+      1067
+    ],
+    "sha256": "e53150f3345cf16958cf97500ab83827f26e83e9df359182ef5719c687bdf2fb",
+    "treatment": "Canon and camera-fit image edit; high-quality JPEG provenance source; exact resize to 1392x1008 and adaptive 96-color indexed runtime PNG; no crop"
+  },
+  "camera_frames": {
+    "ring": {
+      "origin_px": [
+        288,
+        96
+      ],
+      "size_px": [
+        816,
+        624
+      ]
+    },
+    "chamber": {
+      "origin_px": [
+        288,
+        192
+      ],
+      "size_px": [
+        816,
+        624
+      ]
+    }
+  },
+  "ring": {
+    "center_map_px": [
+      691,
+      280
+    ],
+    "center_ring_camera_px": [
+      403,
+      184
+    ],
+    "outer_radii_px": [
+      74,
+      66
+    ],
+    "inner_radii_px": [
+      50,
+      44
+    ],
+    "visual_bounds_map_px": [
+      617,
+      214,
+      765,
+      346
+    ],
+    "fracture_unlit_degrees": [
+      263,
+      278
+    ]
+  },
+  "license_source_notes": "Approved AI-generated Eryndra concept; no third-party stock art copied. Project distribution record remains subject to Foreman review.",
+  "packaging": {
+    "max_file_bytes": 716800,
+    "reason": "GitHub connector individual-upload payload constraint",
+    "lossless_sources": "Retained locally outside the Git-facing package"
+  },
+  "assets": [
+    {
+      "asset_id": "PIC-001",
+      "file": "assets/img/parallaxes/MAP001_WatcherStation_Base.png",
+      "runtime_folder": "img/parallaxes",
+      "dimensions": [
+        1392,
+        1008
+      ],
+      "mode": "P",
+      "has_alpha": false,
+      "alpha_range": null,
+      "sha256": "4fb64a66a9beabf1994f71abe526c1b3b2c3a59fb11435a57ee8a3f4ae9693f1",
+      "origin": "Approved generated concept, exact resize"
+    },
+    {
+      "asset_id": "PIC-002",
+      "file": "assets/img/pictures/MAP001_Ring_Pulse.png",
+      "runtime_folder": "img/pictures",
+      "dimensions": [
+        816,
+        624
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "alpha_range": [
+        0,
+        208
+      ],
+      "sha256": "211e5d3b236d0437f5a2ceac8fff93b28a33f8a234d4b272e3218567e64595c7",
+      "origin": "Deterministic Pillow overlay"
+    },
+    {
+      "asset_id": "PIC-003",
+      "file": "assets/img/pictures/MAP001_Ring_Residual.png",
+      "runtime_folder": "img/pictures",
+      "dimensions": [
+        816,
+        624
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "alpha_range": [
+        0,
+        136
+      ],
+      "sha256": "fecb3d4f695bb3c5bce8efd3a02ea05d29e974a102551a2fd5e1340eb2d05de7",
+      "origin": "Deterministic Pillow overlay"
+    },
+    {
+      "asset_id": "PIC-004",
+      "file": "assets/img/pictures/MAP001_Ring_Propagated.png",
+      "runtime_folder": "img/pictures",
+      "dimensions": [
+        816,
+        624
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "alpha_range": [
+        0,
+        168
+      ],
+      "sha256": "5f082c2c73e73000f9a15319fd781c155d7b36241fb1c8a82c47a1d73a32d5be",
+      "origin": "Deterministic Pillow overlay"
+    },
+    {
+      "asset_id": "PIC-005",
+      "file": "assets/img/pictures/MAP001_Dust_Tremor.png",
+      "runtime_folder": "img/pictures",
+      "dimensions": [
+        816,
+        624
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "alpha_range": [
+        0,
+        89
+      ],
+      "sha256": "6255168f89c670184446e4d8dd39b7470a25d2e233fa78adba07e7e3189dcb3a",
+      "origin": "Deterministic seeded Pillow overlay"
+    },
+    {
+      "asset_id": "PIC-006",
+      "file": "assets/img/pictures/SYS_Eryndra_Title.png",
+      "runtime_folder": "img/pictures",
+      "dimensions": [
+        816,
+        624
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "alpha_range": [
+        0,
+        244
+      ],
+      "sha256": "837ccffafe8cc39339249f6ba8e92dd83ac85b0e3710b9ce46436638eaa6b63c",
+      "origin": "Deterministic Pillow title rendering"
+    },
+    {
+      "asset_id": "TIL-007",
+      "file": "assets/img/tilesets/Eryndra_CinematicCollision_A5.png",
+      "runtime_folder": "img/tilesets",
+      "dimensions": [
+        768,
+        768
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "alpha_range": [
+        0,
+        0
+      ],
+      "sha256": "9542a32e82323eb002e9f3da746fc00f58f3553c6bb31cdf73ccb1253755c7e0",
+      "origin": "Deterministic transparent collision sheet"
+    },
+    {
+      "asset_id": "TIL-007",
+      "file": "assets/data/Tileset007.fragment.json",
+      "runtime_folder": "data registration source",
+      "sha256": "7fa7be8cf7a939cff0ba0a81381ddf540d420c14d6aea70cf4aedd661351301c",
+      "flags": {
+        "1536": 15,
+        "1537": 0,
+        "all_unused": 16
+      },
+      "origin": "Deterministic database fragment"
+    },
+    {
+      "asset_id": "SE-001",
+      "file": "assets/audio/se/Ancient_ThreeNote_Resonance.ogg",
+      "runtime_folder": "audio/se",
+      "sha256": "8a55c42597e2db818e81d111d4d8e6da76115213402b1af29f298a2696c47faa",
+      "audio_probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "vorbis",
+            "sample_rate": "48000",
+            "channels": 1
+          }
+        ],
+        "format": {
+          "duration": "3.400000"
+        }
+      },
+      "timing_seconds": {
+        "pre_silence": 0.2,
+        "tone_duration": 0.55,
+        "equal_intertone_silence": 0.65,
+        "tail_silence": 0.25,
+        "tone_starts": [
+          0.2,
+          1.4,
+          2.6
+        ],
+        "frequencies_hz": [
+          73.42,
+          87.31,
+          77.78
+        ]
+      },
+      "origin": "Deterministic Python synthesis, ffmpeg libvorbis encoding"
+    }
+  ],
+  "review_artifacts": [
+    {
+      "file": "review/ChamberCamera_Dormant_816x624.jpg",
+      "dimensions": [
+        816,
+        624
+      ],
+      "mode": "RGB",
+      "sha256": "8f8e4a9f1ac4a5ef359374afff67c3d9453ea0e65cf9a287ca61177dc5b5fcbe",
+      "purpose": "Camera/composite review only; not a runtime asset"
+    },
+    {
+      "file": "review/ChamberCamera_Dust_816x624.jpg",
+      "dimensions": [
+        816,
+        624
+      ],
+      "mode": "RGB",
+      "sha256": "f1be07b5c3f6744b5c13c40e8466e983f6cbae37b176c367d147c8876e85ac4d",
+      "purpose": "Camera/composite review only; not a runtime asset"
+    },
+    {
+      "file": "review/RingCamera_Dormant_816x624.jpg",
+      "dimensions": [
+        816,
+        624
+      ],
+      "mode": "RGB",
+      "sha256": "3e1415b96af7ebdde049251f61b254256192b5a1da3dd27bf97f0ac7dbb62048",
+      "purpose": "Camera/composite review only; not a runtime asset"
+    },
+    {
+      "file": "review/RingCamera_Dust_tremor_816x624.jpg",
+      "dimensions": [
+        816,
+        624
+      ],
+      "mode": "RGB",
+      "sha256": "eaad79b70f9e43278675ee917765790f48b6df3ad46e42d6395accdf7690cd56",
+      "purpose": "Camera/composite review only; not a runtime asset"
+    },
+    {
+      "file": "review/RingCamera_Propagated_816x624.jpg",
+      "dimensions": [
+        816,
+        624
+      ],
+      "mode": "RGB",
+      "sha256": "e516b62b5f1c7340f27b766be86aca6db011b7435d1d4069c5d7eb6a81441b8d",
+      "purpose": "Camera/composite review only; not a runtime asset"
+    },
+    {
+      "file": "review/RingCamera_Pulse_816x624.jpg",
+      "dimensions": [
+        816,
+        624
+      ],
+      "mode": "RGB",
+      "sha256": "2174b2b8431fdff53b0d8f15b37fbc8ba77dd7318d8d12c27746152579e6e259",
+      "purpose": "Camera/composite review only; not a runtime asset"
+    },
+    {
+      "file": "review/RingCamera_Residual_816x624.jpg",
+      "dimensions": [
+        816,
+        624
+      ],
+      "mode": "RGB",
+      "sha256": "84c87f6e592b43e3cc357c1ef0b8cbfdc4f7a887344929be138b6c8294594a7d",
+      "purpose": "Camera/composite review only; not a runtime asset"
+    },
+    {
+      "file": "review/Ring_States_ContactSheet_1632x1248.jpg",
+      "dimensions": [
+        1632,
+        1248
+      ],
+      "mode": "RGB",
+      "sha256": "df5d6e710db6583a4335e667136c14a45d836ad56eb9586e7f26b71a5501e0f3",
+      "purpose": "Camera/composite review only; not a runtime asset"
+    }
+  ]
+}

@@ -1,0 +1,410 @@
+{
+  "outcome": "PASS",
+  "checks": [
+    {
+      "name": "image-integrity:assets/img/parallaxes/MAP001_WatcherStation_Base.png",
+      "pass": true,
+      "detail": "verify and full decode succeeded"
+    },
+    {
+      "name": "image-integrity:assets/img/pictures/MAP001_Dust_Tremor.png",
+      "pass": true,
+      "detail": "verify and full decode succeeded"
+    },
+    {
+      "name": "image-integrity:assets/img/pictures/MAP001_Ring_Propagated.png",
+      "pass": true,
+      "detail": "verify and full decode succeeded"
+    },
+    {
+      "name": "image-integrity:assets/img/pictures/MAP001_Ring_Pulse.png",
+      "pass": true,
+      "detail": "verify and full decode succeeded"
+    },
+    {
+      "name": "image-integrity:assets/img/pictures/MAP001_Ring_Residual.png",
+      "pass": true,
+      "detail": "verify and full decode succeeded"
+    },
+    {
+      "name": "image-integrity:assets/img/pictures/SYS_Eryndra_Title.png",
+      "pass": true,
+      "detail": "verify and full decode succeeded"
+    },
+    {
+      "name": "image-integrity:assets/img/tilesets/Eryndra_CinematicCollision_A5.png",
+      "pass": true,
+      "detail": "verify and full decode succeeded"
+    },
+    {
+      "name": "image-integrity:review/ChamberCamera_Dormant_816x624.jpg",
+      "pass": true,
+      "detail": "verify and full decode succeeded"
+    },
+    {
+      "name": "image-integrity:review/ChamberCamera_Dust_816x624.jpg",
+      "pass": true,
+      "detail": "verify and full decode succeeded"
+    },
+    {
+      "name": "image-integrity:review/RingCamera_Dormant_816x624.jpg",
+      "pass": true,
+      "detail": "verify and full decode succeeded"
+    },
+    {
+      "name": "image-integrity:review/RingCamera_Dust_tremor_816x624.jpg",
+      "pass": true,
+      "detail": "verify and full decode succeeded"
+    },
+    {
+      "name": "image-integrity:review/RingCamera_Propagated_816x624.jpg",
+      "pass": true,
+      "detail": "verify and full decode succeeded"
+    },
+    {
+      "name": "image-integrity:review/RingCamera_Pulse_816x624.jpg",
+      "pass": true,
+      "detail": "verify and full decode succeeded"
+    },
+    {
+      "name": "image-integrity:review/RingCamera_Residual_816x624.jpg",
+      "pass": true,
+      "detail": "verify and full decode succeeded"
+    },
+    {
+      "name": "image-integrity:review/Ring_States_ContactSheet_1632x1248.jpg",
+      "pass": true,
+      "detail": "verify and full decode succeeded"
+    },
+    {
+      "name": "exists:assets/img/parallaxes/MAP001_WatcherStation_Base.png",
+      "pass": true,
+      "detail": "/workspace/scratch/97aa0d2024e9/Eryndra/work/mapping/MAP-001/pass-02/assets/img/parallaxes/MAP001_WatcherStation_Base.png"
+    },
+    {
+      "name": "size:assets/img/parallaxes/MAP001_WatcherStation_Base.png",
+      "pass": true,
+      "detail": "observed=(1392, 1008), expected=(1392, 1008)"
+    },
+    {
+      "name": "mode:assets/img/parallaxes/MAP001_WatcherStation_Base.png",
+      "pass": true,
+      "detail": "observed=P, expected=P"
+    },
+    {
+      "name": "exists:assets/img/pictures/MAP001_Ring_Pulse.png",
+      "pass": true,
+      "detail": "/workspace/scratch/97aa0d2024e9/Eryndra/work/mapping/MAP-001/pass-02/assets/img/pictures/MAP001_Ring_Pulse.png"
+    },
+    {
+      "name": "size:assets/img/pictures/MAP001_Ring_Pulse.png",
+      "pass": true,
+      "detail": "observed=(816, 624), expected=(816, 624)"
+    },
+    {
+      "name": "mode:assets/img/pictures/MAP001_Ring_Pulse.png",
+      "pass": true,
+      "detail": "observed=RGBA, expected=RGBA"
+    },
+    {
+      "name": "alpha:assets/img/pictures/MAP001_Ring_Pulse.png",
+      "pass": true,
+      "detail": "alpha_range=(0, 208)"
+    },
+    {
+      "name": "exists:assets/img/pictures/MAP001_Ring_Residual.png",
+      "pass": true,
+      "detail": "/workspace/scratch/97aa0d2024e9/Eryndra/work/mapping/MAP-001/pass-02/assets/img/pictures/MAP001_Ring_Residual.png"
+    },
+    {
+      "name": "size:assets/img/pictures/MAP001_Ring_Residual.png",
+      "pass": true,
+      "detail": "observed=(816, 624), expected=(816, 624)"
+    },
+    {
+      "name": "mode:assets/img/pictures/MAP001_Ring_Residual.png",
+      "pass": true,
+      "detail": "observed=RGBA, expected=RGBA"
+    },
+    {
+      "name": "alpha:assets/img/pictures/MAP001_Ring_Residual.png",
+      "pass": true,
+      "detail": "alpha_range=(0, 136)"
+    },
+    {
+      "name": "exists:assets/img/pictures/MAP001_Ring_Propagated.png",
+      "pass": true,
+      "detail": "/workspace/scratch/97aa0d2024e9/Eryndra/work/mapping/MAP-001/pass-02/assets/img/pictures/MAP001_Ring_Propagated.png"
+    },
+    {
+      "name": "size:assets/img/pictures/MAP001_Ring_Propagated.png",
+      "pass": true,
+      "detail": "observed=(816, 624), expected=(816, 624)"
+    },
+    {
+      "name": "mode:assets/img/pictures/MAP001_Ring_Propagated.png",
+      "pass": true,
+      "detail": "observed=RGBA, expected=RGBA"
+    },
+    {
+      "name": "alpha:assets/img/pictures/MAP001_Ring_Propagated.png",
+      "pass": true,
+      "detail": "alpha_range=(0, 168)"
+    },
+    {
+      "name": "exists:assets/img/pictures/MAP001_Dust_Tremor.png",
+      "pass": true,
+      "detail": "/workspace/scratch/97aa0d2024e9/Eryndra/work/mapping/MAP-001/pass-02/assets/img/pictures/MAP001_Dust_Tremor.png"
+    },
+    {
+      "name": "size:assets/img/pictures/MAP001_Dust_Tremor.png",
+      "pass": true,
+      "detail": "observed=(816, 624), expected=(816, 624)"
+    },
+    {
+      "name": "mode:assets/img/pictures/MAP001_Dust_Tremor.png",
+      "pass": true,
+      "detail": "observed=RGBA, expected=RGBA"
+    },
+    {
+      "name": "alpha:assets/img/pictures/MAP001_Dust_Tremor.png",
+      "pass": true,
+      "detail": "alpha_range=(0, 89)"
+    },
+    {
+      "name": "exists:assets/img/pictures/SYS_Eryndra_Title.png",
+      "pass": true,
+      "detail": "/workspace/scratch/97aa0d2024e9/Eryndra/work/mapping/MAP-001/pass-02/assets/img/pictures/SYS_Eryndra_Title.png"
+    },
+    {
+      "name": "size:assets/img/pictures/SYS_Eryndra_Title.png",
+      "pass": true,
+      "detail": "observed=(816, 624), expected=(816, 624)"
+    },
+    {
+      "name": "mode:assets/img/pictures/SYS_Eryndra_Title.png",
+      "pass": true,
+      "detail": "observed=RGBA, expected=RGBA"
+    },
+    {
+      "name": "alpha:assets/img/pictures/SYS_Eryndra_Title.png",
+      "pass": true,
+      "detail": "alpha_range=(0, 244)"
+    },
+    {
+      "name": "exists:assets/img/tilesets/Eryndra_CinematicCollision_A5.png",
+      "pass": true,
+      "detail": "/workspace/scratch/97aa0d2024e9/Eryndra/work/mapping/MAP-001/pass-02/assets/img/tilesets/Eryndra_CinematicCollision_A5.png"
+    },
+    {
+      "name": "size:assets/img/tilesets/Eryndra_CinematicCollision_A5.png",
+      "pass": true,
+      "detail": "observed=(768, 768), expected=(768, 768)"
+    },
+    {
+      "name": "mode:assets/img/tilesets/Eryndra_CinematicCollision_A5.png",
+      "pass": true,
+      "detail": "observed=RGBA, expected=RGBA"
+    },
+    {
+      "name": "transparent:assets/img/tilesets/Eryndra_CinematicCollision_A5.png",
+      "pass": true,
+      "detail": "alpha_range=(0, 0)"
+    },
+    {
+      "name": "ring-state-order",
+      "pass": true,
+      "detail": "pulse alpha > propagated alpha > residual alpha"
+    },
+    {
+      "name": "fracture-unlit:Pulse",
+      "pass": true,
+      "detail": "max_fracture_alpha=0"
+    },
+    {
+      "name": "fracture-unlit:Residual",
+      "pass": true,
+      "detail": "max_fracture_alpha=0"
+    },
+    {
+      "name": "fracture-unlit:Propagated",
+      "pass": true,
+      "detail": "max_fracture_alpha=0"
+    },
+    {
+      "name": "tileset-id",
+      "pass": true,
+      "detail": "id=7"
+    },
+    {
+      "name": "tile-1536-blocked",
+      "pass": true,
+      "detail": "flag=15"
+    },
+    {
+      "name": "tile-1537-passable",
+      "pass": true,
+      "detail": "flag=0"
+    },
+    {
+      "name": "unused-star-skip",
+      "pass": true,
+      "detail": "all flags except 1536/1537 equal 16"
+    },
+    {
+      "name": "audio-codec",
+      "pass": true,
+      "detail": "codec=vorbis"
+    },
+    {
+      "name": "audio-sample-rate",
+      "pass": true,
+      "detail": "rate=48000"
+    },
+    {
+      "name": "audio-mono",
+      "pass": true,
+      "detail": "channels=1"
+    },
+    {
+      "name": "audio-duration",
+      "pass": true,
+      "detail": "duration=3.400000s"
+    },
+    {
+      "name": "manifest-exists",
+      "pass": true,
+      "detail": "/workspace/scratch/97aa0d2024e9/Eryndra/work/mapping/MAP-001/pass-02/ASSET_MANIFEST.json"
+    },
+    {
+      "name": "manifest-assets",
+      "pass": true,
+      "detail": "asset_records=9"
+    },
+    {
+      "name": "manifest-review-artifacts",
+      "pass": true,
+      "detail": "review_records=8"
+    },
+    {
+      "name": "review-cyan-preserved:pulse",
+      "pass": true,
+      "detail": "cyan_pixels=6108"
+    },
+    {
+      "name": "review-cyan-preserved:contact-sheet",
+      "pass": true,
+      "detail": "cyan_pixels=9554"
+    },
+    {
+      "name": "ring-fits-camera:ring",
+      "pass": true,
+      "detail": "ring=[617, 214, 765, 346], camera=[288, 96, 1103, 719]"
+    },
+    {
+      "name": "ring-fits-camera:chamber",
+      "pass": true,
+      "detail": "ring=[617, 214, 765, 346], camera=[288, 192, 1103, 815]"
+    },
+    {
+      "name": "manifest-hash:source/MAP001_CanonCorrected_CameraFit.jpg",
+      "pass": true,
+      "detail": "observed=e53150f3345cf16958cf97500ab83827f26e83e9df359182ef5719c687bdf2fb, expected=e53150f3345cf16958cf97500ab83827f26e83e9df359182ef5719c687bdf2fb"
+    },
+    {
+      "name": "manifest-hash:assets/img/parallaxes/MAP001_WatcherStation_Base.png",
+      "pass": true,
+      "detail": "observed=4fb64a66a9beabf1994f71abe526c1b3b2c3a59fb11435a57ee8a3f4ae9693f1, expected=4fb64a66a9beabf1994f71abe526c1b3b2c3a59fb11435a57ee8a3f4ae9693f1"
+    },
+    {
+      "name": "manifest-hash:assets/img/pictures/MAP001_Ring_Pulse.png",
+      "pass": true,
+      "detail": "observed=211e5d3b236d0437f5a2ceac8fff93b28a33f8a234d4b272e3218567e64595c7, expected=211e5d3b236d0437f5a2ceac8fff93b28a33f8a234d4b272e3218567e64595c7"
+    },
+    {
+      "name": "manifest-hash:assets/img/pictures/MAP001_Ring_Residual.png",
+      "pass": true,
+      "detail": "observed=fecb3d4f695bb3c5bce8efd3a02ea05d29e974a102551a2fd5e1340eb2d05de7, expected=fecb3d4f695bb3c5bce8efd3a02ea05d29e974a102551a2fd5e1340eb2d05de7"
+    },
+    {
+      "name": "manifest-hash:assets/img/pictures/MAP001_Ring_Propagated.png",
+      "pass": true,
+      "detail": "observed=5f082c2c73e73000f9a15319fd781c155d7b36241fb1c8a82c47a1d73a32d5be, expected=5f082c2c73e73000f9a15319fd781c155d7b36241fb1c8a82c47a1d73a32d5be"
+    },
+    {
+      "name": "manifest-hash:assets/img/pictures/MAP001_Dust_Tremor.png",
+      "pass": true,
+      "detail": "observed=6255168f89c670184446e4d8dd39b7470a25d2e233fa78adba07e7e3189dcb3a, expected=6255168f89c670184446e4d8dd39b7470a25d2e233fa78adba07e7e3189dcb3a"
+    },
+    {
+      "name": "manifest-hash:assets/img/pictures/SYS_Eryndra_Title.png",
+      "pass": true,
+      "detail": "observed=837ccffafe8cc39339249f6ba8e92dd83ac85b0e3710b9ce46436638eaa6b63c, expected=837ccffafe8cc39339249f6ba8e92dd83ac85b0e3710b9ce46436638eaa6b63c"
+    },
+    {
+      "name": "manifest-hash:assets/img/tilesets/Eryndra_CinematicCollision_A5.png",
+      "pass": true,
+      "detail": "observed=9542a32e82323eb002e9f3da746fc00f58f3553c6bb31cdf73ccb1253755c7e0, expected=9542a32e82323eb002e9f3da746fc00f58f3553c6bb31cdf73ccb1253755c7e0"
+    },
+    {
+      "name": "manifest-hash:assets/data/Tileset007.fragment.json",
+      "pass": true,
+      "detail": "observed=7fa7be8cf7a939cff0ba0a81381ddf540d420c14d6aea70cf4aedd661351301c, expected=7fa7be8cf7a939cff0ba0a81381ddf540d420c14d6aea70cf4aedd661351301c"
+    },
+    {
+      "name": "manifest-hash:assets/audio/se/Ancient_ThreeNote_Resonance.ogg",
+      "pass": true,
+      "detail": "observed=8a55c42597e2db818e81d111d4d8e6da76115213402b1af29f298a2696c47faa, expected=8a55c42597e2db818e81d111d4d8e6da76115213402b1af29f298a2696c47faa"
+    },
+    {
+      "name": "manifest-hash:review/ChamberCamera_Dormant_816x624.jpg",
+      "pass": true,
+      "detail": "observed=8f8e4a9f1ac4a5ef359374afff67c3d9453ea0e65cf9a287ca61177dc5b5fcbe, expected=8f8e4a9f1ac4a5ef359374afff67c3d9453ea0e65cf9a287ca61177dc5b5fcbe"
+    },
+    {
+      "name": "manifest-hash:review/ChamberCamera_Dust_816x624.jpg",
+      "pass": true,
+      "detail": "observed=f1be07b5c3f6744b5c13c40e8466e983f6cbae37b176c367d147c8876e85ac4d, expected=f1be07b5c3f6744b5c13c40e8466e983f6cbae37b176c367d147c8876e85ac4d"
+    },
+    {
+      "name": "manifest-hash:review/RingCamera_Dormant_816x624.jpg",
+      "pass": true,
+      "detail": "observed=3e1415b96af7ebdde049251f61b254256192b5a1da3dd27bf97f0ac7dbb62048, expected=3e1415b96af7ebdde049251f61b254256192b5a1da3dd27bf97f0ac7dbb62048"
+    },
+    {
+      "name": "manifest-hash:review/RingCamera_Dust_tremor_816x624.jpg",
+      "pass": true,
+      "detail": "observed=eaad79b70f9e43278675ee917765790f48b6df3ad46e42d6395accdf7690cd56, expected=eaad79b70f9e43278675ee917765790f48b6df3ad46e42d6395accdf7690cd56"
+    },
+    {
+      "name": "manifest-hash:review/RingCamera_Propagated_816x624.jpg",
+      "pass": true,
+      "detail": "observed=e516b62b5f1c7340f27b766be86aca6db011b7435d1d4069c5d7eb6a81441b8d, expected=e516b62b5f1c7340f27b766be86aca6db011b7435d1d4069c5d7eb6a81441b8d"
+    },
+    {
+      "name": "manifest-hash:review/RingCamera_Pulse_816x624.jpg",
+      "pass": true,
+      "detail": "observed=2174b2b8431fdff53b0d8f15b37fbc8ba77dd7318d8d12c27746152579e6e259, expected=2174b2b8431fdff53b0d8f15b37fbc8ba77dd7318d8d12c27746152579e6e259"
+    },
+    {
+      "name": "manifest-hash:review/RingCamera_Residual_816x624.jpg",
+      "pass": true,
+      "detail": "observed=84c87f6e592b43e3cc357c1ef0b8cbfdc4f7a887344929be138b6c8294594a7d, expected=84c87f6e592b43e3cc357c1ef0b8cbfdc4f7a887344929be138b6c8294594a7d"
+    },
+    {
+      "name": "manifest-hash:review/Ring_States_ContactSheet_1632x1248.jpg",
+      "pass": true,
+      "detail": "observed=df5d6e710db6583a4335e667136c14a45d836ad56eb9586e7f26b71a5501e0f3, expected=df5d6e710db6583a4335e667136c14a45d836ad56eb9586e7f26b71a5501e0f3"
+    },
+    {
+      "name": "no-atomic-temporaries",
+      "pass": true,
+      "detail": "none"
+    },
+    {
+      "name": "git-package-file-ceiling",
+      "pass": true,
+      "detail": "all files <= 716800 bytes"
+    }
+  ]
+}

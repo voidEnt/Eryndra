@@ -1,6 +1,6 @@
 # Eryndra Master Implementation Index
 
-**Version:** 0.3  
+**Version:** 0.4  
 **Purpose:** Compact cross-project registry linking story canon to RPG Maker MZ implementation.
 
 Detailed specifications live in the main Bible and dedicated registry documents.
@@ -50,7 +50,7 @@ Story scene and named-NPC Bible IDs remain logical identifiers because they do n
 | Bible ID | Type | Name | Scope | Priority | MZ ID / File | Related Scene / Map | Status | Notes |
 |---|---|---|---|---|---|---|---|---|
 | `ACT-001` | Actor | Marek Venn | Prologue+ | CORE | Actor 1 | `PRO-SC-002` onward | Assigned | Playable lead |
-| `MAP-001` | Map | Forgotten Watcher Station | Prologue | CORE | `Map001.json` | `PRO-SC-001`, `PRO-SC-012` | Assigned | Mapping skeleton pass-01 accepted; candidate remains in work/mapping/MAP-001/pass-01 pending production tileset registration and promotion |
+| `MAP-001` | Map | Forgotten Watcher Station | Prologue | CORE | `Map001.json` | `PRO-SC-001`, `PRO-SC-012` | Implemented | Integrated pass-02 candidate has static PASS; runtime acceptance and promotion remain pending |
 | `MAP-002` | Map | Brackenford - Venn Home | Prologue | CORE | `Map002.json` | `PRO-SC-002`, `PRO-SC-011` | Assigned | Family/home anchor |
 | `MAP-003` | Map | Brackenford | Prologue | CORE | `Map003.json` | `PRO-SC-003`, `005`, `010` | Assigned | Primary town map |
 | `MAP-004` | Map | Brackenford - Survey Office | Prologue | CORE | `Map004.json` | `PRO-SC-004`, `010` | Assigned | Assignment/report location |
@@ -66,7 +66,7 @@ Story scene and named-NPC Bible IDs remain logical identifiers because they do n
 
 | Scene ID | Scene Name | Maps | Actors / NPCs | Required State | State Changes | Battle | Next Scene | Priority | Status |
 |---|---|---|---|---|---|---|---|---|---|
-| `PRO-SC-001` | The Forgotten Place | `MAP-001` | None living | New Game | Prologue starts; watcher station awakens | None | `PRO-SC-002` | CORE | Defined |
+| `PRO-SC-001` | The Forgotten Place | `MAP-001` | None living | New Game | Prologue starts; watcher station awakens | None | `PRO-SC-002` | CORE | Implemented |
 | `PRO-SC-002` | Morning at the Venn House | `MAP-002` | Marek, Davren, Elira, Nessa, Latch | Stage 1002 | Family intro complete | None | `PRO-SC-003` | CORE | Defined |
 | `PRO-SC-003` | Brackenford Morning | `MAP-003` | Marek, Latch, generic NPCs | Stage 1003 | Survey Office reached | None | `PRO-SC-004` | CORE | Defined |
 | `PRO-SC-004` | The Survey Assignment | `MAP-004` | Marek, Joren, Edrin, Latch | Stage 1004 | Assignment received | None | `PRO-SC-005` | CORE | Defined |
@@ -107,7 +107,7 @@ Story scene and named-NPC Bible IDs remain logical identifiers because they do n
 
 | Bible ID | MZ Map ID | Map Name | Parent | Required Scenes | Priority | Status |
 |---|---:|---|---|---|---|---|
-| `MAP-001` | 1 | Forgotten Watcher Station | TBD | `PRO-SC-001`, `012` | CORE | Assigned - Mapping skeleton PASS |
+| `MAP-001` | 1 | Forgotten Watcher Station | TBD | `PRO-SC-001`, `012` | CORE | Implemented - Static PASS; runtime test pending |
 | `MAP-002` | 2 | Brackenford - Venn Home | `MAP-003` | `PRO-SC-002`, `011` | CORE | Assigned |
 | `MAP-003` | 3 | Brackenford | TBD | `PRO-SC-003`, `005`, `010` | CORE | Assigned |
 | `MAP-004` | 4 | Brackenford - Survey Office | `MAP-003` | `PRO-SC-004`, `010` | CORE | Assigned |
@@ -174,6 +174,14 @@ The locked Prologue contains **no required combat** and therefore requires no CO
 | Audio | Three-note resonance | `PRO-SC-001`, `006`, `008`, `009`, `011`, `012` | CORE | Concept |
 | Character graphics | Marek Venn | Prologue playable scenes | CORE | Concept |
 | Character graphics | Venn family / Joren / Edrin / Latch / Cael | Prologue story scenes | CORE | Concept |
+| Tileset TIL-007 | Cinematic Parallax Collision | MAP-001 and later cinematic maps | SUPPORT | Implemented |
+| Parallax PIC-001 | MAP001 Watcher Station Base | MAP-001 | CORE | Implemented |
+| Picture PIC-002 | MAP001 Ring Pulse | PRO-SC-001, 012 | CORE | Implemented |
+| Picture PIC-003 | MAP001 Ring Residual | PRO-SC-001 | CORE | Implemented |
+| Picture PIC-004 | MAP001 Ring Propagated | PRO-SC-012 | CORE | Implemented |
+| Picture PIC-005 | MAP001 Dust Tremor | PRO-SC-001 | CORE | Implemented |
+| Picture PIC-006 | Eryndra Title | PRO-SC-001 | CORE | Implemented |
+| Audio SE-001 | Ancient Three-Note Resonance | PRO-SC-001, 006, 008, 009, 011, 012 | CORE | Implemented |
 
 ---
 

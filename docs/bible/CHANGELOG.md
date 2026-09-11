@@ -4,6 +4,18 @@ This changelog records meaningful structural and implementation-reference change
 
 ---
 
+## 2026-09-11 — MAP-001 integrated proof build static PASS
+
+- Completed MAP-001 Presentation/Asset Pass 02 and Eventwright implementation for the MAP-001 portions of `PRO-SC-001` and `PRO-SC-012`.
+- Assigned and implemented `TIL-007`, `PIC-001` through `PIC-006`, and `SE-001` inside the isolated MAP-001 work package.
+- Added a guarded installer that accepts only a newly created blank RPG Maker MZ project and refuses reference-project paths or occupied database IDs without changing the target tree.
+- Independent Validation returned four defects upstream: accidental natural-looking ring damage, ring camera clipping, a non-black title background, and missing darkness before the residual arc. The owning workers corrected all four.
+- Final static results: assets 81/81 PASS, Eventwright 40/40 PASS, installer 4/4 PASS, and independent integration 50/50 PASS.
+- Confirmed both supplied reference ZIPs retain their original hashes and remain immutable.
+- MAP-001 is now an Implemented work-stage candidate with static PASS. Final acceptance, Tested status, and promotion to `game/data/` require the recorded live RPG Maker MZ runtime evidence.
+
+---
+
 ## 2026-09-11 - MAP-001 Mapping skeleton accepted
 
 - Added user-supplied RPG Maker MZ editor evidence for the MAP-001 candidate.
