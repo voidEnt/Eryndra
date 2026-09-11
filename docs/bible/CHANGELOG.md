@@ -4,6 +4,31 @@ This changelog records meaningful structural and implementation-reference change
 
 ---
 
+## v0.3 — 2026-09-10
+
+### Added
+- `docs/bible/ID_Allocation_Plan.md` defining stable RPG Maker MZ numeric ranges for Maps, Switches, Variables, Common Events, Items, Enemies, and Troops.
+- `docs/bible/Prologue_MZ_ID_Assignments.md` containing the first concrete bridge from Bible entries to MZ data IDs.
+- Direct-ID alignment rule: where practical, Bible numeric suffixes match RPG Maker MZ IDs.
+- Explicit Deferred-content policy: Deferred is a flexible holding pool and may be reorganized until individual entries enter an implemented build.
+- Priority-change rule: implemented content may be promoted or demoted between DEFERRED/SUPPORT/CORE without changing its numeric ID.
+- `VR-0001 / SYS_StoryStage` value families and Prologue values 1001-1012, with Act I handoff at 2001.
+
+### Assigned
+- `ACT-001` Marek Venn -> MZ Actor 1.
+- `MAP-001` through `MAP-008` -> `Map001.json` through `Map008.json`.
+- `SW-0100` through `SW-0112` -> MZ Switches 100-112 for the Prologue story-state facts.
+- `VR-0001` -> MZ Variable 1 (`SYS_StoryStage`).
+
+### Changed
+- Master Implementation Index advanced to v0.3 and synchronized with the concrete Prologue MZ assignments and reserved ranges.
+- Main Bible advanced to v0.2 with active allocation policy, Deferred-content policy, direct-ID alignment, and current implementation references.
+
+### Current Next Step
+- Design and implement `MAP-001 / Map001.json` for `PRO-SC-001 The Forgotten Place`, including New Game initialization, cinematic event control, placeholder presentation assets, state changes, title reveal, and handoff to `MAP-002`.
+
+---
+
 ## v0.2 — 2026-09-10
 
 ### Added
