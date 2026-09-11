@@ -1,6 +1,6 @@
 # MAP-001 Mapping Pass 01
 
-**Candidate built; static checks passed; Mapping acceptance pending.**
+**MAP-001 Mapping skeleton: PASS.**
 
 This package is the first geometry skeleton for Forgotten Watcher Station, following the approved MAP-001 blueprint. Separate Mapper and Validator roles performed construction and review. It is not a playable opening scene or a production map promotion.
 
@@ -18,11 +18,15 @@ This package is the first geometry skeleton for Forgotten Watcher Station, follo
 
 Images reconstruct the selected stock tiles offline; they are not MZ screenshots. The ring diagram is review-only and does not add ring graphics to the candidate map.
 
+## Editor evidence
+
+The candidate was opened successfully in a newly created blank RPG Maker MZ project. `MZ_Editor_Open_Evidence.png` confirms the 29x21 map, stock placeholder tiles, and all six named anchors. The visible character is the blank project's player-start marker; it is not a MAP-001 event. See the independent validation report and Mapping handoff record for the acceptance scope.
+
 ## Next gate
 
-Open the candidate in a newly created blank Eryndra review project using RPG Maker MZ, following the dependency note. Keep both supplied ZIPs and any extracted SampleGenerated reference tree unchanged. Record the editor version and any errors or visual discrepancies. Actual editor-open has not been performed here and is required by blueprint section 21 before handoff. Production tileset registration and the listed visual dependencies also remain pending; do not copy this candidate into the production game yet.
+Mapping Pass 01 may advance to Eventwright planning. Production tileset registration and the listed visual dependencies remain pending, so do not copy this candidate into the production game yet.
 
-The production index remains Assigned. No story event commands, new global state, sample database import or finished presentation are included.
+The production index remains Assigned because this accepted skeleton has not been promoted to `game/data`. No story event commands, new global state, sample database import or finished presentation are included.
 
 ## Reproduce
 

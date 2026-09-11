@@ -194,6 +194,24 @@
     "7865": 3599,
     "7868": 3599
   },
-  "mz_editor_open": "NOT RUN",
-  "scope": "Independent static JSON, exact anchors, tile-flag collision and camera bounds; visual/canon review recorded separately."
+  "mz_editor_open": "PASS — supplied visual evidence",
+  "editor_evidence": {
+    "file": "MZ_Editor_Open_Evidence.png",
+    "sha256": "cc26a77913e1dcb4fe8be797612e1d6a87af5d5412f7566e7e4feb5f89e85e97",
+    "image_dimensions": [
+      1912,
+      1031
+    ],
+    "observed": [
+      "RPG Maker MZ editor displays map 001",
+      "status bar displays 29x21",
+      "placeholder tiles render",
+      "event list displays all six prescribed anchor names"
+    ],
+    "version": "NOT VISIBLE",
+    "errors": "No error is visible in the supplied screenshot; an explicit launch-error statement was not supplied."
+  },
+  "mapping_skeleton_acceptance": "PASS",
+  "remaining_gate": "Production promotion remains pending production tileset registration; presentation and executable scene acceptance remain later stages.",
+  "scope": "Independent static JSON, exact anchors, tile-flag collision and camera bounds, plus supplied MZ editor visual evidence; visual/canon review recorded separately."
 }

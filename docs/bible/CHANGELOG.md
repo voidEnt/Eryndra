@@ -4,6 +4,16 @@ This changelog records meaningful structural and implementation-reference change
 
 ---
 
+## 2026-09-11 - MAP-001 Mapping skeleton accepted
+
+- Added user-supplied RPG Maker MZ editor evidence for the MAP-001 candidate.
+- Independent Validation confirmed that the editor view matches the 29x21 geometry, placeholder tiles and six prescribed anchors.
+- Advanced MAP-001 Mapping Pass 01 from pending to PASS at skeleton fidelity.
+- Recorded the blank review project's visible player-start marker and the intentional overlap of three anchors at `(14,10)`.
+- Production tileset registration, presentation assets and Eventwright implementation remain downstream dependencies; the candidate remains outside `game/data`.
+
+---
+
 ## 2026-09-11 — Immutable reference-package correction
 
 - Made `EryndraStory.zip` and `SampleGenerated.zip` explicitly immutable inputs.
@@ -148,4 +158,3 @@ This changelog records meaningful structural and implementation-reference change
 
 ### Current Next Step
 - Decompose the locked Prologue into implementation scenes and assign initial CORE entries before allocating detailed RPG Maker IDs.
-
