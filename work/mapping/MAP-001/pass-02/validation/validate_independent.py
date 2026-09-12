@@ -231,6 +231,11 @@ check("title reveals against black", fade_out >= 0 and title_show > fade_out
       and fade_in > title_show and full_black_tint,
       "Fade Out -> full-black base tint -> transparent title -> Fade In", "Eventwright")
 
+move_picture_commands = [command["parameters"] for command in opening_list if command["code"] == 232]
+expected_move_pictures = [[5,0,0,0,0,0,100,100,80,0,18,False,0],[5,0,0,0,0,0,100,100,0,0,24,True,0],[2,0,0,0,0,0,100,100,190,0,15,True,0],[2,0,0,0,0,0,100,100,0,0,18,True,0],[6,0,0,0,0,0,100,100,255,0,45,True,0],[6,0,0,0,0,0,100,100,0,0,45,True,0]]
+check("MZ command232 schema and transitions", move_picture_commands == expected_move_pictures,
+      f"13-field parameter arrays={move_picture_commands}", "Eventwright")
+
 check("visible dark chamber reveal",
       any(command["code"] == 223 and command["parameters"] == [[-24, -24, -28, 8], 180, True]
           for command in opening_list)

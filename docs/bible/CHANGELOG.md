@@ -4,6 +4,15 @@ This changelog records meaningful structural and implementation-reference change
 
 ---
 
+## 2026-09-12 — MAP-001 Move Picture schema hotfix
+
+- Live MZ testing showed that the full pulse and title remained transparent while the directly shown residual arc worked.
+- Verified MZ command 232 against the supplied runtime and found the generated arrays were missing the y-coordinate field, shifting opacity and later parameters left.
+- Corrected all six picture transitions to the required 13-field schema and added exact-array assertions to both validators.
+- Recorded as `MAP001-RUN-003`; fresh runtime validation remains required.
+
+---
+
 ## 2026-09-12 — MAP-001 parallax diagnosis corrected
 
 - Retracted `MAP001-RUN-001`: removing the `!` prefix caused the map image to remain at its upper-left while screen-space overlays moved independently.

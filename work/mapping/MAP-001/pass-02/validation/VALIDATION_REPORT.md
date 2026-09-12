@@ -48,6 +48,10 @@ The command arrays match the MZ 1.10.0 interpreter schema. Autorun is trigger `3
 
 The opening writes SW100 ON and V1=1001, then finishes with SW101 ON and V1=1002. The closing proof controller requires V1≥1012, sets local Self Switch A, and deliberately leaves SW112 OFF and V1 at 1012 until the future multi-map P-08 montage exists.
 
+## Runtime defect MAP001-RUN-003
+
+Live MZ testing proved that the full pulse and title stayed transparent while the directly shown residual arc appeared. The generated command 232 arrays had 12 fields rather than the 13 consumed by MZ's `Game_Interpreter.command232`; the missing y field shifted opacity to zero. All six Move Picture commands now use the verified MZ schema, and both static validators require their exact arrays. This correction supersedes prior picture-transition acceptance until live retesting.
+
 ## Remaining runtime gate
 
 Static validation cannot prove NW.js rendering, first-frame player hiding, picture alignment during live scrolling/shake, subjective pacing, actual OGG playback, or the final switch/variable values inside a running RPG Maker project. These are the only remaining acceptance items. Follow `RUNTIME_PLAYTEST.md` and return the requested evidence.

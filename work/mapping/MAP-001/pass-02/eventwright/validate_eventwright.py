@@ -109,6 +109,10 @@ def main() -> int:
     picture_names = [entry["parameters"][1] for entry in oc if entry["code"] == 231]
     check("opening picture sequence", picture_names == ["MAP001_Dust_Tremor", "MAP001_Ring_Pulse",
           "MAP001_Ring_Residual", "SYS_Eryndra_Title"], repr(picture_names))
+    move_parameters = [entry["parameters"] for entry in oc if entry["code"] == 232]
+    expected_moves = [[5,0,0,0,0,0,100,100,80,0,18,False,0],[5,0,0,0,0,0,100,100,0,0,24,True,0],[2,0,0,0,0,0,100,100,190,0,15,True,0],[2,0,0,0,0,0,100,100,0,0,18,True,0],[6,0,0,0,0,0,100,100,255,0,45,True,0],[6,0,0,0,0,0,100,100,0,0,45,True,0]]
+    check("MZ command232 picture transitions", move_parameters == expected_moves,
+          f"13-field parameter arrays={move_parameters}")
     pulse_erase_index = next((index for index, entry in enumerate(oc)
                               if entry["code"] == 235 and entry["parameters"] == [2]), -1)
     residual_show_index = next((index for index, entry in enumerate(oc)

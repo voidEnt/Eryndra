@@ -65,7 +65,9 @@ def show_picture(number: int, name: str, opacity: int = 255) -> dict:
 def move_picture(number: int, opacity: int, duration: int, wait: bool) -> dict:
     # id, upper-left origin, direct coordinates, x, y, scale x/y, opacity,
     # normal blend, duration, wait, constant-speed easing
-    return command(232, [number, 0, 0, 0, 0, 100, 100, opacity, 0,
+    # MZ command232 requires the reserved field at index 1, then origin,
+    # designation mode, x, y, scale x/y, opacity, blend, duration, wait, easing.
+    return command(232, [number, 0, 0, 0, 0, 0, 100, 100, opacity, 0,
                          duration, wait, 0])
 
 
