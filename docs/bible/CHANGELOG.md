@@ -4,6 +4,15 @@ This changelog records meaningful structural and implementation-reference change
 
 ---
 
+## 2026-09-12 — MAP-003 work order and MAP-002 dialogue correction
+
+- Approved `docs/design/maps/MAP-003_Brackenford_Blueprint.md` for Brackenford Mapping Pass 01: a reusable 45×35 town for morning free exploration, departure and the unchanged-looking return, with fixed house/office/northern-road anchors, separate clear spawn cells and no invented ancient crisis.
+- User-side MAP-002 morning playtest works but identified horizontally clipped dialogue. Eventwright committed a 36-character/four-line physical wrapping correction without changing the wording; self checks 40/40, installer checks 10/10, independent static checks 63/63. Wrapped text is pending MZ runtime confirmation.
+- The existing cumulative Eryndra review project remains the test target. No new game project, live MAP-003 transfer or edit to either reference ZIP is authorized by the work order.
+- MAP-002 is not Locked; its full runtime acceptance remains pending while MAP-003 spatial work advances.
+
+---
+
 ## 2026-09-12 — MAP-002 Eventwright static PASS
 
 - Eventwright produced integrated Morning and Evening scene candidates plus the isolated MAP-001 post-title transfer patch, guarded installer, exact command manifest and repeatable tests.

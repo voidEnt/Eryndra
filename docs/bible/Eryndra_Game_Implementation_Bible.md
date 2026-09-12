@@ -439,5 +439,4 @@ The Prologue is built end-to-end before production expands into later acts. Its 
 
 Optional side quests, historical books, hidden content, decorative interactions, and similar additions remain DEFERRED until the core story spine is functioning.
 
-The current production target is user-side runtime Validation of MAP-002 Eventwright Functional Spine Pass 01 for `PRO-SC-002` and `PRO-SC-011`. Mapping has final PASS; Eventwright and independent static checks pass, with runtime conditions `MAP002-VAL-C01` through `C04` open.
-
+The current spatial production target is `MAP-003 Brackenford` Mapping Pass 01, following `docs/design/maps/MAP-003_Brackenford_Blueprint.md`. MAP-002 Mapping has PASS and Eventwright static validation passes; user observed the morning sequence functioning but found clipped dialogue, for which a corrected wrapped candidate is committed. MAP-002 final runtime acceptance, including the wrapped text, Evening, save/load and integration, remains open for later manual proof. Advancing MAP-003 spatial work does not mark MAP-002 Locked or waive its regression gate.
