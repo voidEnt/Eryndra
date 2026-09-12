@@ -4,6 +4,14 @@ This changelog records meaningful structural and implementation-reference change
 
 ---
 
+## 2026-09-12 — MAP-003 Mapper skeleton candidate
+
+- Constructed `work/mapping/MAP-003/pass-01/Map003.json` as an original 45×35 stock-Outside spatial skeleton, with ten inert anchors, clear home/office/north-road spawns, blocked non-road boundaries, deterministic builder and four review views.
+- Mapper self-check passed 14/14, including connected stock-passable routes and immutable source-archive hashes. This is not independent Validation or RPG Maker runtime acceptance.
+- MAP-002 transfer hook and user review project remain unchanged; Eventwright may not begin cross-map logic until MAP-003 Mapping acceptance.
+
+---
+
 ## 2026-09-12 — MAP-003 work order and MAP-002 dialogue correction
 
 - Approved `docs/design/maps/MAP-003_Brackenford_Blueprint.md` for Brackenford Mapping Pass 01: a reusable 45×35 town for morning free exploration, departure and the unchanged-looking return, with fixed house/office/northern-road anchors, separate clear spawn cells and no invented ancient crisis.

@@ -1,0 +1,18 @@
+PASS: deterministic generated JSON
+PASS: 45x35 nonlooping Outside map
+PASS: six schema-sized layers
+PASS: 10 contiguous and exact inert anchors
+PASS: no encounters, active soundtrack or runtime transfer
+PASS: locked Prologue source present
+PASS: all three outside arrivals are clear and stock-passable
+PASS: all three door/road anchors have passable approach
+PASS: three entrance cells are distinct
+PASS: all non-north map boundary is sealed
+PASS: home, office, northern exit and return spawn are connected
+PASS: principal corridors permit a lateral two-cell walking band
+PASS: west/east backdrop houses have no explorable doors
+PASS: no combat/battleback/ancient cue assigned
+HASH Map003.json SHA-256 b6a8babbcd8790b8c1a29f64540e116c2aad48dede54092b6b9418f33964d64c
+HASH immutable EryndraStory.zip SHA-256 56f9d5336d7a8736b92745243c1baeb941786c005741a76cd327f573a2654611
+HASH immutable SampleGenerated.zip SHA-256 b09e8c96856098aa94d01b563abc40e97321f3eca99ef7cbe836632d94cfd768
+SUMMARY: 14/14 self-checks PASS; independent Mapping Validation pending
