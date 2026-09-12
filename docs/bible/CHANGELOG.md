@@ -4,6 +4,11 @@ This changelog records meaningful structural and implementation-reference change
 
 ---
 
+## 2026-09-12 — MAP-004 Mapping corrections and independent static PASS
+
+- Independent Validator failed Pass 01 for lateral movement onto the visual south wall through the doorway (`6785` flag `0xE08`) and a missing nonlegible wall chart. Pass 02 blocked the wall with `7048` (`0xE0F`) and added generic records; Validator still failed D2 because its wall note was not recognizably a chart.
+- Mapper Pass 03 changed only one wall graphic to a stock tabular, nonlegible chart (`Inside_C` ID 329). Separate Validator **PASS** for static Mapping: 194 reachable cells, only one reachable south-door tile, all eight inert anchors/required routes intact and both original defects fixed. MAP-004 Eventwright, MAP-003 integration and MZ runtime tests remain pending.
+
 ## 2026-09-12 — MAP-004 work order and Mapping Pass 01 candidate
 
 - Approved the single-room MAP-004 Brackenford Survey Office spatial recipe for both `PRO-SC-004` and `PRO-SC-010`, using the locked P-03/P-07 story gate, exact MAP-003 doorway connection and eight inert event anchors.

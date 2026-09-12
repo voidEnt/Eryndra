@@ -1,0 +1,9 @@
+PASS unchanged MZ map metadata and anchors
+PASS delta limited to two Mapper defects
+PASS south wall all directions blocked
+PASS door reachable but no lateral wall walking
+PASS interior staging traversable
+PASS stock parchment chart and desk record present
+PASS eight inert anchors and no gameplay additions
+7/7 PASS, 19 permitted tile changes, 194 reachable cells
+Mapper self-check only. Independent Validator and MZ runtime review pending.

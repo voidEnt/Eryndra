@@ -1,0 +1,10 @@
+PASS only approved chart layer changed from Pass 02
+PASS stock chart is impassable and desk record unchanged
+PASS door single reachable south-boundary tile
+PASS south wall blocks every direction
+PASS desk and Edrin scene route retained
+PASS exact same eight inert event anchors
+PASS all map metadata unchanged except note
+PASS same 194 walkable cells reachable
+8/8 PASS; 194 reachable cells
+Mapper self-check only; separate Validation and MZ runtime playtest are distinct gates.
