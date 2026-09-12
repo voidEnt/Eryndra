@@ -107,7 +107,7 @@ Story scene and named-NPC Bible IDs remain logical identifiers because they do n
 
 | Bible ID | MZ Map ID | Map Name | Parent | Required Scenes | Priority | Status |
 |---|---:|---|---|---|---|---|
-| `MAP-001` | 1 | Forgotten Watcher Station | TBD | `PRO-SC-001`, `012` | CORE | Implemented - Static PASS; runtime test pending |
+| `MAP-001` | 1 | Forgotten Watcher Station | TBD | `PRO-SC-001`, `012` | CORE | Implemented — `PRO-SC-001` runtime Tested; `PRO-SC-012` pending |
 | `MAP-002` | 2 | Brackenford - Venn Home | `MAP-003` | `PRO-SC-002`, `011` | CORE | Assigned |
 | `MAP-003` | 3 | Brackenford | TBD | `PRO-SC-003`, `005`, `010` | CORE | Assigned |
 | `MAP-004` | 4 | Brackenford - Survey Office | `MAP-003` | `PRO-SC-004`, `010` | CORE | Assigned |
