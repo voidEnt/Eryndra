@@ -2,7 +2,8 @@
 
 **Scope:** Asset + Eventwright proof build for `PRO-SC-001`, with the MAP-001 portion of `PRO-SC-012`  
 **Static verdict:** PASS  
-**Final room acceptance:** CONDITIONAL — RPG Maker MZ runtime evidence remains required
+**Opening runtime verdict:** PASS — `PRO-SC-001` Tested and approved for integration  
+**MAP-001 overall acceptance:** CONDITIONAL — MAP-002 transfer and `PRO-SC-012` integration remain
 
 ## Controlling inputs
 
@@ -52,9 +53,13 @@ The opening writes SW100 ON and V1=1001, then finishes with SW101 ON and V1=1002
 
 Live MZ testing proved that the full pulse and title stayed transparent while the directly shown residual arc appeared. The generated command 232 arrays had 12 fields rather than the 13 consumed by MZ's `Game_Interpreter.command232`; the missing y field shifted opacity to zero. All six Move Picture commands now use the verified MZ schema, and both static validators require their exact arrays. This correction supersedes prior picture-transition acceptance until live retesting.
 
-## Remaining runtime gate
+## Runtime acceptance
 
-Static validation cannot prove NW.js rendering, first-frame player hiding, picture alignment during live scrolling/shake, subjective pacing, actual OGG playback, or the final switch/variable values inside a running RPG Maker project. These are the only remaining acceptance items. Follow `RUNTIME_PLAYTEST.md` and return the requested evidence.
+The Foreman-observed live RPG Maker MZ test confirmed the chamber reveal and framing, northward camera reframe, three-note cue, restrained shake, full cyan pulse with its dark division, pulse extinction and residual arc, black transition, and `ERYNDRA` title. The final console state was `[true, true, 1002]`, confirming SW100 ON, SW101 ON, and VR1=1002.
+
+The independent Validator therefore assigns **PASS** to the `PRO-SC-001` opening. It is **Tested** and approved for integration. All three recorded opening runtime defects are closed.
+
+MAP-001 overall remains **CONDITIONAL**. The transfer to MAP-002 is intentionally absent until the destination is approved, and `PRO-SC-012` still requires runtime and multi-map integration acceptance. SW112 and advancement to Act I remain deferred by design. MAP-001 is not Locked.
 
 ## Frozen artifact hashes
 

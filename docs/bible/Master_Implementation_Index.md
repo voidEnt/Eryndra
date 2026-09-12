@@ -50,7 +50,7 @@ Story scene and named-NPC Bible IDs remain logical identifiers because they do n
 | Bible ID | Type | Name | Scope | Priority | MZ ID / File | Related Scene / Map | Status | Notes |
 |---|---|---|---|---|---|---|---|---|
 | `ACT-001` | Actor | Marek Venn | Prologue+ | CORE | Actor 1 | `PRO-SC-002` onward | Assigned | Playable lead |
-| `MAP-001` | Map | Forgotten Watcher Station | Prologue | CORE | `Map001.json` | `PRO-SC-001`, `PRO-SC-012` | Implemented | Pass-02 RUN-001 retracted; RUN-002 tint and RUN-003 Move Picture corrections applied; combined MZ runtime acceptance and promotion remain pending |
+| `MAP-001` | Map | Forgotten Watcher Station | Prologue | CORE | `Map001.json` | `PRO-SC-001`, `PRO-SC-012` | Implemented | `PRO-SC-001` opening runtime PASS and approved for integration; overall map remains conditional pending MAP-002 transfer and `PRO-SC-012`; not Locked |
 | `MAP-002` | Map | Brackenford - Venn Home | Prologue | CORE | `Map002.json` | `PRO-SC-002`, `PRO-SC-011` | Assigned | Family/home anchor |
 | `MAP-003` | Map | Brackenford | Prologue | CORE | `Map003.json` | `PRO-SC-003`, `005`, `010` | Assigned | Primary town map |
 | `MAP-004` | Map | Brackenford - Survey Office | Prologue | CORE | `Map004.json` | `PRO-SC-004`, `010` | Assigned | Assignment/report location |
@@ -66,7 +66,7 @@ Story scene and named-NPC Bible IDs remain logical identifiers because they do n
 
 | Scene ID | Scene Name | Maps | Actors / NPCs | Required State | State Changes | Battle | Next Scene | Priority | Status |
 |---|---|---|---|---|---|---|---|---|---|
-| `PRO-SC-001` | The Forgotten Place | `MAP-001` | None living | New Game | Prologue starts; watcher station awakens | None | `PRO-SC-002` | CORE | Implemented |
+| `PRO-SC-001` | The Forgotten Place | `MAP-001` | None living | New Game | Prologue starts; watcher station awakens | None | `PRO-SC-002` | CORE | Tested |
 | `PRO-SC-002` | Morning at the Venn House | `MAP-002` | Marek, Davren, Elira, Nessa, Latch | Stage 1002 | Family intro complete | None | `PRO-SC-003` | CORE | Defined |
 | `PRO-SC-003` | Brackenford Morning | `MAP-003` | Marek, Latch, generic NPCs | Stage 1003 | Survey Office reached | None | `PRO-SC-004` | CORE | Defined |
 | `PRO-SC-004` | The Survey Assignment | `MAP-004` | Marek, Joren, Edrin, Latch | Stage 1004 | Assignment received | None | `PRO-SC-005` | CORE | Defined |

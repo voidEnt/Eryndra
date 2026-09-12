@@ -4,6 +4,14 @@ This changelog records meaningful structural and implementation-reference change
 
 ---
 
+## 2026-09-12 — MAP-001 opening runtime PASS
+
+- Foreman-observed live RPG Maker MZ playtest confirmed the approved chamber reveal, camera reframe, three-note cue, shake, full cyan pulse, residual arc, fade, and `ERYNDRA` title sequence.
+- Final runtime state matched the work order: `[SW100=true, SW101=true, VR1=1002]`.
+- Independent Validator assigned PASS to the `PRO-SC-001` opening; all three recorded opening runtime defects are closed.
+- `PRO-SC-001` is now Tested and approved for integration. MAP-001 remains Implemented/conditional overall pending the MAP-002 transfer and `PRO-SC-012` multi-map runtime acceptance; it is not Locked.
+
+---
 ## 2026-09-12 — MAP-001 Move Picture schema hotfix
 
 - Live MZ testing showed that the full pulse and title remained transparent while the directly shown residual arc worked.
