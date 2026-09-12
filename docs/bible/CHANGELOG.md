@@ -4,6 +4,15 @@ This changelog records meaningful structural and implementation-reference change
 
 ---
 
+## 2026-09-12 — MAP-002 Mapper work order approved
+
+- Completed Foreman canon review of Prologue P-02/P-07 and the Marek Venn household dossier.
+- Approved a 29x23 single-floor Venn Home skeleton supporting both `PRO-SC-002` morning and `PRO-SC-011` evening.
+- Fixed required zones, routes, camera frames, one exterior transfer, morning/evening spawns and 17 Mapper-safe blank anchors.
+- Authorized stock MZ Inside tileset slot 3 as a documented Pass 01 fixture only; no production tileset assignment or reference-project import is authorized.
+- MAP-002 Mapping Pass 01 is the active production unit. Both supplied ZIPs remain immutable.
+
+---
 ## 2026-09-12 — MAP-001 opening runtime PASS
 
 - Foreman-observed live RPG Maker MZ playtest confirmed the approved chamber reveal, camera reframe, three-note cue, shake, full cyan pulse, residual arc, fade, and `ERYNDRA` title sequence.

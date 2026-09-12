@@ -26,7 +26,7 @@ Bible map IDs intentionally match MZ map IDs.
 
 | Bible ID | MZ Map ID / File | Map Name | Required Scenes | Status |
 |---|---|---|---|---|
-| `MAP-001` | `Map001.json` | Forgotten Watcher Station | `PRO-SC-001`, `PRO-SC-012` | Implemented — runtime test pending |
+| `MAP-001` | `Map001.json` | Forgotten Watcher Station | `PRO-SC-001`, `PRO-SC-012` | Implemented — `PRO-SC-001` runtime Tested; `PRO-SC-012` pending |
 | `MAP-002` | `Map002.json` | Brackenford - Venn Home | `PRO-SC-002`, `PRO-SC-011` | Assigned |
 | `MAP-003` | `Map003.json` | Brackenford | `PRO-SC-003`, `PRO-SC-005`, `PRO-SC-010` | Assigned |
 | `MAP-004` | `Map004.json` | Brackenford - Survey Office | `PRO-SC-004`, `PRO-SC-010` | Assigned |
@@ -125,9 +125,9 @@ The reserved Prologue ranges 001-024 remain empty. This is intentional: the lock
 
 # Current Implementation Gate
 
-`MAP-001 / Map001.json` and the MAP-001 portion of `PRO-SC-001 The Forgotten Place` now exist as an integrated work-stage candidate under `work/mapping/MAP-001/pass-02/`.
+The MAP-001 opening for `PRO-SC-001` passed live RPG Maker MZ validation and is Tested. MAP-001 remains Implemented overall because its `PRO-SC-012` return is not yet integrated.
 
-Static validation is complete. The current gate is the live RPG Maker MZ playtest defined in `work/mapping/MAP-001/pass-02/validation/RUNTIME_PLAYTEST.md`. Successful evidence advances MAP-001 to Tested and authorizes production promotion. The unresolved transfer to MAP-002 remains an explicit hook until MAP-002 coordinates exist.
+The current production gate is `MAP-002` Mapping Pass 01. Its approved blueprint fixes the morning spawn at `(14,14)` and the Venn Home geometry; the MAP-001 opening transfer can be added only after MAP-002 Mapping and Eventwright acceptance. The MAP-002 south-door destination in MAP-003 remains unresolved until MAP-003 is mapped.
 
 ---
 
@@ -148,4 +148,4 @@ These assignments support the MAP-001 proof build and establish the first reusab
 
 TIL-007 is intentionally placed after the six stock MZ tileset slots. It uses transparent tiles for cinematic parallax collision: tile 1536 is blocked and tile 1537 is passable. Its production database entry and assets must be installed together.
 
-These assets have passed static validation as work-stage implementations. Live MZ playback remains required before Tested status or production promotion. Supplied ZIP files remain immutable and are not runtime dependencies.
+These assets have passed static validation, and the `PRO-SC-001` opening has passed live MZ playback. Their `PRO-SC-012` use remains pending. Supplied ZIP files remain immutable and are not runtime dependencies.

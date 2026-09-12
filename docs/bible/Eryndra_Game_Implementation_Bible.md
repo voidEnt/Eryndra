@@ -439,5 +439,5 @@ The Prologue is built end-to-end before production expands into later acts. Its 
 
 Optional side quests, historical books, hidden content, decorative interactions, and similar additions remain DEFERRED until the core story spine is functioning.
 
-The current production target is the `MAP-001 / Map001.json` skeleton for `PRO-SC-001 The Forgotten Place`, beginning from its approved mapper blueprint. Event logic follows only after the Mapping handoff is ready.
+The current production target is `MAP-002 / Map002.json` Mapping Pass 01 for `PRO-SC-002 Morning at the Venn House` and `PRO-SC-011 Home, But Changed`, using the approved Venn Home mapper work order. Event logic follows only after independent Mapping acceptance.
 
