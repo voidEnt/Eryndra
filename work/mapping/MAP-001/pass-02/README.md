@@ -30,7 +30,7 @@ No file from `EryndraStory.zip` or `SampleGenerated.zip` is modified or installe
 
 ## Runtime hotfix
 
-Live MZ testing found and corrected `MAP001-RUN-001` (camera-tracked base parallax) and `MAP001-RUN-002` (readable dark reveal tint). See the matching defect records. Reinstall this revision into a new blank review project before final acceptance.
+Live MZ testing retracted the initial `MAP001-RUN-001` diagnosis and confirmed `MAP001-RUN-002`: MAP-001 needs the `!` map-aligned parallax plus the readable-dark reveal tint. See both defect records. Reinstall this revision into a new blank review project before final acceptance.
 
 ## Final acceptance step
 

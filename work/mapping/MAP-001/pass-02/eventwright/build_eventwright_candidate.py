@@ -154,7 +154,7 @@ def main() -> None:
     source = json.loads(source_bytes)
     candidate = copy.deepcopy(source)
     candidate["tilesetId"] = 7
-    candidate["parallaxName"] = "MAP001_WatcherStation_Base"  # Camera-tracked map parallax; no ! prefix
+    candidate["parallaxName"] = "!MAP001_WatcherStation_Base"  # MZ map-aligned zero parallax
     candidate["parallaxShow"] = True
     candidate["data"] = convert_collision(source["data"], source["width"], source["height"])
 

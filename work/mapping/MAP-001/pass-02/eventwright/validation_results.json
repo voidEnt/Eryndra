@@ -1,5 +1,5 @@
 {
-  "status": "STALE — camera-tracking hotfix requires rerun",
+  "status": "STALE — final alignment/tint correction requires rerun",
   "checks": [
     {
       "name": "map dimensions",
@@ -12,9 +12,9 @@
       "evidence": "tilesetId=7"
     },
     {
-      "name": "camera-tracked map parallax",
+      "name": "map-aligned zero parallax",
       "status": "STALE",
-      "evidence": "Expected MAP001_WatcherStation_Base; no ! prefix; rerun required"
+      "evidence": "Expected !MAP001_WatcherStation_Base; rerun required"
     },
     {
       "name": "accepted collision geometry",

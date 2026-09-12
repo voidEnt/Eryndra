@@ -4,6 +4,14 @@ This changelog records meaningful structural and implementation-reference change
 
 ---
 
+## 2026-09-12 — MAP-001 parallax diagnosis corrected
+
+- Retracted `MAP001-RUN-001`: removing the `!` prefix caused the map image to remain at its upper-left while screen-space overlays moved independently.
+- Restored `!MAP001_WatcherStation_Base` in the map, builder, installer and validators. The `!` zero-parallax mode is required for one-for-one map/display alignment here.
+- Retained the confirmed `MAP001-RUN-002` lighter reveal tone. A fresh combined runtime test is required.
+
+---
+
 ## 2026-09-12 — MAP-001 runtime reveal-tint hotfix
 
 - Live MZ testing confirmed the chamber becomes visible when the screen tint is cleared, proving the art and camera path are present.

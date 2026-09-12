@@ -75,7 +75,7 @@ def main() -> int:
     source = json.loads(SOURCE.read_text(encoding="utf-8"))
     check("map dimensions", (candidate["width"], candidate["height"]) == (29, 21), "29x21")
     check("registered tileset", candidate["tilesetId"] == 7, f"tilesetId={candidate['tilesetId']}")
-    check("camera-tracked map parallax", candidate["parallaxName"] == "MAP001_WatcherStation_Base",
+    check("map-aligned zero parallax", candidate["parallaxName"] == "!MAP001_WatcherStation_Base",
           candidate["parallaxName"])
     area = 29 * 21
     expected_collision = [1537 if tile == 1559 else 1536 for tile in source["data"][:area]]

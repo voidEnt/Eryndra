@@ -21,7 +21,7 @@ ASSET_ROOT = HERE.parent / "assets"
 MAP_SOURCE = HERE / "Map001.json"
 
 ASSETS = {
-    "MAP001_WatcherStation_Base.png": ("img/parallaxes/MAP001_WatcherStation_Base.png",),
+    "MAP001_WatcherStation_Base.png": ("img/parallaxes/!MAP001_WatcherStation_Base.png",),
     "MAP001_Ring_Pulse.png": ("img/pictures/MAP001_Ring_Pulse.png",),
     "MAP001_Ring_Residual.png": ("img/pictures/MAP001_Ring_Residual.png",),
     "MAP001_Ring_Propagated.png": ("img/pictures/MAP001_Ring_Propagated.png",),
