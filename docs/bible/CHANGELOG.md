@@ -4,6 +4,15 @@ This changelog records meaningful structural and implementation-reference change
 
 ---
 
+## 2026-09-12 — MAP-002 Eventwright static PASS
+
+- Eventwright produced integrated Morning and Evening scene candidates plus the isolated MAP-001 post-title transfer patch, guarded installer, exact command manifest and repeatable tests.
+- Eventwright checks passed 39/39 and installer checks passed 8/8.
+- Independent Validation passed 62/62 checks covering exact dialogue/state/gating, stock MZ schemas, directional movement, MAP-001 authorized-only diff, deterministic rebuild, refusal immutability, backup/rollback and reference hashes.
+- No static defect remains. Overall handoff is CONDITIONAL PASS pending user-side runtime conditions `MAP002-VAL-C01` through `C04`.
+- MAP-003 transfer coordinates, final character art and complete Omen integration remain explicit downstream dependencies.
+
+---
 ## 2026-09-12 — MAP-002 Mapping PASS and Eventwright authorization
 
 - User confirmed MAP-002 opens, renders and supports the required collision routes in RPG Maker MZ using stock Inside tileset slot 3.

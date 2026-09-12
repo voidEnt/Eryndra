@@ -1,0 +1,40 @@
+PASS: candidate JSON schemas load
+PASS: MAP-002 geometry/data unchanged
+PASS: MAP-002 non-event properties unchanged
+PASS: all 17 anchor IDs/names/coordinates preserved
+PASS: Morning movement route ends at exact required cells
+PASS: Every Morning movement cell is stock-passable — 28 steps
+PASS: Morning route avoids staged NPC collision cells
+PASS: Morning page gate uses SW101 and VR1>=1002
+PASS: Morning exact internal equality and SW102 OFF
+PASS: Morning clears inherited MAP-001 black tint before Fade In
+PASS: Marek is visible before Morning Fade In
+PASS: Morning anti-replay pages
+PASS: Evening page gate uses SW110 and VR1>=1011
+PASS: Evening exact internal equality and SW111 OFF
+PASS: Evening normalizes tint before household Fade In
+PASS: Marek is visible before Evening Fade In
+PASS: Evening anti-replay pages
+PASS: Morning exact dialogue and order — 22 lines
+PASS: Evening exact dialogue and order — 22 lines
+PASS: approved family ambient lines exact
+PASS: placeholder character assignments exact
+PASS: no inventory/combat/shop/script/plugin commands
+PASS: no route scripts or route switch writes
+PASS: Evening has sole MAP-002 transfer to MAP-001
+PASS: MAP-003 remains unresolved comment hook
+PASS: Morning Dog SE exactly once
+PASS: repair SE exactly once and restrained
+PASS: distant three-note cue exactly once and faint
+PASS: night cue preserves target post-audio silence — 3.4s cue plus approximately 120 silent frames
+PASS: Latch has no speech/thought text
+PASS: only approved MAP-002 global switch writes
+PASS: only VR1 writes exact stages
+PASS: Morning player release visible/followers hidden
+PASS: Evening output ordered before black transfer
+PASS: bedroom uses stock downed pose and restores Actor1
+PASS: MAP-001 validated opening prefix and all other data preserved
+PASS: MAP-001 exact authorized transfer tail
+PASS: MAP-001 state writes remain SW101 then VR1=1002
+PASS: candidate hashes recorded — Map001=98fec8f89e190531e5de74b525574769b59c79c2030a9fd2ac9a906c47d623cd Map002=23b0c50b6323ca8eb1fd189b20caed7c6732cde54932ea2f1526f1cd4f6ac9ad
+SUMMARY: 39/39 PASS

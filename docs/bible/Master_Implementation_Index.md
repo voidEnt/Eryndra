@@ -51,7 +51,7 @@ Story scene and named-NPC Bible IDs remain logical identifiers because they do n
 |---|---|---|---|---|---|---|---|---|
 | `ACT-001` | Actor | Marek Venn | Prologue+ | CORE | Actor 1 | `PRO-SC-002` onward | Assigned | Playable lead |
 | `MAP-001` | Map | Forgotten Watcher Station | Prologue | CORE | `Map001.json` | `PRO-SC-001`, `PRO-SC-012` | Implemented | `PRO-SC-001` opening runtime PASS and approved for integration; overall map remains conditional pending MAP-002 transfer and `PRO-SC-012`; not Locked |
-| `MAP-002` | Map | Brackenford - Venn Home | Prologue | CORE | `Map002.json` | `PRO-SC-002`, `PRO-SC-011` | Assigned | Mapping Pass 01 PASS; MZ editor/render/collision confirmed; Eventwright Functional Spine active |
+| `MAP-002` | Map | Brackenford - Venn Home | Prologue | CORE | `Map002.json` | `PRO-SC-002`, `PRO-SC-011` | Assigned | Mapping Pass 01 PASS; Eventwright static PASS 62/62; runtime conditions C01-C04 pending |
 | `MAP-003` | Map | Brackenford | Prologue | CORE | `Map003.json` | `PRO-SC-003`, `005`, `010` | Assigned | Primary town map |
 | `MAP-004` | Map | Brackenford - Survey Office | Prologue | CORE | `Map004.json` | `PRO-SC-004`, `010` | Assigned | Assignment/report location |
 | `MAP-005` | Map | Northern Road | Prologue | CORE | `Map005.json` | `PRO-SC-005`, `006` | Assigned | Main exploration route |

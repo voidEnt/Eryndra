@@ -1,0 +1,329 @@
+{
+  "validator": "Independent MAP-002 Eventwright Validator",
+  "scope": "Functional Spine Pass 01 static and installer validation",
+  "static_outcome": "PASS",
+  "overall_outcome": "CONDITIONAL PASS",
+  "summary": {
+    "passed": 62,
+    "failed": 0,
+    "total": 62
+  },
+  "runtime_conditions": [
+    "MAP-001 opening regression and transfer into MAP-002 Morning",
+    "Morning presentation, movement, player release, state, interaction, and no replay after save/load",
+    "Evening direct setup, staging, single faint cue, silence, black transfer, and MAP-001 Omen handoff",
+    "Evening no replay after completion/save-load"
+  ],
+  "results": [
+    {
+      "name": "candidate JSON parses",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "immutable EryndraStory hash preserved",
+      "status": "PASS",
+      "detail": "56f9d5336d7a8736b92745243c1baeb941786c005741a76cd327f573a2654611"
+    },
+    {
+      "name": "immutable SampleGenerated hash preserved",
+      "status": "PASS",
+      "detail": "b09e8c96856098aa94d01b563abc40e97321f3eca99ef7cbe836632d94cfd768"
+    },
+    {
+      "name": "accepted MAP-001 baseline hash",
+      "status": "PASS",
+      "detail": "f6b6a5f5e90d4f48b3b886ee5b23a09a86fba802e4d28c3cacfbf5468d4a39f6"
+    },
+    {
+      "name": "accepted MAP-002 baseline hash",
+      "status": "PASS",
+      "detail": "429310b40f87053f669aca5377cd0544604d929b0e828a754d6ef966f78cdcd7"
+    },
+    {
+      "name": "candidate hashes are expected",
+      "status": "PASS",
+      "detail": "Map001=98fec8f89e190531e5de74b525574769b59c79c2030a9fd2ac9a906c47d623cd Map002=23b0c50b6323ca8eb1fd189b20caed7c6732cde54932ea2f1526f1cd4f6ac9ad"
+    },
+    {
+      "name": "builder completes",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "MAP-001 rebuild deterministic",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "MAP-002 rebuild deterministic",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "MAP-002 dimensions/tileset/data preserved",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "MAP-002 non-event properties preserved except authorized note",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "all 17 anchor identities and coordinates preserved",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "no additional MAP-002 events introduced",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "Morning page-level gate",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "Morning exact equality and SW102-OFF nested gate",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "Morning anti-replay completion pages",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "Evening page-level gate",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "Evening exact equality and SW111-OFF nested gate",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "Evening anti-replay completion pages",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "Morning exact dialogue and beat order",
+      "status": "PASS",
+      "detail": "22/22 lines"
+    },
+    {
+      "name": "Evening exact dialogue and beat order",
+      "status": "PASS",
+      "detail": "22/22 lines"
+    },
+    {
+      "name": "Morning face/speaker placeholders exact",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "Evening face/speaker placeholders exact",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "approved family ambient lines exact",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "Latch has no speech or thought text",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "no inventory/combat/shop/script/plugin commands",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "all Eventwright command arrays match stock MZ schema",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "every event page terminates with command 0",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "movement routes contain no scripts or switch writes",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "Morning initial staging exact",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "Morning movement and inspection routes exact",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "Morning routes satisfy directional passability",
+      "status": "PASS",
+      "detail": "28 steps"
+    },
+    {
+      "name": "Morning routes avoid active NPC collision cells",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "Morning ends at release coordinate",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "Morning state output/order exact",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "Morning clears black tint and reveals Marek before Fade In",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "Evening entry staging exact",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "Supper stages four distinct approved positions",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "Bedroom stages Latch and Marek exactly",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "Marek sleeping placeholder, wake pose, and Actor1 restore",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "threshold Latch faces north, is visible, and is silent",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "bedroom camera uses stock deterministic scroll",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "restrained night tint precedes bedroom Fade In",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "Morning Dog SE occurs exactly once and evening has none",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "repair SE occurs exactly once at restrained settings",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "night three-note cue occurs exactly once at faint volume",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "night cue schedule preserves wake and post-cue silence",
+      "status": "PASS",
+      "detail": "3.4-second cue; approximately 120 silent frames before fade"
+    },
+    {
+      "name": "MAP-002 has one exact evening transfer under black",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "MAP-003 remains an inactive unresolved hook",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "Evening state output and transfer order exact",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "no unapproved MAP-002 global state writes",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "MAP-001 differs only at authorized opening tail",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "MAP-001 authorized transfer tail exact",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "MAP-001 retained validated final state writes",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "installer refuses EryndraStory.zip without mutation",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "installer refuses SampleGenerated.zip without mutation",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "installer refuses named extracted reference tree byte-identically",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "installer missing-asset refusal is byte-identical",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "installer wrong-baseline refusal is byte-identical",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "installer dry-run performs no writes",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "installer success writes exact candidates and recoverable backup",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "installer rolls back both maps after partial replacement failure",
+      "status": "PASS",
+      "detail": ""
+    }
+  ]
+}

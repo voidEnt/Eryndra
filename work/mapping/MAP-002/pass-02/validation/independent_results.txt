@@ -1,0 +1,65 @@
+PASS: candidate JSON parses
+PASS: immutable EryndraStory hash preserved — 56f9d5336d7a8736b92745243c1baeb941786c005741a76cd327f573a2654611
+PASS: immutable SampleGenerated hash preserved — b09e8c96856098aa94d01b563abc40e97321f3eca99ef7cbe836632d94cfd768
+PASS: accepted MAP-001 baseline hash — f6b6a5f5e90d4f48b3b886ee5b23a09a86fba802e4d28c3cacfbf5468d4a39f6
+PASS: accepted MAP-002 baseline hash — 429310b40f87053f669aca5377cd0544604d929b0e828a754d6ef966f78cdcd7
+PASS: candidate hashes are expected — Map001=98fec8f89e190531e5de74b525574769b59c79c2030a9fd2ac9a906c47d623cd Map002=23b0c50b6323ca8eb1fd189b20caed7c6732cde54932ea2f1526f1cd4f6ac9ad
+PASS: builder completes
+PASS: MAP-001 rebuild deterministic
+PASS: MAP-002 rebuild deterministic
+PASS: MAP-002 dimensions/tileset/data preserved
+PASS: MAP-002 non-event properties preserved except authorized note
+PASS: all 17 anchor identities and coordinates preserved
+PASS: no additional MAP-002 events introduced
+PASS: Morning page-level gate
+PASS: Morning exact equality and SW102-OFF nested gate
+PASS: Morning anti-replay completion pages
+PASS: Evening page-level gate
+PASS: Evening exact equality and SW111-OFF nested gate
+PASS: Evening anti-replay completion pages
+PASS: Morning exact dialogue and beat order — 22/22 lines
+PASS: Evening exact dialogue and beat order — 22/22 lines
+PASS: Morning face/speaker placeholders exact
+PASS: Evening face/speaker placeholders exact
+PASS: approved family ambient lines exact
+PASS: Latch has no speech or thought text
+PASS: no inventory/combat/shop/script/plugin commands
+PASS: all Eventwright command arrays match stock MZ schema
+PASS: every event page terminates with command 0
+PASS: movement routes contain no scripts or switch writes
+PASS: Morning initial staging exact
+PASS: Morning movement and inspection routes exact
+PASS: Morning routes satisfy directional passability — 28 steps
+PASS: Morning routes avoid active NPC collision cells
+PASS: Morning ends at release coordinate
+PASS: Morning state output/order exact
+PASS: Morning clears black tint and reveals Marek before Fade In
+PASS: Evening entry staging exact
+PASS: Supper stages four distinct approved positions
+PASS: Bedroom stages Latch and Marek exactly
+PASS: Marek sleeping placeholder, wake pose, and Actor1 restore
+PASS: threshold Latch faces north, is visible, and is silent
+PASS: bedroom camera uses stock deterministic scroll
+PASS: restrained night tint precedes bedroom Fade In
+PASS: Morning Dog SE occurs exactly once and evening has none
+PASS: repair SE occurs exactly once at restrained settings
+PASS: night three-note cue occurs exactly once at faint volume
+PASS: night cue schedule preserves wake and post-cue silence — 3.4-second cue; approximately 120 silent frames before fade
+PASS: MAP-002 has one exact evening transfer under black
+PASS: MAP-003 remains an inactive unresolved hook
+PASS: Evening state output and transfer order exact
+PASS: no unapproved MAP-002 global state writes
+PASS: MAP-001 differs only at authorized opening tail
+PASS: MAP-001 authorized transfer tail exact
+PASS: MAP-001 retained validated final state writes
+PASS: installer refuses EryndraStory.zip without mutation
+PASS: installer refuses SampleGenerated.zip without mutation
+PASS: installer refuses named extracted reference tree byte-identically
+PASS: installer missing-asset refusal is byte-identical
+PASS: installer wrong-baseline refusal is byte-identical
+PASS: installer dry-run performs no writes
+PASS: installer success writes exact candidates and recoverable backup
+PASS: installer rolls back both maps after partial replacement failure
+SUMMARY: 62/62 PASS
+STATIC EVENTWRIGHT SCOPE: PASS
+OVERALL HANDOFF: CONDITIONAL PASS (pending user-side MZ runtime tests)
