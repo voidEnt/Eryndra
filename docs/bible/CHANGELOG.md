@@ -4,6 +4,14 @@ This changelog records meaningful structural and implementation-reference change
 
 ---
 
+## 2026-09-12 — MAP-001 runtime parallax hotfix
+
+- Live MZ playtest exposed a black-screen presentation defect not caught by static validation: MAP-001's `!` parallax prefix pinned the map-sized art to the upper-left screen corner instead of following the player camera.
+- Eventwright hotfix removes the prefix, changes the installed parallax filename, updates builder/installer/test/validator contracts, and records `MAP001-RUN-001`.
+- Prior static acceptance is superseded pending a fresh MZ runtime playtest of this revision. No story canon, map geometry, assets, reference ZIP, or global-state allocation changed.
+
+---
+
 ## 2026-09-11 — MAP-001 integrated proof build static PASS
 
 - Completed MAP-001 Presentation/Asset Pass 02 and Eventwright implementation for the MAP-001 portions of `PRO-SC-001` and `PRO-SC-012`.

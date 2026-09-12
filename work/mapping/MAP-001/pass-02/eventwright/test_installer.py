@@ -59,7 +59,7 @@ def main() -> int:
         system = json.loads((target / "data/System.json").read_text())
         tilesets = json.loads((target / "data/Tilesets.json").read_text())
         assets = [
-            target / "img/parallaxes/!MAP001_WatcherStation_Base.png",
+            target / "img/parallaxes/MAP001_WatcherStation_Base.png",
             target / "img/pictures/MAP001_Ring_Pulse.png",
             target / "img/pictures/MAP001_Ring_Residual.png",
             target / "img/pictures/MAP001_Ring_Propagated.png",

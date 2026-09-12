@@ -130,8 +130,8 @@ check("map dimensions", (map_data["width"], map_data["height"]) == (29, 21),
       f"{map_data['width']}x{map_data['height']}", "Mapper")
 check("tileset registration", map_data["tilesetId"] == 7,
       f"tilesetId={map_data['tilesetId']}", "Technical")
-check("fixed map-space parallax",
-      map_data["parallaxName"] == "!MAP001_WatcherStation_Base"
+check("camera-tracked map parallax",
+      map_data["parallaxName"] == "MAP001_WatcherStation_Base"
       and not map_data["parallaxLoopX"] and not map_data["parallaxLoopY"],
       f"name={map_data['parallaxName']}; loops={map_data['parallaxLoopX']}/{map_data['parallaxLoopY']}",
       "Eventwright")

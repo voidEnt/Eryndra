@@ -1,5 +1,2 @@
-9eb52bb228437fa47c13746abb74074f9bd8c6ef2b0bfebfdd02c155e3616e47  eventwright/Map001.json
-817b442bc891f3ff8677f752a6d6ddce1a746d127de43531aa596b92274a4bc0  eventwright/build_eventwright_candidate.py
-a1ae5c3e9e9cd25e6dfbcbf6a539f5a65c77b75eb92d53665485c6ca97aaa9ce  eventwright/install_into_blank_mz_project.py
-7f68c66808f64fb88b1f5f4f71a29d35dac1639c271068d6ba8b886972ff5ede  eventwright/test_installer.py
-d0fd9999060b04dc92678f42e36b6e9ce4e7621fad538a6fe630b9a5509a99bb  eventwright/validate_eventwright.py
+# Superseded by MAP001-RUN-001 camera-tracking hotfix (2026-09-12).
+# Regenerate this file only after running the Eventwright build and validation in a complete Pass-02 checkout.

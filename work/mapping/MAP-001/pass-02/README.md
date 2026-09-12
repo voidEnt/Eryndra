@@ -28,6 +28,10 @@ No file from `EryndraStory.zip` or `SampleGenerated.zip` is modified or installe
 - `validation/RUNTIME_PLAYTEST.md` — exact final acceptance procedure
 - `ASSET_MANIFEST.json` — asset identities and hashes
 
+## Runtime hotfix
+
+Live MZ testing found and corrected `MAP001-RUN-001`: the base parallax must be camera-tracked, not `!` screen-fixed. See `RUNTIME_DEFECT_MAP001-RUN-001.md`. Reinstall this revision into a new blank review project before final acceptance.
+
 ## Final acceptance step
 
 Follow `validation/RUNTIME_PLAYTEST.md` in a newly created blank RPG Maker MZ project. Return the two requested screenshots and the short PASS/FAIL note. Do not install into either reference archive or an extracted reference-project directory.

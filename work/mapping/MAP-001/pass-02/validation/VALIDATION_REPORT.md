@@ -44,7 +44,7 @@ The OGG decodes as mono Vorbis at 48 kHz and 3.4 seconds. Independent waveform a
 
 The command arrays match the MZ 1.10.0 interpreter schema. Autorun is trigger `3`; switch, variable, self-switch, transparency, follower, tint, scroll, picture, shake, fade, wait, and SE commands use the expected parameters. MZ selects the last valid event page, so the opening's SW101 page and the omen's Self Switch A / SW112 pages stop replay as intended.
 
-The `!MAP001_WatcherStation_Base` runtime name activates MZ's zero-parallax map-space behavior. At the installed player reference `(14,10)`, the 816×624 chamber frame begins at map pixel `(288,192)`. Scrolling north two tiles produces the ring frame at `(288,96)`, matching all screen-space overlays.
+**Runtime defect MAP001-RUN-001 (2026-09-12):** live MZ testing showed the `!` prefix pins this full-map parallax to the screen's upper-left, exposing its black buffer instead of the intended camera crop. The hotfix removes that prefix and installs the image as `MAP001_WatcherStation_Base.png`, allowing the normal map camera to track the 1392×1008 image. At the installed player reference `(14,10)`, the 816×624 chamber frame begins at map pixel `(288,192)`; scrolling north two tiles produces the ring frame at `(288,96)`, matching the screen-space overlays. This report's prior static PASS is superseded until the hotfix receives the recorded live MZ retest.
 
 The opening writes SW100 ON and V1=1001, then finishes with SW101 ON and V1=1002. The closing proof controller requires V1≥1012, sets local Self Switch A, and deliberately leaves SW112 OFF and V1 at 1012 until the future multi-map P-08 montage exists.
 

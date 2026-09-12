@@ -1,5 +1,5 @@
 {
-  "status": "PASS",
+  "status": "STALE — camera-tracking hotfix requires rerun",
   "checks": [
     {
       "name": "map dimensions",
@@ -12,9 +12,9 @@
       "evidence": "tilesetId=7"
     },
     {
-      "name": "fixed map parallax",
-      "status": "PASS",
-      "evidence": "!MAP001_WatcherStation_Base"
+      "name": "camera-tracked map parallax",
+      "status": "STALE",
+      "evidence": "Expected MAP001_WatcherStation_Base; no ! prefix; rerun required"
     },
     {
       "name": "accepted collision geometry",
@@ -203,6 +203,6 @@
     }
   ],
   "check_count": 40,
-  "passed": 40,
+  "passed": 39,
   "failed": 0
 }
