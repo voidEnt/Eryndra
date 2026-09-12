@@ -4,6 +4,15 @@ This changelog records meaningful structural and implementation-reference change
 
 ---
 
+## 2026-09-12 — MAP-003 independent FAIL and Mapping Pass 02 PASS
+
+- Separate Validator tested MAP-003 Mapping Pass 01 and returned `FAIL` (16/17): event 7 Latch departure was `(12,26)` rather than the approved northern-road `(21,8)`. Self-check had reproduced the builder's mistake instead of checking the work order.
+- Preserved Pass 01 and its failure report. Mapping Pass 02 corrects only event 7's position and the map's pass note, re-renders identical visual previews, and extends the Mapper self-check to parse the approved blueprint directly (15/15).
+- Independent Pass 02 Validation passed 17/17 full checks and 8/8 targeted regressions; the MAP-003 skeleton may proceed to Eventwright planning. No MZ runtime, transfer integration, MAP-004/MAP-005 destination or user review-project modification has occurred.
+- Both story and sample ZIPs remain immutable; no new review game is required.
+
+---
+
 ## 2026-09-12 — MAP-003 Mapper skeleton candidate
 
 - Constructed `work/mapping/MAP-003/pass-01/Map003.json` as an original 45×35 stock-Outside spatial skeleton, with ten inert anchors, clear home/office/north-road spawns, blocked non-road boundaries, deterministic builder and four review views.

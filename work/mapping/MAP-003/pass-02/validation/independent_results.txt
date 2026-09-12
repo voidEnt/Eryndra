@@ -1,0 +1,10 @@
+PASS: Pass 01 vs 02 tile grid identical
+PASS: only map note changes outside events
+PASS: only event ID 7 changes between passes
+PASS: Latch moves from home to approved northern-road cell and retains inert page
+PASS: all four camera/overall previews unchanged byte-for-byte
+PASS: builder changed only Latch coordinate and pass-number note
+PASS: Pass 02 self-check asserts approved blueprint rather than builder only
+PASS: full independent static/directional/rebuild audit passes
+SHA256 Map003.json f96b341538c0bf33b19844a6b276b879ebbed6ebdf296c58b7424ccad568f128
+SUMMARY: 8/8 regression checks PASS; PASS
