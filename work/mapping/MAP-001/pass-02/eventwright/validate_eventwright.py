@@ -99,6 +99,9 @@ def main() -> int:
     oc = commands(opening[0])
     check("opening hides player/followers", has(oc, 211, [0]) and has(oc, 216, [1]),
           "Change Transparency ON; Followers HIDE")
+    check("visible dark reveal tone", has(oc, 223, [[-24, -24, -28, 8], 180, True]) and
+          has(commands(omen[0]), 223, [[-24, -24, -28, 8], 120, True]),
+          "opening/omen reveal to a visibly dark tone, not near-black")
     check("opening state writes", has(oc, 121, [100, 100, 0]) and
           has(oc, 122, [1, 1, 0, 0, 1001]) and has(oc, 121, [101, 101, 0]) and
           has(oc, 122, [1, 1, 0, 0, 1002]),

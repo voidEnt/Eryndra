@@ -231,6 +231,13 @@ check("title reveals against black", fade_out >= 0 and title_show > fade_out
       and fade_in > title_show and full_black_tint,
       "Fade Out -> full-black base tint -> transparent title -> Fade In", "Eventwright")
 
+check("visible dark chamber reveal",
+      any(command["code"] == 223 and command["parameters"] == [[-24, -24, -28, 8], 180, True]
+          for command in opening_list)
+      and any(command["code"] == 223 and command["parameters"] == [[-24, -24, -28, 8], 120, True]
+              for command in omen_list),
+      "Both controllers reveal to a readable dark tone rather than near-black", "Eventwright")
+
 # Camera math: 816x624 at 48px uses center offsets (8,6). Start (14,10)
 # therefore resolves to map origin (6,4); north-two scroll resolves to (6,2).
 check("camera/map-space alignment",

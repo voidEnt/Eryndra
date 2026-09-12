@@ -79,7 +79,7 @@ def opening_commands() -> list[dict]:
         command(223, [[-255, -255, -255, 0], 0, False]),
         command(230, [30]),
         comment("Slow reveal of the dormant chamber"),
-        command(223, [[-96, -96, -112, 48], 180, True]),
+        command(223, [[-24, -24, -28, 8], 180, True]),
         command(230, [150]),
         comment("Reframe from chamber camera to ring camera"),
         command(204, [8, 2, 4, True]),             # scroll up 2 tiles
@@ -122,7 +122,7 @@ def omen_commands() -> list[dict]:
         command(216, [1]),
         command(223, [[-255, -255, -255, 0], 0, False]),
         command(230, [30]),
-        command(223, [[-96, -96, -112, 48], 120, True]),
+        command(223, [[-24, -24, -28, 8], 120, True]),
         command(204, [8, 2, 4, True]),
         show_picture(4, "MAP001_Ring_Propagated", 170),
         command(250, [{"name": "Ancient_ThreeNote_Resonance", "pan": 0,

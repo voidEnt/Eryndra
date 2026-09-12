@@ -4,6 +4,14 @@ This changelog records meaningful structural and implementation-reference change
 
 ---
 
+## 2026-09-12 — MAP-001 runtime reveal-tint hotfix
+
+- Live MZ testing confirmed the chamber becomes visible when the screen tint is cleared, proving the art and camera path are present.
+- Reduced the opening and omen reveal tone from `[-96, -96, -112, 48]` to readable-dark `[-24, -24, -28, 8]`; added matching Eventwright and independent validation assertions.
+- This correction is `MAP001-RUN-002`; a fresh New Game MZ test remains required.
+
+---
+
 ## 2026-09-12 — MAP-001 runtime parallax hotfix
 
 - Live MZ playtest exposed a black-screen presentation defect not caught by static validation: MAP-001's `!` parallax prefix pinned the map-sized art to the upper-left screen corner instead of following the player camera.
