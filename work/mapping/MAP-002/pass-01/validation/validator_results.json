@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "production_unit": "MAP-002",
+  "map_name": "Brackenford - Venn Home",
+  "stage": "Mapping Pass 01",
+  "validator_role": "Independent Validator",
+  "outcome": "CONDITIONAL_PASS",
+  "blocking_defects": [],
+  "checks": {
+    "mapper_validator_rerun": {
+      "status": "PASS",
+      "passed": 53,
+      "total": 53
+    },
+    "json_structure": "PASS",
+    "map_dimensions": "PASS",
+    "tileset_dependency": "PASS",
+    "blank_anchor_contract": "PASS",
+    "route_connectivity": "PASS",
+    "table_staging": "PASS",
+    "single_exit_geometry": "PASS",
+    "camera_composites": "PASS_SKELETON_FIDELITY",
+    "deterministic_rebuild": "PASS",
+    "obs_01_regression": "PASS_CLOSED",
+    "canon_p02": "PASS",
+    "canon_p07": "PASS",
+    "venn_household_canon": "PASS",
+    "forbidden_implications": "PASS",
+    "reference_archive_integrity": "PASS",
+    "mz_editor_runtime_open": "NOT_RUN"
+  },
+  "route_evidence": {
+    "start": [14, 14],
+    "reachable_cells": 268,
+    "required_targets_reached": true
+  },
+  "hashes": {
+    "Map002.json": "429310b40f87053f669aca5377cd0544604d929b0e828a754d6ef966f78cdcd7",
+    "MAP-002_full-map.png": "a719cb9d2a4a643605d19dab43d37d4650636260d0065485a6cd7f0b09c1849c",
+    "MAP-002_common-room_816x624.png": "fea0eaf00672e47176da650474ac3d4403f117ab7a9327e6200ab36fc379be33",
+    "MAP-002_marek-bedroom_816x624.png": "f635f2bb539d92844835da2877884a745706af5f6ba780802d42f2d26aa02bdc",
+    "EryndraStory.zip": "56f9d5336d7a8736b92745243c1baeb941786c005741a76cd327f573a2654611",
+    "SampleGenerated.zip": "b09e8c96856098aa94d01b563abc40e97321f3eca99ef7cbe836632d94cfd768"
+  },
+  "conditions": [
+    {
+      "id": "MAP002-VAL-C01",
+      "status": "OPEN",
+      "severity": "GATE_CONDITION",
+      "owner": "Validation/User runtime",
+      "blocking_for": [
+        "runtime acceptance",
+        "integration acceptance",
+        "Implemented or Tested status"
+      ],
+      "nonblocking_for": [
+        "Eventwright Functional Spine preparation"
+      ],
+      "required_outcome": "Map002.json opens and renders in RPG Maker MZ using stock Inside tileset slot 3, with required routes and anchors present."
+    }
+  ],
+  "observations": [
+    {
+      "id": "MAP002-OBS-01",
+      "status": "CLOSED",
+      "severity": "RESOLVED_NONBLOCKING",
+      "owner": "Mapping documentation/visual refinement",
+      "finding": "Tile 332 was described as a survey map but visually read as an animal portrait or ordinary wall decoration.",
+      "correction": "Mapping removed tile 332 and corrected the builder, regenerated map/composites, manifest, and handoff. The neutral table at (18,6) retains the required work-surface function.",
+      "regression_result": "PASS"
+    }
+  ],
+  "eventwright_authorized": true,
+  "eventwright_authorization_scope": "Functional Spine preparation and implementation against the accepted geometry; no runtime or integration acceptance claim.",
+  "mapper_files_modified_by_validator": false
+}

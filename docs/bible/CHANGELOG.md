@@ -4,6 +4,15 @@ This changelog records meaningful structural and implementation-reference change
 
 ---
 
+## 2026-09-12 — MAP-002 Mapping Pass 01 conditional PASS
+
+- Mapper produced original 29x23 Venn Home geometry, three review composites, exact 17 blank anchors, dependency documentation and repeatable build/validation scripts.
+- Mapper self-validation passed 53/53; independent Validation confirmed 268 connected route cells, all staging positions, deterministic rebuilds, canon/style compliance and immutable reference hashes.
+- Validation observation `MAP002-OBS-01` was returned to Mapping and closed by removing a misleading animal-portrait tile from Marek's room.
+- Mapping Pass 01 received CONDITIONAL PASS with no blocking Mapping defect. Eventwright Functional Spine preparation is authorized.
+- Condition `MAP002-VAL-C01` remains open until the user confirms the map opens, renders and passes a collision spot-check in RPG Maker MZ using stock Inside tileset slot 3.
+
+---
 ## 2026-09-12 — MAP-002 Mapper work order approved
 
 - Completed Foreman canon review of Prologue P-02/P-07 and the Marek Venn household dossier.

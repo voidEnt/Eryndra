@@ -1,0 +1,58 @@
+MAP-002 Mapping Pass 01 validation - PASS
+
+[PASS] Canvas is 29x23
+[PASS] Six MZ data planes
+[PASS] Inside tileset slot 3
+[PASS] No looping
+[PASS] No encounters
+[PASS] No autoplay
+[PASS] No parallax
+[PASS] Exactly 17 registered events
+[PASS] Anchor 01 identity
+[PASS] Anchor 01 is Mapper-safe blank stub
+[PASS] Anchor 02 identity
+[PASS] Anchor 02 is Mapper-safe blank stub
+[PASS] Anchor 03 identity
+[PASS] Anchor 03 is Mapper-safe blank stub
+[PASS] Anchor 04 identity
+[PASS] Anchor 04 is Mapper-safe blank stub
+[PASS] Anchor 05 identity
+[PASS] Anchor 05 is Mapper-safe blank stub
+[PASS] Anchor 06 identity
+[PASS] Anchor 06 is Mapper-safe blank stub
+[PASS] Anchor 07 identity
+[PASS] Anchor 07 is Mapper-safe blank stub
+[PASS] Anchor 08 identity
+[PASS] Anchor 08 is Mapper-safe blank stub
+[PASS] Anchor 09 identity
+[PASS] Anchor 09 is Mapper-safe blank stub
+[PASS] Anchor 10 identity
+[PASS] Anchor 10 is Mapper-safe blank stub
+[PASS] Anchor 11 identity
+[PASS] Anchor 11 is Mapper-safe blank stub
+[PASS] Anchor 12 identity
+[PASS] Anchor 12 is Mapper-safe blank stub
+[PASS] Anchor 13 identity
+[PASS] Anchor 13 is Mapper-safe blank stub
+[PASS] Anchor 14 identity
+[PASS] Anchor 14 is Mapper-safe blank stub
+[PASS] Anchor 15 identity
+[PASS] Anchor 15 is Mapper-safe blank stub
+[PASS] Anchor 16 identity
+[PASS] Anchor 16 is Mapper-safe blank stub
+[PASS] Anchor 17 identity
+[PASS] Anchor 17 is Mapper-safe blank stub
+[PASS] All Region IDs are zero
+[PASS] Stock fixture is Inside
+[PASS] Every used tile has a stock flag :: used=[112, 113, 116, 120, 137, 169, 170, 171, 172, 177, 178, 179, 180, 184, 186, 194, 201, 202, 203, 204, 212, 220, 232, 248, 402, 1536, 1552, 6784, 6785, 6787, 6789, 7048]
+[PASS] Mandatory house routes connect
+[PASS] Four table staging cells remain walkable
+[PASS] Table does not trap common-room route
+[PASS] Common camera crop remains inside canvas
+[PASS] Bedroom camera crop remains inside canvas
+[PASS] Bedroom frame contains bed and threshold
+[PASS] Bedroom wall has only required door gaps
+[PASS] Single exterior exit at (14,20)
+
+Checks: 53/53
+Map SHA-256: 429310b40f87053f669aca5377cd0544604d929b0e828a754d6ef966f78cdcd7
