@@ -26,7 +26,7 @@ SAMPLE_SHA = "b09e8c96856098aa94d01b563abc40e97321f3eca99ef7cbe836632d94cfd768"
 BASE1_SHA = "f6b6a5f5e90d4f48b3b886ee5b23a09a86fba802e4d28c3cacfbf5468d4a39f6"
 BASE2_SHA = "429310b40f87053f669aca5377cd0544604d929b0e828a754d6ef966f78cdcd7"
 CAND1_SHA = "98fec8f89e190531e5de74b525574769b59c79c2030a9fd2ac9a906c47d623cd"
-CAND2_SHA = "23b0c50b6323ca8eb1fd189b20caed7c6732cde54932ea2f1526f1cd4f6ac9ad"
+CAND2_SHA = "fcf70f9e356c2b35ec72332129715f9ff6e856cb6a90003e5e3352dbf757c933"
 
 MORNING = [
     ("Elira", "If you check that strap again, it may start charging you for the inspection."),
@@ -94,13 +94,38 @@ def flatten(data):
 
 
 def dialogue(page):
-    rows, speaker = [], None
+    rows, speaker, lines = [], None, []
     for command in page["list"]:
         if command["code"] == 101:
+            if speaker is not None:
+                rows.append((speaker, " ".join(lines)))
             speaker = command["parameters"][4]
+            lines = []
         elif command["code"] == 401:
-            rows.append((speaker, command["parameters"][0]))
+            lines.append(command["parameters"][0])
+    if speaker is not None:
+        rows.append((speaker, " ".join(lines)))
     return rows
+
+
+def message_layout_ok(commands):
+    count, active = 0, False
+    for command in commands:
+        if command["code"] == 101:
+            if active and count == 0:
+                return False
+            count, active = 0, True
+        elif command["code"] == 401:
+            if not active or len(command["parameters"][0]) > 36:
+                return False
+            count += 1
+            if count > 4:
+                return False
+        elif active:
+            if count == 0:
+                return False
+            active = False
+    return not active or count > 0
 
 
 def find_index(commands, code, params=None):
@@ -234,6 +259,8 @@ def run(a):
 
     check("Morning exact dialogue and beat order", dialogue(p_m) == MORNING, f"{len(dialogue(p_m))}/22 lines")
     check("Evening exact dialogue and beat order", dialogue(p_e) == EVENING, f"{len(dialogue(p_e))}/22 lines")
+    check("every message respects face-window width and four-line MZ limit",
+          all(message_layout_ok(page["list"]) for event in m2["events"] if event for page in event["pages"]))
     for label, page in (("Morning", p_m), ("Evening", p_e)):
         face_rows = [(c["parameters"][4], c["parameters"][0], c["parameters"][1])
                      for c in page["list"] if c["code"] == 101]

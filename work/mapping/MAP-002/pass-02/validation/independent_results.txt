@@ -3,7 +3,7 @@ PASS: immutable EryndraStory hash preserved — 56f9d5336d7a8736b92745243c1baeb9
 PASS: immutable SampleGenerated hash preserved — b09e8c96856098aa94d01b563abc40e97321f3eca99ef7cbe836632d94cfd768
 PASS: accepted MAP-001 baseline hash — f6b6a5f5e90d4f48b3b886ee5b23a09a86fba802e4d28c3cacfbf5468d4a39f6
 PASS: accepted MAP-002 baseline hash — 429310b40f87053f669aca5377cd0544604d929b0e828a754d6ef966f78cdcd7
-PASS: candidate hashes are expected — Map001=98fec8f89e190531e5de74b525574769b59c79c2030a9fd2ac9a906c47d623cd Map002=23b0c50b6323ca8eb1fd189b20caed7c6732cde54932ea2f1526f1cd4f6ac9ad
+PASS: candidate hashes are expected — Map001=98fec8f89e190531e5de74b525574769b59c79c2030a9fd2ac9a906c47d623cd Map002=fcf70f9e356c2b35ec72332129715f9ff6e856cb6a90003e5e3352dbf757c933
 PASS: builder completes
 PASS: MAP-001 rebuild deterministic
 PASS: MAP-002 rebuild deterministic
@@ -19,6 +19,7 @@ PASS: Evening exact equality and SW111-OFF nested gate
 PASS: Evening anti-replay completion pages
 PASS: Morning exact dialogue and beat order — 22/22 lines
 PASS: Evening exact dialogue and beat order — 22/22 lines
+PASS: every message respects face-window width and four-line MZ limit
 PASS: Morning face/speaker placeholders exact
 PASS: Evening face/speaker placeholders exact
 PASS: approved family ambient lines exact
@@ -60,6 +61,6 @@ PASS: installer wrong-baseline refusal is byte-identical
 PASS: installer dry-run performs no writes
 PASS: installer success writes exact candidates and recoverable backup
 PASS: installer rolls back both maps after partial replacement failure
-SUMMARY: 62/62 PASS
+SUMMARY: 63/63 PASS
 STATIC EVENTWRIGHT SCOPE: PASS
 OVERALL HANDOFF: CONDITIONAL PASS (pending user-side MZ runtime tests)

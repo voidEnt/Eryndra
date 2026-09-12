@@ -62,11 +62,30 @@ def flatten(map_data):
 
 
 def dialogue(page):
-    found=[]; speaker=None
+    found=[]; speaker=None; lines=[]
     for c in page["list"]:
-        if c["code"]==101: speaker=c["parameters"][4]
-        elif c["code"]==401: found.append((speaker,c["parameters"][0]))
+        if c["code"]==101:
+            if speaker is not None: found.append((speaker," ".join(lines)))
+            speaker=c["parameters"][4]; lines=[]
+        elif c["code"]==401: lines.append(c["parameters"][0])
+    if speaker is not None: found.append((speaker," ".join(lines)))
     return found
+
+
+def message_layout_ok(commands):
+    count=0; in_message=False
+    for c in commands:
+        if c["code"]==101:
+            if in_message and count==0: return False
+            count=0; in_message=True
+        elif c["code"]==401:
+            if not in_message or len(c["parameters"][0])>36: return False
+            count+=1
+            if count>4: return False
+        elif in_message:
+            if count==0: return False
+            in_message=False
+    return not in_message or count>0
 
 
 def run(args):
@@ -118,6 +137,7 @@ def run(args):
     check("Evening anti-replay pages", len(m2["events"][2]["pages"])==3 and m2["events"][2]["pages"][1]["conditions"]["switch1Id"]==111 and m2["events"][2]["pages"][2]["conditions"]["variableValue"]==1012)
     check("Morning exact dialogue and order", dialogue(p1)==MORNING, f"{len(dialogue(p1))} lines")
     check("Evening exact dialogue and order", dialogue(p2)==EVENING, f"{len(dialogue(p2))} lines")
+    check("all speaker messages fit the face-window layout", all(message_layout_ok(page["list"]) for event in m2["events"] if event for page in event["pages"]))
     ambient=[("Davren","If the latch catches again, leave it for this evening."),("Elira","The survey office will still be there. Breakfast will not."),("Nessa","Latch thinks every closed door is a personal insult.")]
     check("approved family ambient lines exact", [dialogue(m2["events"][i]["pages"][1])[0] for i in (5,6,7)]==ambient)
     expected_images={5:("People1",4),6:("People1",5),7:("People2",2),8:("Nature",0)}

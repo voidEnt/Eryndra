@@ -1,1 +1,1 @@
-PASS: 8 installer refusal/atomicity scenarios
+PASS: 10 installer refusal/atomicity scenarios (including prior-build upgrade)

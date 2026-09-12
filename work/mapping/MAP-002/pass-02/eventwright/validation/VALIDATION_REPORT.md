@@ -7,8 +7,8 @@
 
 ## Static results
 
-- Event/data checks: `39/39 PASS`
-- Installer refusal/atomicity scenarios: `8/8 PASS`
+- Event/data checks: `40/40 PASS`, including face-window layout (36 characters / four lines maximum)
+- Installer refusal/atomicity scenarios: `10/10 PASS`, including exact installed pre-wrap pair upgrade
 - Deterministic rebuild: byte-identical PASS
 - MAP-002 Mapping geometry/data: byte-identical to accepted baseline
 - All 17 anchor IDs, names and coordinates: preserved
@@ -23,7 +23,7 @@
 | Candidate | SHA-256 |
 |---|---|
 | `Map001_TRANSFER_PATCH_CANDIDATE.json` | `98fec8f89e190531e5de74b525574769b59c79c2030a9fd2ac9a906c47d623cd` |
-| `Map002.json` | `23b0c50b6323ca8eb1fd189b20caed7c6732cde54932ea2f1526f1cd4f6ac9ad` |
+| `Map002.json` | `fcf70f9e356c2b35ec72332129715f9ff6e856cb6a90003e5e3352dbf757c933` |
 
 ## Installer evidence
 
@@ -37,7 +37,7 @@ The installer tests verify:
 6. successful installation replaces only both documented map files and creates backups; and
 7. an injected second-replacement failure rolls both map files back to their original bytes.
 
-All refusal checks run before backup directory creation, temporary staging or replacement.
+All refusal checks run before backup directory creation, temporary staging or replacement. The current installer accepts the exact pre-wrap installed map pair as a source for the wrapped replacement; it refuses a mixed or user-modified pair.
 
 ## Required independent/runtime checks
 
@@ -50,3 +50,5 @@ All refusal checks run before backup directory creation, temporary staging or re
 - Placeholder sprite/face compatibility in the user's MZ runtime.
 
 This report does not claim independent or user runtime acceptance.
+
+User observed horizontal dialogue clipping in the previous candidate. The wrapped candidate passes static checks, but the presentation correction still needs MZ runtime confirmation.

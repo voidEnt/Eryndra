@@ -43,6 +43,27 @@ def fixture(parent: Path, name="EryndraReview") -> Path:
     return p
 
 
+def previous_candidate_map2() -> bytes:
+    """Reconstitute the accepted pre-wrap build for an upgrade test."""
+    data=json.loads((ROOT/"Map002.json").read_text(encoding="utf-8"))
+    for event in data["events"]:
+        if not event: continue
+        for page in event["pages"]:
+            commands=page["list"]; restored=[]; index=0
+            while index<len(commands):
+                command=commands[index]
+                if command["code"]==101:
+                    restored.append(command); index+=1; lines=[]
+                    while index<len(commands) and commands[index]["code"]==401:
+                        lines.append(commands[index]["parameters"][0]); index+=1
+                    if lines: restored.append({"code":401,"indent":command["indent"],"parameters":[" ".join(lines)]})
+                else: restored.append(command); index+=1
+            page["list"]=restored
+    result=json.dumps(data,separators=(",", ":")).encode("utf-8")
+    assert hashlib.sha256(result).hexdigest()==installer.MAP002_PRE_WRAP_SHA256
+    return result
+
+
 def expect_refusal_unchanged(project: Path):
     before=tree_hash(project)
     try: installer.install(project, ROOT)
@@ -68,6 +89,17 @@ def main():
         good=fixture(temp,"Good"); backup=installer.install(good,ROOT); assert backup and backup.is_dir()
         assert (good/"data/Map001.json").read_bytes()==(ROOT/"Map001_TRANSFER_PATCH_CANDIDATE.json").read_bytes()
         assert (good/"data/Map002.json").read_bytes()==(ROOT/"Map002.json").read_bytes()
+        previous=fixture(temp,"PreviouslyInstalled")
+        shutil.copy2(ROOT/"Map001_TRANSFER_PATCH_CANDIDATE.json",previous/"data/Map001.json")
+        (previous/"data/Map002.json").write_bytes(previous_candidate_map2())
+        before=tree_hash(previous); assert installer.install(previous,ROOT,True) is None
+        assert tree_hash(previous)==before
+        prior_backup=installer.install(previous,ROOT); assert prior_backup and prior_backup.is_dir()
+        assert (prior_backup/"Map002.json").read_bytes()==previous_candidate_map2()
+        assert (previous/"data/Map002.json").read_bytes()==(ROOT/"Map002.json").read_bytes()
+        mixed=fixture(temp,"MixedPair")
+        shutil.copy2(ROOT/"Map001_TRANSFER_PATCH_CANDIDATE.json",mixed/"data/Map001.json")
+        expect_refusal_unchanged(mixed)
         rollback=fixture(temp,"Rollback"); before1=(rollback/"data/Map001.json").read_bytes(); before2=(rollback/"data/Map002.json").read_bytes()
         real_replace=os.replace; calls=0
         def fail_second(src,dst):
@@ -80,7 +112,7 @@ def main():
         else: raise AssertionError("expected injected failure")
         assert (rollback/"data/Map001.json").read_bytes()==before1
         assert (rollback/"data/Map002.json").read_bytes()==before2
-    print("PASS: 8 installer refusal/atomicity scenarios")
+    print("PASS: 10 installer refusal/atomicity scenarios (including prior-build upgrade)")
 
 
 if __name__=="__main__": main()

@@ -16,6 +16,8 @@ from pathlib import Path
 
 MAP001_BASELINE_SHA256 = "f6b6a5f5e90d4f48b3b886ee5b23a09a86fba802e4d28c3cacfbf5468d4a39f6"
 MAP002_BASELINE_SHA256 = "429310b40f87053f669aca5377cd0544604d929b0e828a754d6ef966f78cdcd7"
+MAP001_PRE_WRAP_SHA256 = "98fec8f89e190531e5de74b525574769b59c79c2030a9fd2ac9a906c47d623cd"
+MAP002_PRE_WRAP_SHA256 = "23b0c50b6323ca8eb1fd189b20caed7c6732cde54932ea2f1526f1cd4f6ac9ad"
 
 
 class Refusal(RuntimeError):
@@ -51,10 +53,13 @@ def preflight(target: Path, candidate_dir: Path) -> dict[str, Path]:
     missing = [str(p) for p in required.values() if not p.is_file()]
     if missing:
         raise Refusal("missing required project/candidate files: " + ", ".join(missing))
-    if digest(required["map001"]) != MAP001_BASELINE_SHA256:
-        raise Refusal("Map001.json is not the accepted pre-transfer baseline")
-    if digest(required["map002"]) != MAP002_BASELINE_SHA256:
-        raise Refusal("Map002.json is not the accepted Mapping Pass 01 baseline")
+    installed_pair=(digest(required["map001"]),digest(required["map002"]))
+    allowed_pairs={
+        (MAP001_BASELINE_SHA256,MAP002_BASELINE_SHA256),
+        (MAP001_PRE_WRAP_SHA256,MAP002_PRE_WRAP_SHA256),
+    }
+    if installed_pair not in allowed_pairs:
+        raise Refusal("map pair does not match an accepted pre-install or installed pre-wrap build; no files changed")
     try:
         infos = json.loads(required["mapinfos"].read_text(encoding="utf-8"))
         if len(infos) <= 2 or not infos[1] or not infos[2] or infos[1]["id"] != 1 or infos[2]["id"] != 2:

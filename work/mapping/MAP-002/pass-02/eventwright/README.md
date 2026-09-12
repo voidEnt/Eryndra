@@ -1,8 +1,10 @@
 # MAP-002 Eventwright Functional Spine Pass 01
 
-**Result:** Ready for independent Validation and user-side RPG Maker MZ playtesting. Static Eventwright checks pass `39/39`; installer checks pass `8/8`.
+**Result:** Dialogue-wrap correction ready for user-side RPG Maker MZ retest. Static Eventwright checks pass `40/40`; installer checks pass `10/10`; independent static checks pass `63/63`. The new build is not yet runtime-accepted.
 
 This package turns the accepted MAP-002 Mapping Pass 01 skeleton into the executable morning (`PRO-SC-002`) and evening (`PRO-SC-011`) scene candidates. It also supplies a separately named MAP-001 candidate whose only authorized change is the post-title transfer into MAP-002.
+
+After a user playtest found clipped message text, the builder now wraps each dialogue/ambient message into at most four physical lines of at most 36 characters. The wording and beat order are unchanged. The guarded installer accepts the exact installed pre-wrap pair in the existing cumulative review project and retains atomic backups/refusal safeguards.
 
 ## Runtime candidates
 

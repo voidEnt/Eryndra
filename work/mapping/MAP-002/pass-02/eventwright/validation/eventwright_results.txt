@@ -17,6 +17,7 @@ PASS: Marek is visible before Evening Fade In
 PASS: Evening anti-replay pages
 PASS: Morning exact dialogue and order — 22 lines
 PASS: Evening exact dialogue and order — 22 lines
+PASS: all speaker messages fit the face-window layout
 PASS: approved family ambient lines exact
 PASS: placeholder character assignments exact
 PASS: no inventory/combat/shop/script/plugin commands
@@ -36,5 +37,5 @@ PASS: bedroom uses stock downed pose and restores Actor1
 PASS: MAP-001 validated opening prefix and all other data preserved
 PASS: MAP-001 exact authorized transfer tail
 PASS: MAP-001 state writes remain SW101 then VR1=1002
-PASS: candidate hashes recorded — Map001=98fec8f89e190531e5de74b525574769b59c79c2030a9fd2ac9a906c47d623cd Map002=23b0c50b6323ca8eb1fd189b20caed7c6732cde54932ea2f1526f1cd4f6ac9ad
-SUMMARY: 39/39 PASS
+PASS: candidate hashes recorded — Map001=98fec8f89e190531e5de74b525574769b59c79c2030a9fd2ac9a906c47d623cd Map002=fcf70f9e356c2b35ec72332129715f9ff6e856cb6a90003e5e3352dbf757c933
+SUMMARY: 40/40 PASS

@@ -9,6 +9,8 @@
 
 The higher blank pages prevent replay and prevent an autorun lock if a valid later story stage is loaded. No self switch or new global state is introduced.
 
+Each speaker message uses a single MZ Show Text command with one to four continuation lines, each no longer than 36 characters. Wrapping changes display layout only: concatenating the physical lines reproduces the approved spoken line exactly.
+
 ## Morning command sequence
 
 1. Fade out; reveal the player, hide followers, and place Marek `(14,14)` facing north.

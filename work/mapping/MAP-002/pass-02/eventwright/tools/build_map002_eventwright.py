@@ -10,6 +10,7 @@ from __future__ import annotations
 import argparse
 import copy
 import json
+import textwrap
 from pathlib import Path
 
 
@@ -51,11 +52,17 @@ def image(name, index, direction=2, pattern=1):
 
 FACES = {"Marek": ("Actor1", 0), "Davren": ("People1", 4),
          "Elira": ("People1", 5), "Nessa": ("People2", 2)}
+MESSAGE_LINE_LIMIT = 36  # Includes headroom for face graphics at 816x624.
 
 
 def say(speaker, line, indent=2):
     face, index = FACES[speaker]
-    return [cmd(101, [face, index, 0, 2, speaker], indent), cmd(401, [line], indent)]
+    lines = textwrap.wrap(line, width=MESSAGE_LINE_LIMIT, break_long_words=False,
+                          break_on_hyphens=False)
+    if not lines or len(lines) > 4:
+        raise ValueError(f"Dialogue exceeds one MZ message page: {speaker}: {line}")
+    return [cmd(101, [face, index, 0, 2, speaker], indent),
+            *(cmd(401, [part], indent) for part in lines)]
 
 
 def wait(frames, indent=2):

@@ -1,9 +1,9 @@
 {
   "validator": "MAP-002 Eventwright Functional Spine Pass 01",
   "summary": {
-    "passed": 39,
+    "passed": 40,
     "failed": 0,
-    "total": 39
+    "total": 40
   },
   "results": [
     {
@@ -100,6 +100,11 @@
       "name": "Evening exact dialogue and order",
       "status": "PASS",
       "detail": "22 lines"
+    },
+    {
+      "name": "all speaker messages fit the face-window layout",
+      "status": "PASS",
+      "detail": ""
     },
     {
       "name": "approved family ambient lines exact",
@@ -199,7 +204,7 @@
     {
       "name": "candidate hashes recorded",
       "status": "PASS",
-      "detail": "Map001=98fec8f89e190531e5de74b525574769b59c79c2030a9fd2ac9a906c47d623cd Map002=23b0c50b6323ca8eb1fd189b20caed7c6732cde54932ea2f1526f1cd4f6ac9ad"
+      "detail": "Map001=98fec8f89e190531e5de74b525574769b59c79c2030a9fd2ac9a906c47d623cd Map002=fcf70f9e356c2b35ec72332129715f9ff6e856cb6a90003e5e3352dbf757c933"
     }
   ]
 }

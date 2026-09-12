@@ -28,13 +28,13 @@ No Eventwright-owned file was changed during Validation. Validator artifacts are
 | Accepted MAP-001 baseline | `f6b6a5f5e90d4f48b3b886ee5b23a09a86fba802e4d28c3cacfbf5468d4a39f6` |
 | Accepted MAP-002 Mapping baseline | `429310b40f87053f669aca5377cd0544604d929b0e828a754d6ef966f78cdcd7` |
 | MAP-001 transfer-patched candidate | `98fec8f89e190531e5de74b525574769b59c79c2030a9fd2ac9a906c47d623cd` |
-| MAP-002 Eventwright candidate | `23b0c50b6323ca8eb1fd189b20caed7c6732cde54932ea2f1526f1cd4f6ac9ad` |
+| MAP-002 Eventwright candidate (wrapped dialogue) | `fcf70f9e356c2b35ec72332129715f9ff6e856cb6a90003e5e3352dbf757c933` |
 
 The deterministic builder reproduced both candidate files byte-for-byte.
 
 ## Independent results
 
-The independent validator completed **62/62 checks with no static defects**.
+The independent validator completed **63/63 checks with no static defects**, including a new physical message width and four-line limit check. This rerun follows the user's report that the prior candidate clipped dialogue horizontally. The original spoken text and order are preserved; the correction remains pending runtime confirmation.
 
 Validated requirements include:
 
@@ -69,7 +69,7 @@ Neither archive was modified. `SampleGenerated` remains a read-only technical re
 
 ## Defects
 
-No static blocking or nonblocking defect was found in the submitted Eventwright scope.
+The prior candidate had a confirmed runtime presentation defect: dialogue clipped inside the message box. Eventwright has corrected the physical line wrapping in this candidate. No static blocking or nonblocking defect remains in the new candidate, but the runtime defect stays open until the user verifies the updated build in MZ.
 
 ## Open runtime acceptance conditions
 
