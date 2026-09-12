@@ -1,0 +1,21 @@
+PASS: required MZ map keys compatible with stock Map003
+PASS: 45x35, six layers, nonlooping, Outside ID 2
+PASS: all used tiles defined in Outside stock flags
+PASS: 10 contiguous map events with no additional IDs
+FAIL: blueprint event IDs, names, and exact coordinates
+PASS: Mapper anchors are inert, invisible and nonblocking
+PASS: no active sound, enemies, scripted transfer or parallax
+PASS: three empty and passable outside spawns
+PASS: door and northern hotspots approach from specified adjacent cells
+PASS: both entrances and northern approach linked by MZ directional passage
+PASS: two-tile corridor from Venn house toward north
+PASS: all outer edge cells impassable
+PASS: no false entrances on background building facades
+PASS: four 816x624 review PNGs and 45x35 complete view present
+PASS: builder reruns without error in isolated directory
+PASS: byte-identical JSON and preview PNGs on rebuild
+PASS: ZIP inputs and Mapper map were not modified during validation
+SHA256 Map003.json b6a8babbcd8790b8c1a29f64540e116c2aad48dede54092b6b9418f33964d64c
+SHA256 01-EryndraStory.zip 56f9d5336d7a8736b92745243c1baeb941786c005741a76cd327f573a2654611
+SHA256 02-SampleGenerated.zip b09e8c96856098aa94d01b563abc40e97321f3eca99ef7cbe836632d94cfd768
+SUMMARY: 16/17 checks PASS; FAIL
