@@ -27,7 +27,7 @@ Bible map IDs intentionally match MZ map IDs.
 | Bible ID | MZ Map ID / File | Map Name | Required Scenes | Status |
 |---|---|---|---|---|
 | `MAP-001` | `Map001.json` | Forgotten Watcher Station | `PRO-SC-001`, `PRO-SC-012` | Implemented — `PRO-SC-001` runtime Tested; `PRO-SC-012` pending |
-| `MAP-002` | `Map002.json` | Brackenford - Venn Home | `PRO-SC-002`, `PRO-SC-011` | Assigned — Mapping Pass 01 conditional PASS; MZ confirmation pending |
+| `MAP-002` | `Map002.json` | Brackenford - Venn Home | `PRO-SC-002`, `PRO-SC-011` | Assigned — Mapping Pass 01 PASS; Eventwright Functional Spine active |
 | `MAP-003` | `Map003.json` | Brackenford | `PRO-SC-003`, `PRO-SC-005`, `PRO-SC-010` | Assigned |
 | `MAP-004` | `Map004.json` | Brackenford - Survey Office | `PRO-SC-004`, `PRO-SC-010` | Assigned |
 | `MAP-005` | `Map005.json` | Northern Road | `PRO-SC-005`, `PRO-SC-006` | Assigned |

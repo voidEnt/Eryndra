@@ -4,6 +4,14 @@ This changelog records meaningful structural and implementation-reference change
 
 ---
 
+## 2026-09-12 — MAP-002 Mapping PASS and Eventwright authorization
+
+- User confirmed MAP-002 opens, renders and supports the required collision routes in RPG Maker MZ using stock Inside tileset slot 3.
+- Independent Validation closed `MAP002-VAL-C01`; MAP-002 Mapping Pass 01 now has final PASS with no open Mapping defects.
+- Approved the MAP-002 Eventwright work order for `PRO-SC-002` and `PRO-SC-011`, including exact dialogue, state contracts, staging, MAP-001 connection points and role restrictions.
+- Eventwright Functional Spine Pass 01 is now the active production unit. MAP-003 coordinates remain deliberately unresolved.
+
+---
 ## 2026-09-12 — MAP-002 Mapping Pass 01 conditional PASS
 
 - Mapper produced original 29x23 Venn Home geometry, three review composites, exact 17 blank anchors, dependency documentation and repeatable build/validation scripts.

@@ -51,7 +51,7 @@ Story scene and named-NPC Bible IDs remain logical identifiers because they do n
 |---|---|---|---|---|---|---|---|---|
 | `ACT-001` | Actor | Marek Venn | Prologue+ | CORE | Actor 1 | `PRO-SC-002` onward | Assigned | Playable lead |
 | `MAP-001` | Map | Forgotten Watcher Station | Prologue | CORE | `Map001.json` | `PRO-SC-001`, `PRO-SC-012` | Implemented | `PRO-SC-001` opening runtime PASS and approved for integration; overall map remains conditional pending MAP-002 transfer and `PRO-SC-012`; not Locked |
-| `MAP-002` | Map | Brackenford - Venn Home | Prologue | CORE | `Map002.json` | `PRO-SC-002`, `PRO-SC-011` | Assigned | Mapping Pass 01 CONDITIONAL PASS; 53/53 static checks; MZ editor/runtime confirmation pending; Eventwright functional spine authorized |
+| `MAP-002` | Map | Brackenford - Venn Home | Prologue | CORE | `Map002.json` | `PRO-SC-002`, `PRO-SC-011` | Assigned | Mapping Pass 01 PASS; MZ editor/render/collision confirmed; Eventwright Functional Spine active |
 | `MAP-003` | Map | Brackenford | Prologue | CORE | `Map003.json` | `PRO-SC-003`, `005`, `010` | Assigned | Primary town map |
 | `MAP-004` | Map | Brackenford - Survey Office | Prologue | CORE | `Map004.json` | `PRO-SC-004`, `010` | Assigned | Assignment/report location |
 | `MAP-005` | Map | Northern Road | Prologue | CORE | `Map005.json` | `PRO-SC-005`, `006` | Assigned | Main exploration route |
@@ -108,7 +108,7 @@ Story scene and named-NPC Bible IDs remain logical identifiers because they do n
 | Bible ID | MZ Map ID | Map Name | Parent | Required Scenes | Priority | Status |
 |---|---:|---|---|---|---|---|
 | `MAP-001` | 1 | Forgotten Watcher Station | TBD | `PRO-SC-001`, `012` | CORE | Implemented — `PRO-SC-001` runtime Tested; `PRO-SC-012` pending |
-| `MAP-002` | 2 | Brackenford - Venn Home | `MAP-003` | `PRO-SC-002`, `011` | CORE | Assigned - Mapping Pass 01 conditional PASS |
+| `MAP-002` | 2 | Brackenford - Venn Home | `MAP-003` | `PRO-SC-002`, `011` | CORE | Assigned - Mapping Pass 01 PASS; Eventwright active |
 | `MAP-003` | 3 | Brackenford | TBD | `PRO-SC-003`, `005`, `010` | CORE | Assigned |
 | `MAP-004` | 4 | Brackenford - Survey Office | `MAP-003` | `PRO-SC-004`, `010` | CORE | Assigned |
 | `MAP-005` | 5 | Northern Road | TBD | `PRO-SC-005`, `006` | CORE | Assigned |

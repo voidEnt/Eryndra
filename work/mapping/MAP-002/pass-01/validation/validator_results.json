@@ -4,7 +4,7 @@
   "map_name": "Brackenford - Venn Home",
   "stage": "Mapping Pass 01",
   "validator_role": "Independent Validator",
-  "outcome": "CONDITIONAL_PASS",
+  "outcome": "PASS",
   "blocking_defects": [],
   "checks": {
     "mapper_validator_rerun": {
@@ -27,7 +27,8 @@
     "venn_household_canon": "PASS",
     "forbidden_implications": "PASS",
     "reference_archive_integrity": "PASS",
-    "mz_editor_runtime_open": "NOT_RUN"
+    "mz_editor_runtime_open": "PASS_USER_CONFIRMED",
+    "mz_required_collision_routes": "PASS_USER_CONFIRMED"
   },
   "route_evidence": {
     "start": [14, 14],
@@ -45,18 +46,12 @@
   "conditions": [
     {
       "id": "MAP002-VAL-C01",
-      "status": "OPEN",
-      "severity": "GATE_CONDITION",
+      "status": "CLOSED",
+      "severity": "RESOLVED_GATE_CONDITION",
       "owner": "Validation/User runtime",
-      "blocking_for": [
-        "runtime acceptance",
-        "integration acceptance",
-        "Implemented or Tested status"
-      ],
-      "nonblocking_for": [
-        "Eventwright Functional Spine preparation"
-      ],
-      "required_outcome": "Map002.json opens and renders in RPG Maker MZ using stock Inside tileset slot 3, with required routes and anchors present."
+      "closure_date": "2026-09-12",
+      "closure_evidence": "User confirmed Map002.json opens and renders correctly in RPG Maker MZ and that the required collision routes work.",
+      "result": "PASS"
     }
   ],
   "observations": [
@@ -71,6 +66,6 @@
     }
   ],
   "eventwright_authorized": true,
-  "eventwright_authorization_scope": "Functional Spine preparation and implementation against the accepted geometry; no runtime or integration acceptance claim.",
+  "eventwright_authorization_scope": "Functional Spine preparation and implementation against the accepted Mapping Pass 01 geometry; later event behavior and complete scene integration require separate validation.",
   "mapper_files_modified_by_validator": false
 }

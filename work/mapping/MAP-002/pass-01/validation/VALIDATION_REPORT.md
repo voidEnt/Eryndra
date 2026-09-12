@@ -2,11 +2,13 @@
 
 **Production unit:** `MAP-002 Brackenford - Venn Home`  
 **Validated stage:** Mapping skeleton Pass 01 only  
-**Outcome:** **CONDITIONAL PASS**  
+**Outcome:** **PASS**  
 **Blocking defects:** None  
-**Eventwright gate:** May begin the Functional Spine pass using this spatial skeleton. Runtime acceptance and final integration remain prohibited until Condition `MAP002-VAL-C01` is closed.
+**Eventwright gate:** **OPEN.** Eventwright may begin the Functional Spine pass using this accepted spatial skeleton. This Mapping-stage PASS does not constitute acceptance of later event logic or final scene integration.
 
 **Regression result:** `MAP002-OBS-01` is **CLOSED**. Mapping removed stock tile 332, regenerated the map and affected composites, and corrected the manifest/handoff language without changing the approved geometry.
+
+**Runtime confirmation:** `MAP002-VAL-C01` is **CLOSED**. The user confirmed that `Map002.json` opens and renders correctly in RPG Maker MZ and that the required collision routes work.
 
 ## 1. Scope and authority
 
@@ -46,7 +48,7 @@ This outcome accepts only the Mapping Pass 01 spatial substrate. It does not val
 - All composites have the required dimensions: full map `1392 x 1104`; camera reviews `816 x 624`.
 - The common-room frame contains the kitchen, table, repair nook, entry approach, and required staging space.
 - The Marek-room frame contains Marek's bed, the south doorway, and Latch's threshold coordinate together.
-- The visible black areas are authored impassable buffer outside the house walls, not missing pixels or a crop beyond the canvas. Actual MZ camera behavior remains part of Condition `MAP002-VAL-C01`.
+- The visible black areas are authored impassable buffer outside the house walls, not missing pixels or a crop beyond the canvas. User-side MZ confirmation closed Condition `MAP002-VAL-C01` with correct rendering and required route behavior.
 
 ### Reproducibility - PASS
 
@@ -87,14 +89,13 @@ Static review confirms the builder opens `SampleGenerated.zip` only in read mode
 
 ## 6. Conditions and observations
 
-### `MAP002-VAL-C01` - MZ editor/runtime confirmation
+### `MAP002-VAL-C01` - MZ editor/runtime confirmation - CLOSED
 
-- **Status:** OPEN
-- **Severity:** Gate condition; nonblocking for Eventwright Functional Spine preparation, blocking for runtime/integration acceptance
+- **Status:** CLOSED by user-side RPG Maker MZ confirmation
+- **Severity:** Resolved gate condition
 - **Owner:** Validation with user-side RPG Maker MZ evidence
-- **Reason:** The work order requires `Map002.json` to open correctly in RPG Maker MZ. This environment can validate schema, stock dependencies, rendering, and deterministic output, but cannot launch the user's licensed MZ editor.
-- **Closure evidence:** Install `Map002.json` in a newly created Eryndra review project whose tileset slot 3 is stock `Inside`; confirm the editor opens the map, the stock tiles render as shown, and a basic collision spot-check reaches the three bedroom doors, repair nook, common table, entry, and south exit.
-- **Regression scope:** Map load, tileset-slot dependency, visible camera framing, passability, and event-anchor presence.
+- **Closure evidence:** On 2026-09-12, the user confirmed that the supplied `Map002.json` opens and renders correctly in RPG Maker MZ and that the required collision routes work. This satisfies the work order's MZ editor/runtime confirmation requirement for Mapping Pass 01.
+- **Regression result:** PASS for map load, stock tileset rendering, visible framing, and required collision-route behavior. Anchor structure remains covered by the independent static validation above.
 
 ### `MAP002-OBS-01` - Tile 332 description mismatch - CLOSED
 
@@ -113,9 +114,9 @@ Eventwright may use the accepted geometry and exact anchors, subject to these re
 3. Preserve the ordinary, non-supernatural treatment of Latch.
 4. Use the approved entry/output states exactly: morning `1002 -> 1003` with `SW-0102`; evening `1011 -> 1012` with `SW-0111`.
 5. Keep the field kit and calibration weight as scene props, not inventory/database rewards.
-6. Confirm actual MZ camera framing before presentation acceptance.
-7. Do not mark MAP-002 Implemented, Tested, or integration-ready until `MAP002-VAL-C01` is closed and the later Eventwright/runtime validation passes.
+6. Preserve the user-confirmed MZ rendering and route behavior; presentation changes introduced during Eventwright require regression validation.
+7. Do not mark the completed MAP-002 scenes Implemented, Tested, or integration-ready until the later Eventwright/runtime validation passes.
 
 ## 8. Decision
 
-**MAP-002 Mapping Pass 01 retains CONDITIONAL PASS after regression validation.** The spatial skeleton is suitable for Eventwright Functional Spine work, and `MAP002-OBS-01` is closed. No further Mapping correction is required for this pass. The sole remaining condition is actual MZ editor/runtime confirmation under `MAP002-VAL-C01`.
+**MAP-002 Mapping Pass 01 receives final PASS.** The spatial skeleton is accepted for Eventwright Functional Spine work. `MAP002-VAL-C01` and `MAP002-OBS-01` are closed, no blocking defects remain, and no further Mapping correction is required for this pass. Later Eventwright behavior and complete scene integration remain separate validation gates.
