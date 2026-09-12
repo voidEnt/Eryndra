@@ -4,6 +4,11 @@ This changelog records meaningful structural and implementation-reference change
 
 ---
 
+## 2026-09-12 — MAP-004 work order and Mapping Pass 01 candidate
+
+- Approved the single-room MAP-004 Brackenford Survey Office spatial recipe for both `PRO-SC-004` and `PRO-SC-010`, using the locked P-03/P-07 story gate, exact MAP-003 doorway connection and eight inert event anchors.
+- Built `work/mapping/MAP-004/pass-01/Map004.json` using stock Inside tileset ID 3, with three previews, builder, dependency and handoff notes. Mapper self-check: 10/10; separate Validation, Eventwright and MZ runtime review remain pending. Neither reference ZIP nor prior map was changed.
+
 ## 2026-09-12 — MAP-003 independent FAIL and Mapping Pass 02 PASS
 
 - Separate Validator tested MAP-003 Mapping Pass 01 and returned `FAIL` (16/17): event 7 Latch departure was `(12,26)` rather than the approved northern-road `(21,8)`. Self-check had reproduced the builder's mistake instead of checking the work order.

@@ -53,7 +53,7 @@ Story scene and named-NPC Bible IDs remain logical identifiers because they do n
 | `MAP-001` | Map | Forgotten Watcher Station | Prologue | CORE | `Map001.json` | `PRO-SC-001`, `PRO-SC-012` | Implemented | `PRO-SC-001` opening runtime PASS and approved for integration; overall map remains conditional pending MAP-002 transfer and `PRO-SC-012`; not Locked |
 | `MAP-002` | Map | Brackenford - Venn Home | Prologue | CORE | `Map002.json` | `PRO-SC-002`, `PRO-SC-011` | Assigned | Mapping Pass 01 PASS; wrapped Eventwright candidate independently static PASS 63/63; user runtime recheck still pending |
 | `MAP-003` | Map | Brackenford | Prologue | CORE | `Map003.json` | `PRO-SC-003`, `005`, `010` | Assigned | Mapping Pass 02 independently PASS (17/17 + 8/8 regression); Eventwright and runtime integration pending |
-| `MAP-004` | Map | Brackenford - Survey Office | Prologue | CORE | `Map004.json` | `PRO-SC-004`, `010` | Assigned | Assignment/report location |
+| `MAP-004` | Map | Brackenford - Survey Office | Prologue | CORE | `Map004.json` | `PRO-SC-004`, `010` | Assigned | Spatial Pass 01 candidate; independent Validation pending |
 | `MAP-005` | Map | Northern Road | Prologue | CORE | `Map005.json` | `PRO-SC-005`, `006` | Assigned | Main exploration route |
 | `MAP-006` | Map | Old Place - Exterior | Prologue | CORE | `Map006.json` | `PRO-SC-007` | Assigned | Discovery/approach |
 | `MAP-007` | Map | Old Place - Interior | Prologue | CORE | `Map007.json` | `PRO-SC-008`, `012` | Assigned | Contact location |
@@ -110,7 +110,7 @@ Story scene and named-NPC Bible IDs remain logical identifiers because they do n
 | `MAP-001` | 1 | Forgotten Watcher Station | TBD | `PRO-SC-001`, `012` | CORE | Implemented — `PRO-SC-001` runtime Tested; `PRO-SC-012` pending |
 | `MAP-002` | 2 | Brackenford - Venn Home | `MAP-003` | `PRO-SC-002`, `011` | CORE | Assigned — Mapping PASS; Eventwright static PASS; runtime pending |
 | `MAP-003` | 3 | Brackenford | TBD | `PRO-SC-003`, `005`, `010` | CORE | Assigned — Mapping Pass 02 independently PASS; Eventwright pending |
-| `MAP-004` | 4 | Brackenford - Survey Office | `MAP-003` | `PRO-SC-004`, `010` | CORE | Assigned |
+| `MAP-004` | 4 | Brackenford - Survey Office | `MAP-003` | `PRO-SC-004`, `010` | CORE | Assigned — Mapping candidate; independent Validation pending |
 | `MAP-005` | 5 | Northern Road | TBD | `PRO-SC-005`, `006` | CORE | Assigned |
 | `MAP-006` | 6 | Old Place - Exterior | `MAP-005` | `PRO-SC-007` | CORE | Assigned |
 | `MAP-007` | 7 | Old Place - Interior | `MAP-006` | `PRO-SC-008`, `012` | CORE | Assigned |

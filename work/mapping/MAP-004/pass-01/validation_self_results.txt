@@ -1,0 +1,12 @@
+PASS shape, stock Inside, nonlooping
+PASS six correctly sized layers
+PASS eight blueprint anchors parsed
+PASS anchor IDs/names/positions from approved blueprint
+PASS only inert event pages
+PASS arrival clear of anchors
+PASS entrance and story staging reachable
+PASS outside bounds blocked
+PASS no encounters, BGM or BGS
+PASS all occupied furniture within interior
+10/10 PASS; 195 traversable cells reachable
+Mapper self-check only; independent Validator and MZ runtime review not performed.

@@ -29,7 +29,7 @@ Bible map IDs intentionally match MZ map IDs.
 | `MAP-001` | `Map001.json` | Forgotten Watcher Station | `PRO-SC-001`, `PRO-SC-012` | Implemented — `PRO-SC-001` runtime Tested; `PRO-SC-012` pending |
 | `MAP-002` | `Map002.json` | Brackenford - Venn Home | `PRO-SC-002`, `PRO-SC-011` | Assigned — Mapping PASS; Eventwright static PASS; runtime C01-C04 pending |
 | `MAP-003` | `Map003.json` | Brackenford | `PRO-SC-003`, `PRO-SC-005`, `PRO-SC-010` | Assigned — Mapping Pass 02 independently PASS; Eventwright/runtime pending |
-| `MAP-004` | `Map004.json` | Brackenford - Survey Office | `PRO-SC-004`, `PRO-SC-010` | Assigned |
+| `MAP-004` | `Map004.json` | Brackenford - Survey Office | `PRO-SC-004`, `PRO-SC-010` | Assigned — Mapping Pass 01 candidate; independent Validation pending |
 | `MAP-005` | `Map005.json` | Northern Road | `PRO-SC-005`, `PRO-SC-006` | Assigned |
 | `MAP-006` | `Map006.json` | Old Place - Exterior | `PRO-SC-007` | Assigned |
 | `MAP-007` | `Map007.json` | Old Place - Interior | `PRO-SC-008`, `PRO-SC-012` | Assigned |
@@ -127,7 +127,7 @@ The reserved Prologue ranges 001-024 remain empty. This is intentional: the lock
 
 The MAP-001 opening for `PRO-SC-001` passed live RPG Maker MZ validation and is Tested. MAP-001 remains Implemented overall because its `PRO-SC-012` return is not yet integrated.
 
-MAP-002 Mapping has PASS and its corrected dialogue-wrapped Eventwright candidate passes independent static Validation; user runtime recheck remains pending. MAP-003 Mapping Pass 01 failed for Latch's wrong anchor `(12,26)`. The corrected Pass 02 moves that inert anchor to the approved northern-road position `(21,8)` and independently passes 17/17 full checks plus 8/8 regression checks. The MAP-002 south-door destination in MAP-003 is now spatially defined at `(11,26)`, but the transfer remains inactive until an authorized Eventwright/integration pass. MAP-004's survey office and MAP-005's northern road are not yet built; no live transfers to them are authorized.
+MAP-002 Mapping has PASS and its corrected dialogue-wrapped Eventwright candidate passes independent static Validation; user runtime recheck remains pending. MAP-003 Mapping Pass 01 failed for Latch's wrong anchor `(12,26)`. The corrected Pass 02 moves that inert anchor to the approved northern-road position `(21,8)` and independently passes 17/17 full checks plus 8/8 regression checks. The MAP-002 south-door destination in MAP-003 is now spatially defined at `(11,26)`, but the transfer remains inactive until an authorized Eventwright/integration pass. MAP-004's survey office has a spatial Mapping Pass 01 candidate awaiting independent Validation. MAP-005's northern road is not yet built. No live transfers to either map are authorized.
 
 ---
 
