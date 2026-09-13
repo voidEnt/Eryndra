@@ -1,0 +1,34 @@
+MAP-004 Eventwright self-validation: 31/31 PASS
+PASS: MAP-004 dimensions and tileset preserved
+PASS: MAP-004 tile/collision array byte-equivalent
+PASS: MAP-004 non-event map properties preserved
+PASS: MAP-004 anchor identities and coordinates preserved
+PASS: MAP-004 prop/camera anchors 6-8 remain inert and byte-equivalent
+PASS: MAP-003 map geometry and properties byte-equivalent
+PASS: Only MAP-003 event ID 2 differs
+PASS: Morning controller begins at >=1004 autorun
+PASS: Report controller begins at >=1010 autorun
+PASS: Morning exact equality and SW103-OFF guards present
+PASS: Report exact equality and SW110-OFF guards present
+PASS: Completion and stage-ceiling blank pages prevent controller replay
+PASS: Morning dialogue speakers, order, wording and line breaks exact
+PASS: Report dialogue speakers, order, wording and line breaks exact
+PASS: All Show Text content lines are <=40 characters — maximum=40
+PASS: Every Show Text box uses speaker name and at most four lines
+PASS: Morning writes only SW103 then stage1005 exactly once
+PASS: Report writes only SW110 then stage1011 exactly once
+PASS: No unauthorized MAP-004 global state writes
+PASS: Morning stages player from (12,15) to (12,12) facing north
+PASS: Report stages player from (12,15) to (12,12) facing north
+PASS: MAP-004 door transfers to MAP-003 (31,16) south with black fade
+PASS: MAP-003 office door active only from stage1003 onward
+PASS: MAP-003 stage1003 equality guard advances to1004 only
+PASS: MAP-003 door transfers to MAP-004 (12,15) north with black fade
+PASS: Edrin visibility bands are hidden/base, visible1004, hidden1005, visible1010
+PASS: Joren and Edrin stock placeholders are distinct
+PASS: No unauthorized command types — used=[0, 101, 108, 111, 121, 122, 201, 205, 216, 401, 412]
+PASS: No combat/audio/picture/tint/shake/plugin/script commands
+PASS: Deterministic builder reproduces Map004.json
+PASS: Deterministic builder reproduces MAP-003 integration candidate
+Independent Validation: NOT RUN
+RPG Maker MZ runtime: NOT RUN

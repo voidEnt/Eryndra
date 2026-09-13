@@ -1,0 +1,164 @@
+{
+  "suite": "MAP-004 Eventwright self-validation",
+  "passed": 31,
+  "total": 31,
+  "checks": [
+    {
+      "name": "MAP-004 dimensions and tileset preserved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "MAP-004 tile/collision array byte-equivalent",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "MAP-004 non-event map properties preserved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "MAP-004 anchor identities and coordinates preserved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "MAP-004 prop/camera anchors 6-8 remain inert and byte-equivalent",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "MAP-003 map geometry and properties byte-equivalent",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Only MAP-003 event ID 2 differs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Morning controller begins at >=1004 autorun",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Report controller begins at >=1010 autorun",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Morning exact equality and SW103-OFF guards present",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Report exact equality and SW110-OFF guards present",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Completion and stage-ceiling blank pages prevent controller replay",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Morning dialogue speakers, order, wording and line breaks exact",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Report dialogue speakers, order, wording and line breaks exact",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "All Show Text content lines are <=40 characters",
+      "passed": true,
+      "detail": "maximum=40"
+    },
+    {
+      "name": "Every Show Text box uses speaker name and at most four lines",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Morning writes only SW103 then stage1005 exactly once",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Report writes only SW110 then stage1011 exactly once",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "No unauthorized MAP-004 global state writes",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Morning stages player from (12,15) to (12,12) facing north",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Report stages player from (12,15) to (12,12) facing north",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "MAP-004 door transfers to MAP-003 (31,16) south with black fade",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "MAP-003 office door active only from stage1003 onward",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "MAP-003 stage1003 equality guard advances to1004 only",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "MAP-003 door transfers to MAP-004 (12,15) north with black fade",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Edrin visibility bands are hidden/base, visible1004, hidden1005, visible1010",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Joren and Edrin stock placeholders are distinct",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "No unauthorized command types",
+      "passed": true,
+      "detail": "used=[0, 101, 108, 111, 121, 122, 201, 205, 216, 401, 412]"
+    },
+    {
+      "name": "No combat/audio/picture/tint/shake/plugin/script commands",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Deterministic builder reproduces Map004.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Deterministic builder reproduces MAP-003 integration candidate",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "independent_validation": "NOT RUN",
+  "runtime_validation": "NOT RUN"
+}

@@ -1,0 +1,14 @@
+MAP-004 Eventwright installer tests: 11/11 PASS
+PASS: compatible MapInfos ID 4 states are accepted without dry-run writes
+PASS: blank assigned database names are filled only at IDs 103, 110 and variable 1
+PASS: dry run writes nothing
+PASS: second installation is idempotent
+PASS: installation patches MAP-003 event 2 and creates backups
+PASS: MAP-004 and MapInfos ID 4 registration install correctly
+PASS: unrelated MapInfos and System fields are preserved
+PASS: conflicting nonblank database names are refused without writes
+PASS: unrelated MapInfos ID 4 registration is refused without writes or backup creation
+PASS: immutable reference-named targets are refused
+PASS: unaccepted MAP-003 input is refused without writes
+Independent Validation: NOT RUN
+RPG Maker MZ runtime: NOT RUN
